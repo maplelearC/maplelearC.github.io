@@ -10,10 +10,10 @@
         <category>MySQL</category>
         <category>数据库</category>
         <category>Lua</category>
-        <category>算法</category>
-        <category>数据结构</category>
         <category>深入理解计算机系统</category>
         <category>CSAPP</category>
+        <category>算法</category>
+        <category>数据结构</category>
         <category>计算机网络</category>
         <category>C#</category>
         <item>
@@ -23,29 +23,29 @@
             <category>深入理解计算机系统</category>
             <category>CSAPP</category>
             <pubDate>Wed, 05 Oct 2022 15:50:37 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;csapp第二章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#csapp第二章&#34;&gt;#&lt;/a&gt; CSAPP: 第二章&lt;/h1&gt;
-&lt;h2 id=&#34;2-信息的表示和处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-信息的表示和处理&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2、信息的表示和处理&lt;/strong&gt;&lt;/h2&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;csapp第二章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#csapp第二章&#34;&gt;#&lt;/a&gt; CSAPP: 第二章&lt;/h1&gt;
+&lt;h2 id=&#34;2-信息的表示和处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-信息的表示和处理&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2、信息的表示和处理&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;计算机使用二值信号存储和表示信息&lt;/p&gt;
 &lt;p&gt;当计算结果太大以至于不能表示时，就会产生&lt;strong&gt;溢出&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;浮点数表示的精度有限，因而浮点运算是不可结合的。&lt;/p&gt;
 &lt;p&gt;整数的表示范围小但是精确，浮点数表示的范围大但是是近似的。&lt;/p&gt;
 &lt;p&gt;许多安全漏洞是由算术运算的微妙细节导致的。&lt;/p&gt;
-&lt;h2 id=&#34;21-信息存储&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-信息存储&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1 信息存储&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;21-信息存储&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#21-信息存储&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1 信息存储&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;计算机一般使用字节作为最小的可寻址的内存单位。&lt;/p&gt;
 &lt;p&gt;在机器级程序中不包含关于数据类型的信息。&lt;/p&gt;
 &lt;p&gt;指针的值是某个存储块的第一个字节的&lt;strong&gt;虚拟地址&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;每个程序对象可以视为一个字节块。&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;211-十六进制表示法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#211-十六进制表示法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.1 十六进制表示法&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;211-十六进制表示法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#211-十六进制表示法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.1 十六进制表示法&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;十六进制以 0x 开头。&lt;/p&gt;
 &lt;p&gt;A：10；C:12；F：15&lt;/p&gt;
-&lt;h3 id=&#34;212-字数据大小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#212-字数据大小&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.2 字数据大小&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;212-字数据大小&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#212-字数据大小&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.2 字数据大小&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;每个计算机有对应的字长，虚拟地址用一个字来编码，所以&lt;strong&gt;字长决定了虚拟地址空间的大小&lt;/strong&gt;。&lt;strong&gt;64 位机器的指针类型长度为 8 字节&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;32 位机器的虚拟地址空间为 &lt;strong&gt;4GB&lt;/strong&gt;，64 位字长的虚拟地址空间位 16 EB。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;int32_t&lt;/strong&gt; 和 &lt;strong&gt;int64_t&lt;/strong&gt; 类型分别为 4 字节和 8 字节，不受机器影响。使用确定大小的整数类型很有用。&lt;/p&gt;
 &lt;p&gt;对 32 位和 64 位机器而言，char、short、int、long long 长度都是一样的，为  1，2，4，8。long 的长度不一样。&lt;/p&gt;
 &lt;p&gt;float 和 double 的长度一样，分别为 4，8&lt;/p&gt;
 &lt;p&gt;程序对 char 有无符号一般不敏感。&lt;/p&gt;
-&lt;h3 id=&#34;213-寻址和字节顺序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#213-寻址和字节顺序&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.3 寻址和字节顺序&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;213-寻址和字节顺序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#213-寻址和字节顺序&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.3 寻址和字节顺序&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;对于跨越多字节的对象，它的地址是它所用字节中的&lt;strong&gt;最小地址&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;两种字节存储法：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -53,32 +53,32 @@
 &lt;li&gt;&lt;strong&gt;大端法&lt;/strong&gt;：数字的高位在前&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;大多数 Intel 都是小端法，不是所有。&lt;/p&gt;
-&lt;h3 id=&#34;214-表示字符串&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#214-表示字符串&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.4 表示字符串&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;C 语言字符串是以 null 字符结尾的字符数组，即 &#39;\0&#39;&lt;/p&gt;
+&lt;h3 id=&#34;214-表示字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#214-表示字符串&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.4 表示字符串&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;C 语言字符串是以 null 字符结尾的字符数组，即 ‘\0’&lt;/p&gt;
 &lt;p&gt;ASCII 字符适合编码英文文档。&lt;/p&gt;
 &lt;p&gt;Unicode（UTF-8）使用 &lt;strong&gt;4 字节&lt;/strong&gt;表示字符，一些常用的字符只需要 1 或 2 个字节。所有 ASCII 字符在 UTF-8 中是一样的。&lt;/p&gt;
 &lt;p&gt;JAVA 使用 UTF-8 来编码字符串。&lt;/p&gt;
-&lt;h3 id=&#34;215-表示代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#215-表示代码&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.5 表示代码&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;215-表示代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#215-表示代码&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.5 表示代码&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;二进制代码是&lt;strong&gt;不兼容&lt;/strong&gt;的，一般无法在不同机器间移植。&lt;/p&gt;
 &lt;p&gt;从机器的角度看，&lt;strong&gt;程序就是一个字节序列&lt;/strong&gt;。&lt;/p&gt;
-&lt;h3 id=&#34;216-布尔代数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#216-布尔代数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.6 布尔代数&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;216-布尔代数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#216-布尔代数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.6 布尔代数&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;布尔代数&lt;/strong&gt;是在 0 和 1 基础上的定义&lt;/p&gt;
 &lt;p&gt;可以把字节看作是一个长为 8 的&lt;strong&gt;位向量&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;位向量的一个应用是表示有限集合。如位向量 [0110 1001] 表示集合 A = {0,3,5,6}。&lt;/p&gt;
-&lt;h3 id=&#34;217-c-语言中的位级运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#217-c-语言中的位级运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.7 C 语言中的位级运算&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;217-c-语言中的位级运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#217-c-语言中的位级运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.7 C 语言中的位级运算&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;位运算的常见应用是实现&lt;strong&gt;掩码&lt;/strong&gt;。掩码表示从一个字中选出的位的集合，如掩码 0xFF 表示一个字的低 8 位。&lt;/p&gt;
 &lt;p&gt;表达式 &lt;strong&gt;~0&lt;/strong&gt; 可以生成一个全 1 的掩码，不管机器的字大小是多少。&lt;/p&gt;
-&lt;h3 id=&#34;218-c-语言中的逻辑运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#218-c-语言中的逻辑运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.8 C 语言中的逻辑运算&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;218-c-语言中的逻辑运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#218-c-语言中的逻辑运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.8 C 语言中的逻辑运算&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;逻辑运算符 &amp;amp;&amp;amp; 和 || 如果第一个参数就能确定结果，就不再计算第二个参数&lt;/p&gt;
-&lt;h3 id=&#34;219-c-语言中的移位运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#219-c-语言中的移位运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.9 C 语言中的移位运算&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;219-c-语言中的移位运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#219-c-语言中的移位运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.1.9 C 语言中的移位运算&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;左移 k 位丢掉最高的 k 位，并在右端补 k 个 0。&lt;/p&gt;
 &lt;p&gt;右移分为&lt;strong&gt;逻辑右移&lt;/strong&gt;和&lt;strong&gt;算术右移&lt;/strong&gt;。&lt;strong&gt;逻辑右移左端补 0，算术右移左端补最高有效位的值。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;一般都对有符号数使用算术右移，即补符号位的值。无符号数，&lt;strong&gt;只能是逻辑右移&lt;/strong&gt;，即补 0&lt;/p&gt;
-&lt;h2 id=&#34;22-整数表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-整数表示&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2 整数表示&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;22-整数表示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#22-整数表示&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2 整数表示&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;无符号表示与补码表示&lt;/p&gt;
 &lt;p&gt;有符号数到无符号数的转换会产生漏洞，&lt;strong&gt;避免错误的方法之一是绝不使用无符号数&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;除了 C 以外&lt;strong&gt;很少有语言支持无符号整数&lt;/strong&gt;，Java 就只支持有符号数&lt;/p&gt;
-&lt;h3 id=&#34;221-整数数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#221-整数数据类型&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.1 整数数据类型&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;221-整数数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#221-整数数据类型&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.1 整数数据类型&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;在 64 位系统上&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;i&lt;strong&gt;nt&lt;/strong&gt;：4 字节，可表示十进制数字位数：&lt;strong&gt;10 位（-20~20 亿以内）&lt;/strong&gt;&lt;/li&gt;
@@ -89,9 +89,9 @@
 &lt;li&gt;&lt;strong&gt;char&lt;/strong&gt;：&lt;strong&gt;-128~127&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;java 只支持有符号数。&lt;/p&gt;
-&lt;h3 id=&#34;222-无符号数的编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#222-无符号数的编码&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.2 无符号数的编码&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;222-无符号数的编码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#222-无符号数的编码&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.2 无符号数的编码&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;无符号表示、补码表示与数据的映射都是双射，即一一对应。&lt;/p&gt;
-&lt;h3 id=&#34;223-补码编码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#223-补码编码&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.3 补码编码&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;223-补码编码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#223-补码编码&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.3 补码编码&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;补码的定义实际就是&lt;strong&gt;将符号位解释为负权&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;C 库头文件  定义了一组常量来限定不同整数数据类型的取值范围。INT_MAX、INT_MIN、UINT_MAX&lt;/p&gt;
 &lt;p&gt;C 库头文件 中定义了 uint16_t, int32_t 等类型，用于声明确定宽度类型的整数。&lt;/p&gt;
@@ -107,7 +107,7 @@
 &lt;li&gt;x &amp;lt;2^(w-1)，值不变&lt;/li&gt;
 &lt;li&gt;x &amp;gt;= 2^(w-1)，转换后的值为 x - 2^w&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;225-c-语言中的有符号数和无符号数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#225-c-语言中的有符号数和无符号数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.5 C 语言中的有符号数和无符号数&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;225-c-语言中的有符号数和无符号数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#225-c-语言中的有符号数和无符号数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.2.5 C 语言中的有符号数和无符号数&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;C 语言中有符号数和无符号数相加减，有符号被转换成无符号。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;### 2.2.6 扩展一个数字的位表示&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;扩展无符号数使用零扩展，即在最高位前加 0&lt;/p&gt;
@@ -115,8 +115,8 @@
 &lt;p&gt;&lt;strong&gt;### 2.2.7 截断数字&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;对一个 w 位的数字截断为一个 k 位数字，将丢弃高 w-k 位。&lt;/p&gt;
 &lt;p&gt;对于无符号数而言，截断后的数字实际上等于 w mod 2^k，即取余。&lt;/p&gt;
-&lt;h2 id=&#34;23-整数运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-整数运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3 整数运算&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;231-无符号加法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#231-无符号加法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3.1 无符号加法&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;23-整数运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#23-整数运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3 整数运算&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;231-无符号加法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#231-无符号加法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3.1 无符号加法&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;考虑溢出，C 语言不会将溢出作为错误发出信号&lt;/p&gt;
 &lt;p&gt;当 x+y &amp;gt;= 2^w，实际结果为 s = x+y-2^w&lt;/p&gt;
 &lt;p&gt;对任意的 x+y，&lt;strong&gt;s = (x+y) % 2^w&lt;/strong&gt;&lt;/p&gt;
@@ -134,7 +134,7 @@
 &lt;p&gt;** 计算补码非的第二种方法：** 假设 k 是最右边的 1 的位置，对 k 左边的所有位取反&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;### 2.3.4 无符号乘法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;无符号乘法的积&lt;/strong&gt; &lt;strong&gt;m = (x*y) % 2^w&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;235-补码乘法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#235-补码乘法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3.5 补码乘法&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;235-补码乘法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#235-补码乘法&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3.5 补码乘法&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;可以认为补码乘法和无符号乘法的&lt;strong&gt;位级表示&lt;/strong&gt;是一样的&lt;/p&gt;
 &lt;p&gt;C 语言在运算时将 x,y 视为无符号数进行乘法运算，结果取余后将其按补码方式解释&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;补码乘法的积&lt;/strong&gt; &lt;strong&gt;m = (x*y) % 2^w&lt;/strong&gt;&lt;/p&gt;
@@ -151,12 +151,12 @@
 &lt;p&gt;使用 &lt;strong&gt;(x+(1&amp;lt;&amp;gt;k&lt;/strong&gt; 的结果相当于进行除法运算然后&lt;strong&gt;向零舍入&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;代码实现&lt;/p&gt;
 &lt;p&gt;​                (x&amp;lt;0 ? x+(1&amp;lt;&amp;lt;k)-1 : x) &amp;gt;&amp;gt; k;&lt;/p&gt;
-&lt;h3 id=&#34;238-关于整数运算的最后思考&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#238-关于整数运算的最后思考&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3.8 关于整数运算的最后思考&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;238-关于整数运算的最后思考&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#238-关于整数运算的最后思考&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.3.8 关于整数运算的最后思考&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;补码使用了与无符号算术运算相同的位级实现&lt;/strong&gt;，包括加法、减法、乘法甚至除法。都有完全一样或非常类似的位级行为。&lt;/p&gt;
-&lt;h2 id=&#34;24-浮点数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24-浮点数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4 浮点数&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;24-浮点数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#24-浮点数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4 浮点数&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;浮点数对于非常大，非常接近零，近似值计算都很有用&lt;/p&gt;
-&lt;h3 id=&#34;241-二进制小数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#241-二进制小数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.1 二进制小数&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;小数的二进制表示法只能表示那些能够写为 &lt;strong&gt;x * 2^w&lt;/strong&gt; 的数，&lt;strong&gt;其他的数都是近似表示。x 必须可以由形如 2^i + 2^j + ... + 2^n 的多项式表示&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;241-二进制小数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#241-二进制小数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.1 二进制小数&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;小数的二进制表示法只能表示那些能够写为 &lt;strong&gt;x * 2^w&lt;/strong&gt; 的数，&lt;strong&gt;其他的数都是近似表示。x 必须可以由形如 2^i + 2^j + … + 2^n 的多项式表示&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;浮点运算的不精确性可能产生严重后果&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;### 2.4.2 IEEE 浮点表示&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IEEE 浮点标准&lt;/strong&gt;的表示形式为：&lt;strong&gt;V = (-1)^S * M * 2^E&lt;/strong&gt;，它分为三部分：&lt;/p&gt;
@@ -201,7 +201,7 @@
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;243-数字示例&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#243-数字示例&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.3 数字示例&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;243-数字示例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#243-数字示例&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.3 数字示例&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;0 有 +0.0 和 -0.0 两种表示方式&lt;/p&gt;
 &lt;p&gt;最大非规格化数到最小规格化数的过渡是平滑的。&lt;/p&gt;
 &lt;p&gt;浮点数能够使用正数排序函数来排序，即浮点数的位级表示当用整数方式来解释时是顺序的（正数升序负数降序）。&lt;/p&gt;
@@ -214,7 +214,7 @@
 &lt;li&gt;** 最小的正规格化值：** 阶码字段最低位为 1，其他为 0&lt;/li&gt;
 &lt;li&gt;** 最大的规格化值：** 阶码字段最低位为 0，符号位为 0，其他为 1&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;244-舍入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#244-舍入&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.4 舍入&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;244-舍入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#244-舍入&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.4 舍入&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;因为范围和精度有限，浮点运算只能近似表示实数运算。&lt;/p&gt;
 &lt;p&gt;在浮点数的近似匹配上，IEEE 浮点格式定义了&lt;strong&gt;四种舍入方式（默认第一种）：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -225,12 +225,12 @@
 &lt;/ol&gt;
 &lt;p&gt;向偶数舍入可以计算一组数的平均数时避免统计偏差。&lt;/p&gt;
 &lt;p&gt;实际上这种舍入是发生在二进制小数上的。&lt;/p&gt;
-&lt;h3 id=&#34;245-浮点运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#245-浮点运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.5 浮点运算&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;245-浮点运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#245-浮点运算&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.5 浮点运算&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;IEEE 标准定义 1/-0 = -∞，1/+0 = +∞&lt;/p&gt;
 &lt;p&gt;浮点运算是&lt;strong&gt;可交换不可结合也不可分配&lt;/strong&gt;的。&lt;/p&gt;
 &lt;p&gt;浮点加法满足&lt;strong&gt;加法和乘法上的单调性&lt;/strong&gt;。如果 a&amp;gt;=b，则 x+a &amp;gt;= x+b&lt;/p&gt;
 &lt;p&gt;缺乏结合性和分配性会使一些简单问题变得很复杂&lt;/p&gt;
-&lt;h3 id=&#34;246-c-语言中的浮点数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#246-c-语言中的浮点数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.6 C 语言中的浮点数&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;246-c-语言中的浮点数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#246-c-语言中的浮点数&#34;&gt;#&lt;/a&gt; &lt;strong&gt;2.4.6 C 语言中的浮点数&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;在 int、float、double 间进行&lt;strong&gt;强制类型转换时的几种情况：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;int 到 float：不会溢出，可能舍入&lt;/li&gt;

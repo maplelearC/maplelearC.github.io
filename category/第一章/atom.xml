@@ -7,21 +7,21 @@
     <category term="MySQL" />
     <category term="数据库" />
     <category term="Lua" />
-    <category term="算法" />
-    <category term="数据结构" />
     <category term="深入理解计算机系统" />
     <category term="CSAPP" />
+    <category term="算法" />
+    <category term="数据结构" />
     <category term="计算机网络" />
     <category term="C#" />
     <entry>
         <id>https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/</id>
         <title>CSAPP:第一章</title>
         <link rel="alternate" href="https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/"/>
-        <content type="html">&lt;h1 id=&#34;csapp第一章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#csapp第一章&#34;&gt;#&lt;/a&gt; 《CSAPP：第一章》&lt;/h1&gt;
-&lt;h2 id=&#34;11-信息就是位上下文&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-信息就是位上下文&#34;&gt;#&lt;/a&gt; 1.1 信息就是位 + 上下文&lt;/h2&gt;
+        <content type="html">&lt;h1 id=&#34;csapp第一章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#csapp第一章&#34;&gt;#&lt;/a&gt; 《CSAPP：第一章》&lt;/h1&gt;
+&lt;h2 id=&#34;11-信息就是位上下文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-信息就是位上下文&#34;&gt;#&lt;/a&gt; 1.1 信息就是位 + 上下文&lt;/h2&gt;
 &lt;p&gt;程序的生命周期从源程序 (源文件) 开始。源程序实际上就是由 0 和 1 组成的位序列。&lt;/p&gt;
 &lt;p&gt;一般 ASCII 标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。&lt;/p&gt;
-&lt;p&gt;源文件中每个文本行都是以看不见的 &#39;\n&#39; 结束的。&lt;/p&gt;
+&lt;p&gt;源文件中每个文本行都是以看不见的 ‘\n’ 结束的。&lt;/p&gt;
 &lt;p&gt;只由 ASCII 字符组成的文件成为&lt;strong&gt;文本文件&lt;/strong&gt;，其他都是&lt;strong&gt;二进制文件&lt;/strong&gt;。.cpp 文件就是文本文件。&lt;/p&gt;
 &lt;p&gt;系统中的所有信息都是由一串比特（bit：位）表示的，区分不同数据对象的&lt;strong&gt;唯一方法&lt;/strong&gt;就是根据上下文。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;C 语言的特点&lt;/strong&gt;&lt;/p&gt;
@@ -31,7 +31,7 @@
 &lt;li&gt;C 语言与 unix 关系密切&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;C 语言是系统级编程的首选，也非常适用于应用级程序。&lt;/p&gt;
-&lt;h2 id=&#34;12-程序被其他程序翻译成不同的格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#12-程序被其他程序翻译成不同的格式&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.2&lt;/strong&gt; 程序被其他程序翻译成不同的格式&lt;/h2&gt;
+&lt;h2 id=&#34;12-程序被其他程序翻译成不同的格式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12-程序被其他程序翻译成不同的格式&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.2&lt;/strong&gt; 程序被其他程序翻译成不同的格式&lt;/h2&gt;
 &lt;p&gt;从源程序到目标程序要经历&lt;strong&gt;四个步骤：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;源程序被&lt;strong&gt;预处理器&lt;/strong&gt;处理得到&lt;strong&gt;修改了的源程序&lt;/strong&gt;（文本文件，hello.i）&lt;/li&gt;
@@ -45,16 +45,16 @@
 &lt;p&gt;&lt;strong&gt;汇编阶段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接阶段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;比如 printf 函数是一个标准 C 库函数，存在于 printf.o 中，这是一个单独的预编译好了的目标文件。链接器将其与汇编得到的二进制文件合并得到可执行目标文件。&lt;/p&gt;
-&lt;h2 id=&#34;13-了解编译系统如何工作是大有用处的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#13-了解编译系统如何工作是大有用处的&#34;&gt;#&lt;/a&gt; 1.3 了解编译系统如何工作是大有用处的&lt;/h2&gt;
+&lt;h2 id=&#34;13-了解编译系统如何工作是大有用处的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#13-了解编译系统如何工作是大有用处的&#34;&gt;#&lt;/a&gt; 1.3 了解编译系统如何工作是大有用处的&lt;/h2&gt;
 &lt;p&gt;用处：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;优化程序性能&lt;/li&gt;
 &lt;li&gt;理解链接时出现的错误&lt;/li&gt;
 &lt;li&gt;避免安全漏洞&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;14-处理器读并解释储存在内存中的指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-处理器读并解释储存在内存中的指令&#34;&gt;#&lt;/a&gt; 1.4 处理器读并解释储存在内存中的指令&lt;/h2&gt;
+&lt;h2 id=&#34;14-处理器读并解释储存在内存中的指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#14-处理器读并解释储存在内存中的指令&#34;&gt;#&lt;/a&gt; 1.4 处理器读并解释储存在内存中的指令&lt;/h2&gt;
 &lt;p&gt;shell 是一个命令行解释器，它输出一个提示符（&amp;gt;&amp;gt;），等待输入一个命令行，然后执行命令。如果输入的是可执行文件的名字，就运行该文件。&lt;/p&gt;
-&lt;h3 id=&#34;141-系统的硬件组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#141-系统的硬件组成&#34;&gt;#&lt;/a&gt; 1.4.1 系统的硬件组成&lt;/h3&gt;
+&lt;h3 id=&#34;141-系统的硬件组成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#141-系统的硬件组成&#34;&gt;#&lt;/a&gt; 1.4.1 系统的硬件组成&lt;/h3&gt;
 &lt;p&gt;主要包括&lt;strong&gt;总线、I/O 设备、处理器、主存储器 **** 四个部分&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -101,12 +101,12 @@
 &lt;li&gt;** 指令集架构：** 每条机器指令的效果&lt;/li&gt;
 &lt;li&gt;** 微体系架构：** 处理器实际上是如何实现的&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;142-运行-hello-程序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#142-运行-hello-程序&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.4.2 运行 hello 程序&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;142-运行-hello-程序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#142-运行-hello-程序&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.4.2 运行 hello 程序&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;执行目标文件时，shell 程序将位于磁盘目标文件中的字符逐个读入寄存器，然后放到主存中。之后处理器就开始执行目标文件的机器语言指令，从 main 程序开始。&lt;/p&gt;
 &lt;p&gt;利用 ** 直接存储器存取（DMA）** 可以不通过寄存器，直接将数据从磁盘到达内存。&lt;/p&gt;
 &lt;p&gt;以输出打印 hello world 为例，处理器将 hello world 的字节复制到寄存器，然后再复制到显示器，最后显示在屏幕上。&lt;/p&gt;
 &lt;p&gt;** 整个流程：**&lt;strong&gt; 读取文件字符到寄存器 → 存储到主存  → 执行指令&lt;/strong&gt;  →  &lt;strong&gt;加载 helloworld 到寄存器 → 复制到显示器 → 显示&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;15-高速缓存至关重要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#15-高速缓存至关重要&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.5 高速缓存至关重要&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;15-高速缓存至关重要&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#15-高速缓存至关重要&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.5 高速缓存至关重要&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;从主存读取一个字比磁盘快 &lt;strong&gt;1000 万&lt;/strong&gt;倍。&lt;/p&gt;
 &lt;p&gt;从寄存器文件读取比主存块 &lt;strong&gt;100 倍&lt;/strong&gt;，并且差距还在加大。&lt;/p&gt;
 &lt;p&gt;高速缓存（cache）用来解决处理器与主存间的差异。&lt;/p&gt;
@@ -114,7 +114,7 @@
 &lt;p&gt;&lt;strong&gt;L2 高速缓存&lt;/strong&gt;通过&lt;strong&gt;一条特殊的总线&lt;/strong&gt;与 CPU 连接，容量为数十万到数百万字节（&lt;strong&gt;几百 MB 到 几 GB&lt;/strong&gt;）。L2 比 主存快 &lt;strong&gt;5~10&lt;/strong&gt; 倍&lt;/p&gt;
 &lt;p&gt;新的系统还有 L3。&lt;/p&gt;
 &lt;p&gt;通过让高速缓存里存放可能经常访问的数据，让大部分的内存操作都在高速缓存中完成。&lt;/p&gt;
-&lt;h2 id=&#34;16-存储设备形成层次结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#16-存储设备形成层次结构&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.6 存储设备形成层次结构&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;16-存储设备形成层次结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#16-存储设备形成层次结构&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.6 存储设备形成层次结构&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;存储器层次结构共 7 层，&lt;strong&gt;主要思想&lt;/strong&gt;是上一层的存储器作为低一层的高速缓存。&lt;/p&gt;
 &lt;p&gt;从上到下，容量更大，运行更慢，每字节价格更便宜。&lt;/p&gt;
 &lt;ul&gt;
@@ -126,7 +126,7 @@
 &lt;li&gt;5 层：本地二级存储（本地磁盘）&lt;/li&gt;
 &lt;li&gt;6 层：远程二级存储（分布式文件系统，Web 服务器）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;17-操作系统管理硬件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#17-操作系统管理硬件&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7 操作系统管理硬件&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;17-操作系统管理硬件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#17-操作系统管理硬件&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7 操作系统管理硬件&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;操作系统的&lt;strong&gt;两个基本功能：&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;防止硬件被失控的应用程序滥用&lt;/li&gt;
@@ -138,7 +138,7 @@
 &lt;li&gt;&lt;strong&gt;虚拟内存&lt;/strong&gt;：对主存和磁盘的抽象表示&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;文件&lt;/strong&gt;：对 I/O 设备的抽象表示&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;171-进程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#171-进程&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.1 进程&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;171-进程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#171-进程&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.1 进程&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;** 进程：** 对操作系统正在运行的程序的一种抽象。&lt;/p&gt;
 &lt;p&gt;** 并发运行：** 一个进程的指令和另一个进程的指令是交错执行的。&lt;/p&gt;
 &lt;p&gt;一个系统可以同时运行多个进程，实际上这些进程是并发运行的。&lt;/p&gt;
@@ -147,10 +147,10 @@
 &lt;p&gt;操作系统&lt;strong&gt;内核&lt;/strong&gt;是操作系统代码常驻主存的部分，从一个进程到另一个进程的转换是由内核管理的。&lt;/p&gt;
 &lt;p&gt;内核不是一个独立的进程，是一系列代码和数据结构的集合。&lt;/p&gt;
 &lt;p&gt;当应用程序需要操作系统的某些操作时，就把控制权传递给内核，内核执行完操作后返回应用程序。&lt;/p&gt;
-&lt;h3 id=&#34;172-线程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#172-线程&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.2 线程&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;172-线程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#172-线程&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.2 线程&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;一个进程由多个线程组成&lt;/strong&gt;，每个线程都运行在进程的上下文中，共享同样的代码和全局数据。&lt;/p&gt;
 &lt;p&gt;多线程之间比多进程之间更容易共享数据，且线程一般来说比进程更高效。&lt;/p&gt;
-&lt;h3 id=&#34;173-虚拟内存&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#173-虚拟内存&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.3 虚拟内存&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;173-虚拟内存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#173-虚拟内存&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.3 虚拟内存&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;机器级程序将内存视为一个庞大的字节数组，称为&lt;strong&gt;虚拟内存&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;内存的每个字节由地址来标识，所有可能地址的集合就是&lt;strong&gt;虚拟地址空间。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;虚拟内存使每个进程都以为自己独占了主存。每个进程看到的内存都是&lt;strong&gt;一致的&lt;/strong&gt;，即&lt;strong&gt;虚拟地址空间&lt;/strong&gt;。&lt;/p&gt;
@@ -171,16 +171,16 @@
 &lt;p&gt;地址空间的中间部分用来存放共享库的代码和数据。如 C 标准库、数学库等都属于共享库&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;栈&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;用户栈和堆一样，在程序执行期间可以&lt;strong&gt;动态的扩展和收缩&lt;/strong&gt;，编译器用它来&lt;strong&gt;实现函数调用&lt;/strong&gt;。当调用函数时，栈增长，从函数返回时，栈收缩&lt;/p&gt;
-&lt;h3 id=&#34;174-文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#174-文件&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.4 文件&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;174-文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#174-文件&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.7.4 文件&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;文件就是&lt;strong&gt;字节序列&lt;/strong&gt;，仅此而已。&lt;/p&gt;
 &lt;p&gt;每个 I/O 设备，包括磁盘、键盘、显示器、网络，都可以看成是文件。&lt;/p&gt;
-&lt;h2 id=&#34;18-系统之间利用网络通信&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#18-系统之间利用网络通信&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.8 系统之间利用网络通信&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;18-系统之间利用网络通信&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#18-系统之间利用网络通信&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.8 系统之间利用网络通信&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;从一个单独的系统而言，网络可以视为一个 I/O 设备。&lt;/p&gt;
 &lt;p&gt;以在一个远端服务器运行程序为例，在本地输入，在远端执行，执行结果发送回本地输出。&lt;/p&gt;
-&lt;h2 id=&#34;19-重要主题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#19-重要主题&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9 重要主题&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;191-amdahl-定律&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#191-amdahl-定律&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9.1 Amdahl 定律&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;19-重要主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#19-重要主题&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9 重要主题&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;191-amdahl-定律&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#191-amdahl-定律&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9.1 Amdahl 定律&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Amdahl 定律的主要观点：要加速整个系统，必须提升全系统中相当大的部分。&lt;/p&gt;
-&lt;h3 id=&#34;192-并发和并行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#192-并发和并行&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9.2 并发和并行&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;192-并发和并行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#192-并发和并行&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9.2 并发和并行&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;区分并发与并行：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;** 并发：** 一个通用的概念，指一个同时具有多个活动的系统&lt;/li&gt;
@@ -190,7 +190,7 @@
 &lt;p&gt;&lt;strong&gt;1. 线程级并行&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;传统意义上的并发执行是通过单处理器在进程间快速切换&lt;strong&gt;模拟&lt;/strong&gt;出来的。&lt;/p&gt;
 &lt;p&gt;多处理器系统由一个操作系统控制多个 CPU。结构如下&lt;/p&gt;
-&lt;p&gt;​    &lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005160155790.png&#34; alt=&#34;image-20221005160155790&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;​    &lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005160155790.png&#34; alt=&#34;image-20221005160155790&#34;&gt;&lt;/p&gt;
 &lt;p&gt;L1 高速缓存被分为两个部分：一个保存最近取到的指令，一个存放数据。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;超线程&lt;/strong&gt;又称&lt;strong&gt;同时多线程&lt;/strong&gt;，它允许一个 CPU 执行多个控制流。 CPU 有的硬件有多个备份，比如程序计数器和寄存器文件，而其他硬件只有一份，比如浮点算术运算单元。常规 CPU 需要约 &lt;strong&gt;20000&lt;/strong&gt; 个时钟周期来切换线程，超线程 CPU 可以在&lt;strong&gt;单个周期&lt;/strong&gt;的基础上切换线程，比如一个线程在等待数据装在到高速缓存，CPU 就可以去执行另一个线程。&lt;/p&gt;
 &lt;p&gt;i7 处理器每个核执行两个线程，所以是 &lt;strong&gt;4 核 8 线程&lt;/strong&gt;，8 个线程都并行执行。&lt;/p&gt;
@@ -199,8 +199,8 @@
 &lt;p&gt;如果比一个周期一条指令更快，就称为&lt;strong&gt;超标量处理器&lt;/strong&gt;，现在一般都是超标量。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3. 单指令、多数据并行&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在最低层次上，现代处理器允许一条指令产生多个可以并行执行的操作，称为单指令、多数据并行，即 SIMD 并行。&lt;/p&gt;
-&lt;h3 id=&#34;193-计算机系统中抽象的重要性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#193-计算机系统中抽象的重要性&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9.3 计算机系统中抽象的重要性&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;​    &lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005160217657.png&#34; alt=&#34;image-20221005160217657&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;193-计算机系统中抽象的重要性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#193-计算机系统中抽象的重要性&#34;&gt;#&lt;/a&gt; &lt;strong&gt;1.9.3 计算机系统中抽象的重要性&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;​    &lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005160217657.png&#34; alt=&#34;image-20221005160217657&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;指令集架构&lt;/strong&gt;是对 CPU 硬件的抽象，使用这个抽象，CPU 看起来好像一次只执行机器代码程序的一条指令，实际上底层硬件并行地执行多条指令。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;虚拟机&lt;/strong&gt;是对整个计算机系统的抽象，包括操作系统、处理器和程序。&lt;strong&gt;1.4.1 系统的硬件组成&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;主要包括&lt;strong&gt;总线、I/O 设备、处理器、主存储器 **** 四个部分&lt;/strong&gt;&lt;/p&gt;

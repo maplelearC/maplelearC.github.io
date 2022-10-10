@@ -30,12 +30,12 @@
 <link rel="canonical" href="https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/">
 
 
-<meta name="description" content="# 《CSAPP：第一章》 # 1.1 信息就是位 + 上下文 程序的生命周期从源程序 (源文件) 开始。源程序实际上就是由 0 和 1 组成的位序列。 一般 ASCII 标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。 源文件中每个文本行都是以看不见的 &#39;\n&#39; 结束的。 只由 ASCII 字符组成的文件成为文本文件，其他都是二进制文件。.cpp 文件就是文本文件。 系统中的所有信">
+<meta name="description" content="# 《CSAPP：第一章》 # 1.1 信息就是位 + 上下文 程序的生命周期从源程序 (源文件) 开始。源程序实际上就是由 0 和 1 组成的位序列。 一般 ASCII 标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。 源文件中每个文本行都是以看不见的 ‘\n’ 结束的。 只由 ASCII 字符组成的文件成为文本文件，其他都是二进制文件。.cpp 文件就是文本文件。 系统中的所有信">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSAPP: 第一章">
 <meta property="og:url" content="https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="# 《CSAPP：第一章》 # 1.1 信息就是位 + 上下文 程序的生命周期从源程序 (源文件) 开始。源程序实际上就是由 0 和 1 组成的位序列。 一般 ASCII 标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。 源文件中每个文本行都是以看不见的 &#39;\n&#39; 结束的。 只由 ASCII 字符组成的文件成为文本文件，其他都是二进制文件。.cpp 文件就是文本文件。 系统中的所有信">
+<meta property="og:description" content="# 《CSAPP：第一章》 # 1.1 信息就是位 + 上下文 程序的生命周期从源程序 (源文件) 开始。源程序实际上就是由 0 和 1 组成的位序列。 一般 ASCII 标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。 源文件中每个文本行都是以看不见的 ‘\n’ 结束的。 只由 ASCII 字符组成的文件成为文本文件，其他都是二进制文件。.cpp 文件就是文本文件。 系统中的所有信">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://lgqimg.changzer.cn/image-20221005160155790.png">
 <meta property="og:image" content="http://lgqimg.changzer.cn/image-20221005160217657.png">
@@ -119,12 +119,12 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
         </ul>
       </div>
     </header>
@@ -173,11 +173,11 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="csapp第一章"><a class="anchor" href="#csapp第一章">#</a> 《CSAPP：第一章》</h1>
-<h2 id="11-信息就是位上下文"><a class="anchor" href="#11-信息就是位上下文">#</a> 1.1 信息就是位 + 上下文</h2>
+    <h1 id="csapp第一章"><a class="markdownIt-Anchor" href="#csapp第一章">#</a> 《CSAPP：第一章》</h1>
+<h2 id="11-信息就是位上下文"><a class="markdownIt-Anchor" href="#11-信息就是位上下文">#</a> 1.1 信息就是位 + 上下文</h2>
 <p>程序的生命周期从源程序 (源文件) 开始。源程序实际上就是由 0 和 1 组成的位序列。</p>
 <p>一般 ASCII 标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。</p>
-<p>源文件中每个文本行都是以看不见的 '\n' 结束的。</p>
+<p>源文件中每个文本行都是以看不见的 ‘\n’ 结束的。</p>
 <p>只由 ASCII 字符组成的文件成为<strong>文本文件</strong>，其他都是<strong>二进制文件</strong>。.cpp 文件就是文本文件。</p>
 <p>系统中的所有信息都是由一串比特（bit：位）表示的，区分不同数据对象的<strong>唯一方法</strong>就是根据上下文。</p>
 <p><strong>C 语言的特点</strong></p>
@@ -187,7 +187,7 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <li>C 语言与 unix 关系密切</li>
 </ol>
 <p>C 语言是系统级编程的首选，也非常适用于应用级程序。</p>
-<h2 id="12-程序被其他程序翻译成不同的格式"><a class="anchor" href="#12-程序被其他程序翻译成不同的格式">#</a> <strong>1.2</strong> 程序被其他程序翻译成不同的格式</h2>
+<h2 id="12-程序被其他程序翻译成不同的格式"><a class="markdownIt-Anchor" href="#12-程序被其他程序翻译成不同的格式">#</a> <strong>1.2</strong> 程序被其他程序翻译成不同的格式</h2>
 <p>从源程序到目标程序要经历<strong>四个步骤：</strong></p>
 <ol>
 <li>源程序被<strong>预处理器</strong>处理得到<strong>修改了的源程序</strong>（文本文件，hello.i）</li>
@@ -201,16 +201,16 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <p><strong>汇编阶段</strong></p>
 <p><strong>链接阶段</strong></p>
 <p>比如 printf 函数是一个标准 C 库函数，存在于 printf.o 中，这是一个单独的预编译好了的目标文件。链接器将其与汇编得到的二进制文件合并得到可执行目标文件。</p>
-<h2 id="13-了解编译系统如何工作是大有用处的"><a class="anchor" href="#13-了解编译系统如何工作是大有用处的">#</a> 1.3 了解编译系统如何工作是大有用处的</h2>
+<h2 id="13-了解编译系统如何工作是大有用处的"><a class="markdownIt-Anchor" href="#13-了解编译系统如何工作是大有用处的">#</a> 1.3 了解编译系统如何工作是大有用处的</h2>
 <p>用处：</p>
 <ol>
 <li>优化程序性能</li>
 <li>理解链接时出现的错误</li>
 <li>避免安全漏洞</li>
 </ol>
-<h2 id="14-处理器读并解释储存在内存中的指令"><a class="anchor" href="#14-处理器读并解释储存在内存中的指令">#</a> 1.4 处理器读并解释储存在内存中的指令</h2>
+<h2 id="14-处理器读并解释储存在内存中的指令"><a class="markdownIt-Anchor" href="#14-处理器读并解释储存在内存中的指令">#</a> 1.4 处理器读并解释储存在内存中的指令</h2>
 <p>shell 是一个命令行解释器，它输出一个提示符（&gt;&gt;），等待输入一个命令行，然后执行命令。如果输入的是可执行文件的名字，就运行该文件。</p>
-<h3 id="141-系统的硬件组成"><a class="anchor" href="#141-系统的硬件组成">#</a> 1.4.1 系统的硬件组成</h3>
+<h3 id="141-系统的硬件组成"><a class="markdownIt-Anchor" href="#141-系统的硬件组成">#</a> 1.4.1 系统的硬件组成</h3>
 <p>主要包括<strong>总线、I/O 设备、处理器、主存储器 **** 四个部分</strong></p>
 <ol>
 <li>
@@ -257,12 +257,12 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <li>** 指令集架构：** 每条机器指令的效果</li>
 <li>** 微体系架构：** 处理器实际上是如何实现的</li>
 </ul>
-<h3 id="142-运行-hello-程序"><a class="anchor" href="#142-运行-hello-程序">#</a> <strong>1.4.2 运行 hello 程序</strong></h3>
+<h3 id="142-运行-hello-程序"><a class="markdownIt-Anchor" href="#142-运行-hello-程序">#</a> <strong>1.4.2 运行 hello 程序</strong></h3>
 <p>执行目标文件时，shell 程序将位于磁盘目标文件中的字符逐个读入寄存器，然后放到主存中。之后处理器就开始执行目标文件的机器语言指令，从 main 程序开始。</p>
 <p>利用 ** 直接存储器存取（DMA）** 可以不通过寄存器，直接将数据从磁盘到达内存。</p>
 <p>以输出打印 hello world 为例，处理器将 hello world 的字节复制到寄存器，然后再复制到显示器，最后显示在屏幕上。</p>
 <p>** 整个流程：**<strong> 读取文件字符到寄存器 → 存储到主存  → 执行指令</strong>  →  <strong>加载 helloworld 到寄存器 → 复制到显示器 → 显示</strong></p>
-<h2 id="15-高速缓存至关重要"><a class="anchor" href="#15-高速缓存至关重要">#</a> <strong>1.5 高速缓存至关重要</strong></h2>
+<h2 id="15-高速缓存至关重要"><a class="markdownIt-Anchor" href="#15-高速缓存至关重要">#</a> <strong>1.5 高速缓存至关重要</strong></h2>
 <p>从主存读取一个字比磁盘快 <strong>1000 万</strong>倍。</p>
 <p>从寄存器文件读取比主存块 <strong>100 倍</strong>，并且差距还在加大。</p>
 <p>高速缓存（cache）用来解决处理器与主存间的差异。</p>
@@ -270,7 +270,7 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <p><strong>L2 高速缓存</strong>通过<strong>一条特殊的总线</strong>与 CPU 连接，容量为数十万到数百万字节（<strong>几百 MB 到 几 GB</strong>）。L2 比 主存快 <strong>5~10</strong> 倍</p>
 <p>新的系统还有 L3。</p>
 <p>通过让高速缓存里存放可能经常访问的数据，让大部分的内存操作都在高速缓存中完成。</p>
-<h2 id="16-存储设备形成层次结构"><a class="anchor" href="#16-存储设备形成层次结构">#</a> <strong>1.6 存储设备形成层次结构</strong></h2>
+<h2 id="16-存储设备形成层次结构"><a class="markdownIt-Anchor" href="#16-存储设备形成层次结构">#</a> <strong>1.6 存储设备形成层次结构</strong></h2>
 <p>存储器层次结构共 7 层，<strong>主要思想</strong>是上一层的存储器作为低一层的高速缓存。</p>
 <p>从上到下，容量更大，运行更慢，每字节价格更便宜。</p>
 <ul>
@@ -282,7 +282,7 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <li>5 层：本地二级存储（本地磁盘）</li>
 <li>6 层：远程二级存储（分布式文件系统，Web 服务器）</li>
 </ul>
-<h2 id="17-操作系统管理硬件"><a class="anchor" href="#17-操作系统管理硬件">#</a> <strong>1.7 操作系统管理硬件</strong></h2>
+<h2 id="17-操作系统管理硬件"><a class="markdownIt-Anchor" href="#17-操作系统管理硬件">#</a> <strong>1.7 操作系统管理硬件</strong></h2>
 <p>操作系统的<strong>两个基本功能：</strong></p>
 <ol>
 <li>防止硬件被失控的应用程序滥用</li>
@@ -294,7 +294,7 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <li><strong>虚拟内存</strong>：对主存和磁盘的抽象表示</li>
 <li><strong>文件</strong>：对 I/O 设备的抽象表示</li>
 </ol>
-<h3 id="171-进程"><a class="anchor" href="#171-进程">#</a> <strong>1.7.1 进程</strong></h3>
+<h3 id="171-进程"><a class="markdownIt-Anchor" href="#171-进程">#</a> <strong>1.7.1 进程</strong></h3>
 <p>** 进程：** 对操作系统正在运行的程序的一种抽象。</p>
 <p>** 并发运行：** 一个进程的指令和另一个进程的指令是交错执行的。</p>
 <p>一个系统可以同时运行多个进程，实际上这些进程是并发运行的。</p>
@@ -303,10 +303,10 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <p>操作系统<strong>内核</strong>是操作系统代码常驻主存的部分，从一个进程到另一个进程的转换是由内核管理的。</p>
 <p>内核不是一个独立的进程，是一系列代码和数据结构的集合。</p>
 <p>当应用程序需要操作系统的某些操作时，就把控制权传递给内核，内核执行完操作后返回应用程序。</p>
-<h3 id="172-线程"><a class="anchor" href="#172-线程">#</a> <strong>1.7.2 线程</strong></h3>
+<h3 id="172-线程"><a class="markdownIt-Anchor" href="#172-线程">#</a> <strong>1.7.2 线程</strong></h3>
 <p><strong>一个进程由多个线程组成</strong>，每个线程都运行在进程的上下文中，共享同样的代码和全局数据。</p>
 <p>多线程之间比多进程之间更容易共享数据，且线程一般来说比进程更高效。</p>
-<h3 id="173-虚拟内存"><a class="anchor" href="#173-虚拟内存">#</a> <strong>1.7.3 虚拟内存</strong></h3>
+<h3 id="173-虚拟内存"><a class="markdownIt-Anchor" href="#173-虚拟内存">#</a> <strong>1.7.3 虚拟内存</strong></h3>
 <p>机器级程序将内存视为一个庞大的字节数组，称为<strong>虚拟内存</strong>。</p>
 <p>内存的每个字节由地址来标识，所有可能地址的集合就是<strong>虚拟地址空间。</strong></p>
 <p>虚拟内存使每个进程都以为自己独占了主存。每个进程看到的内存都是<strong>一致的</strong>，即<strong>虚拟地址空间</strong>。</p>
@@ -327,16 +327,16 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <p>地址空间的中间部分用来存放共享库的代码和数据。如 C 标准库、数学库等都属于共享库</p>
 <p><strong>栈</strong></p>
 <p>用户栈和堆一样，在程序执行期间可以<strong>动态的扩展和收缩</strong>，编译器用它来<strong>实现函数调用</strong>。当调用函数时，栈增长，从函数返回时，栈收缩</p>
-<h3 id="174-文件"><a class="anchor" href="#174-文件">#</a> <strong>1.7.4 文件</strong></h3>
+<h3 id="174-文件"><a class="markdownIt-Anchor" href="#174-文件">#</a> <strong>1.7.4 文件</strong></h3>
 <p>文件就是<strong>字节序列</strong>，仅此而已。</p>
 <p>每个 I/O 设备，包括磁盘、键盘、显示器、网络，都可以看成是文件。</p>
-<h2 id="18-系统之间利用网络通信"><a class="anchor" href="#18-系统之间利用网络通信">#</a> <strong>1.8 系统之间利用网络通信</strong></h2>
+<h2 id="18-系统之间利用网络通信"><a class="markdownIt-Anchor" href="#18-系统之间利用网络通信">#</a> <strong>1.8 系统之间利用网络通信</strong></h2>
 <p>从一个单独的系统而言，网络可以视为一个 I/O 设备。</p>
 <p>以在一个远端服务器运行程序为例，在本地输入，在远端执行，执行结果发送回本地输出。</p>
-<h2 id="19-重要主题"><a class="anchor" href="#19-重要主题">#</a> <strong>1.9 重要主题</strong></h2>
-<h3 id="191-amdahl-定律"><a class="anchor" href="#191-amdahl-定律">#</a> <strong>1.9.1 Amdahl 定律</strong></h3>
+<h2 id="19-重要主题"><a class="markdownIt-Anchor" href="#19-重要主题">#</a> <strong>1.9 重要主题</strong></h2>
+<h3 id="191-amdahl-定律"><a class="markdownIt-Anchor" href="#191-amdahl-定律">#</a> <strong>1.9.1 Amdahl 定律</strong></h3>
 <p>Amdahl 定律的主要观点：要加速整个系统，必须提升全系统中相当大的部分。</p>
-<h3 id="192-并发和并行"><a class="anchor" href="#192-并发和并行">#</a> <strong>1.9.2 并发和并行</strong></h3>
+<h3 id="192-并发和并行"><a class="markdownIt-Anchor" href="#192-并发和并行">#</a> <strong>1.9.2 并发和并行</strong></h3>
 <p>区分并发与并行：</p>
 <ul>
 <li>** 并发：** 一个通用的概念，指一个同时具有多个活动的系统</li>
@@ -346,7 +346,7 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <p><strong>1. 线程级并行</strong></p>
 <p>传统意义上的并发执行是通过单处理器在进程间快速切换<strong>模拟</strong>出来的。</p>
 <p>多处理器系统由一个操作系统控制多个 CPU。结构如下</p>
-<p>​    <img data-src="http://lgqimg.changzer.cn/image-20221005160155790.png" alt="image-20221005160155790" /></p>
+<p>​    <img data-src="http://lgqimg.changzer.cn/image-20221005160155790.png" alt="image-20221005160155790"></p>
 <p>L1 高速缓存被分为两个部分：一个保存最近取到的指令，一个存放数据。</p>
 <p><strong>超线程</strong>又称<strong>同时多线程</strong>，它允许一个 CPU 执行多个控制流。 CPU 有的硬件有多个备份，比如程序计数器和寄存器文件，而其他硬件只有一份，比如浮点算术运算单元。常规 CPU 需要约 <strong>20000</strong> 个时钟周期来切换线程，超线程 CPU 可以在<strong>单个周期</strong>的基础上切换线程，比如一个线程在等待数据装在到高速缓存，CPU 就可以去执行另一个线程。</p>
 <p>i7 处理器每个核执行两个线程，所以是 <strong>4 核 8 线程</strong>，8 个线程都并行执行。</p>
@@ -355,8 +355,8 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
 <p>如果比一个周期一条指令更快，就称为<strong>超标量处理器</strong>，现在一般都是超标量。</p>
 <p><strong>3. 单指令、多数据并行</strong></p>
 <p>在最低层次上，现代处理器允许一条指令产生多个可以并行执行的操作，称为单指令、多数据并行，即 SIMD 并行。</p>
-<h3 id="193-计算机系统中抽象的重要性"><a class="anchor" href="#193-计算机系统中抽象的重要性">#</a> <strong>1.9.3 计算机系统中抽象的重要性</strong></h3>
-<p>​    <img data-src="http://lgqimg.changzer.cn/image-20221005160217657.png" alt="image-20221005160217657" /></p>
+<h3 id="193-计算机系统中抽象的重要性"><a class="markdownIt-Anchor" href="#193-计算机系统中抽象的重要性">#</a> <strong>1.9.3 计算机系统中抽象的重要性</strong></h3>
+<p>​    <img data-src="http://lgqimg.changzer.cn/image-20221005160217657.png" alt="image-20221005160217657"></p>
 <p><strong>指令集架构</strong>是对 CPU 硬件的抽象，使用这个抽象，CPU 看起来好像一次只执行机器代码程序的一条指令，实际上底层硬件并行地执行多条指令。</p>
 <p><strong>虚拟机</strong>是对整个计算机系统的抽象，包括操作系统、处理器和程序。<strong>1.4.1 系统的硬件组成</strong></p>
 <p>主要包括<strong>总线、I/O 设备、处理器、主存储器 **** 四个部分</strong></p>
@@ -430,7 +430,7 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
     <div class="item left">
       
 
-  <a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclgrvbd6j20zk0m8qv5.jpg" title="CSAPP:第二章">
+  <a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicli3sbvtj20zk0m8x6p.jpg" title="CSAPP:第二章">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 第二章</span>
   <h3>CSAPP:第二章</h3>
@@ -440,7 +440,7 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
     <div class="item right">
       
 
-  <a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet8c1a2j20zk0m8kct.jpg" title="Lua入门学习">
+  <a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="Lua入门学习">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> Lua</span>
   <h3>Lua入门学习</h3>
@@ -583,22 +583,44 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/CSAPP/" title="分类于 CSAPP">CSAPP</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/CSAPP/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="分类于 第二章">第二章</a>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
 </div>
 
-    <span><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" title="CSAPP:第二章">CSAPP:第二章</a></span>
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" title="《计算机网络：自定向下》第一章：概述">《计算机网络：自定向下》第一章：概述</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/" title="分类于 SQL 语言">SQL 语言</a>
 </div>
 
-    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" title="《计算机网络：自定向下》第二章：应用层">《计算机网络：自定向下》第二章：应用层</a></span>
+    <span><a href="/2022/10/04/Mysql/" title="MySql">MySql</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="分类于 算法和数据结构">算法和数据结构</a>
+</div>
+
+    <span><a href="/2022/10/03/%E7%AE%97%E6%B3%95/" title="算法和数据结构">算法和数据结构</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CSAPP/" title="分类于 CSAPP">CSAPP</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/CSAPP/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="分类于 第二章">第二章</a>
+</div>
+
+    <span><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" title="CSAPP:第二章">CSAPP:第二章</a></span>
   </li>
 
       
@@ -617,10 +639,12 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/" title="分类于 Lua">Lua</a>
 </div>
 
-    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" title="《计算机网络：自定向下》第一章：概述">《计算机网络：自定向下》第一章：概述</a></span>
+    <span><a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" title="Lua入门学习">Lua入门学习</a></span>
   </li>
 
       
@@ -649,34 +673,10 @@ Maple Blog =  = 与君初相识，犹如故人归</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="分类于 算法和数据结构">算法和数据结构</a>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
 </div>
 
-    <span><a href="/2022/10/03/%E7%AE%97%E6%B3%95/" title="算法和数据结构">算法和数据结构</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/" title="分类于 SQL 语言">SQL 语言</a>
-</div>
-
-    <span><a href="/2022/10/04/Mysql/" title="MySql">MySql</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/" title="分类于 Lua">Lua</a>
-</div>
-
-    <span><a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" title="Lua入门学习">Lua入门学习</a></span>
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" title="《计算机网络：自定向下》第二章：应用层">《计算机网络：自定向下》第二章：应用层</a></span>
   </li>
 
   </ul>
