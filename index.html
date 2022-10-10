@@ -1,246 +1,373 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Maple Blog</title><meta name="author" content="Maple"><meta name="copyright" content="Maple"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
-<meta property="og:title" content="Maple Blog">
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="" href="https://maplelearc.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="" href="https://maplelearc.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="" href="https://maplelearc.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="lua,unity,C#" />
+
+
+<link rel="canonical" href="https://maplelearc.github.io/">
+
+
+<meta name="description" content="Maple的编程学习">
+<meta property="og:type" content="website">
+<meta property="og:title">
 <meta property="og:url" content="https://maplelearc.github.io/index.html">
-<meta property="og:site_name" content="Maple Blog">
+<meta property="og:site_name">
+<meta property="og:description" content="Maple的编程学习">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://maplelearc.github.io/img/avatar(1).png">
 <meta property="article:author" content="Maple">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://maplelearc.github.io/img/avatar(1).png"><link rel="shortcut icon" href="/img/thumbbig-10411.webp"><link rel="canonical" href="https://maplelearc.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: undefined,
-  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#FFFAFA","bgDark":"#1f1f1f","position":"top-left"},
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: true
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Maple Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-10-09 21:40:58'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+  <title>Maple Blog =  = 与君初相识，犹如故人归</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+            <a href="/" class="logo" rel="start"><p class="artboard">Maple Blog</p>
+              <h1 itemprop="name headline" class="title"></h1>
+            </a>
+            <p class="meta" itemprop="description">= 与君初相识，犹如故人归 =</p>
+          
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Maple Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="index wrap">
+    <h2 class="divider">文章列表</h2>
+    <div class="segments posts">
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" itemprop="url" title="Lua入门学习"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></a>
+  </div>
+  <div class="info">
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar(1).png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/iTab-m9md18.jfif')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Maple Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Maple Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" title="Lua入门学习">Lua入门学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-08T09:41:18.000Z" title="发表于 2022-10-08 17:41:18">2022-10-08</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-09T13:12:01.116Z" title="更新于 2022-10-09 21:12:01">2022-10-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">计算机语言学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/">Lua</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Lua/">Lua</a></span></div><div class="content">Lua 入门学习
-Lua 基本语法交互式编程Lua 提供了人交互式编程模式。可以在命令行中输出程序并立即查看效果Lua 交互式编程通过命令 lua -i 或 lua 来启用：
-123$ lua -i$ lua Lua 5.3.0  Copyright (C) 1994-2015 Lua.org, PUC-Rio&gt;
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-08 17:41:18">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-08T17:41:18+08:00">2022-10-08</time>
+  </span>
+</div>
 
-在命令行中，输入以下命令：
-1&gt; print(&quot;Hello world!&quot;)
+    <h3><a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" itemprop="url" title="Lua入门学习">Lua入门学习</a></h3>
+    <div class="excerpt">
+        # Lua 入门学习
 
-按下回车，得到以下结果：
-123&gt; print(&quot;Hello World！&quot;)Hello World！&gt;
+# Lua 基本语法
+# 交互式编程
+Lua 提供了人交互式编程模式。可以在命令行中输出程序并立即查看效果
+Lua 交互式编程通过命令 lua -i 或 lua 来启用：
+$ lua -i$ lua Lua 5.3.0 Copyright (C) 1994-2015 Lua.org, PUC-Rio&gt;在命令行中，输入以下命令：
+&gt; print(&quot;Hello world!&quot;)按下回车，得到以下结果：
+&gt; print(&quot;Hello World！&quot;)Hello World！&gt;# 脚本编程
+我们可以将 Lua...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/" itemprop="url" title="Lua"><i class="ic i-flag"></i>Lua</a>
+      </span>
+    </div>
+    <a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" itemprop="url" title="Lua入门学习" class="btn">more...</a>
+  </div>
+</article>
 
-脚本编程我们可以将 Lua 程序代码保持到一个以 lua 结尾的文件，并执行，该模式称为脚本式编程，如我们将如下代码存储在名为 hello.lua 的脚本文件中：
-1print(&quot;Hello World！&quot;)
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/" itemprop="url" title="CSAPP:第一章"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-05 15:50:37">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-05T15:50:37+08:00">2022-10-05</time>
+  </span>
+</div>
 
-使用 lua 名执行以上脚本，输出结果为：
-12$ lua test.luaHello World！
-
-我们也可以将代码修改为如下形式来执行脚本（在开头添加：#!&#x2F;usr&#x2F;loc ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/" title="CSAPP:第一章">CSAPP:第一章</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-05T07:50:37.000Z" title="发表于 2022-10-05 15:50:37">2022-10-05</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-08T13:23:37.265Z" title="更新于 2022-10-08 21:23:37">2022-10-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CSAPP/">CSAPP</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/CSAPP/%E7%AC%AC%E4%B8%80%E7%AB%A0/">第一章</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/">深入理解计算机系统</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/CSAPP/">CSAPP</a></span></div><div class="content">《CSAPP：第一章》1.1 信息就是位+上下文程序的生命周期从源程序(源文件)开始。源程序实际上就是由0和1组成的位序列。
- 一般ASCII标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。
-源文件中每个文本行都是以看不见的 ‘\n’ 结束的。
+    <h3><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/" itemprop="url" title="CSAPP:第一章">CSAPP:第一章</a></h3>
+    <div class="excerpt">
+        # 《CSAPP：第一章》
+# 1.1 信息就是位 + 上下文
+程序的生命周期从源程序 (源文件) 开始。源程序实际上就是由 0 和 1 组成的位序列。
+一般 ASCII 标准来表示文本字符，实际上是用一个字节的整数值来表示一种字符。
+源文件中每个文本行都是以看不见的 &#39;\n&#39; 结束的。
 只由 ASCII 字符组成的文件成为文本文件，其他都是二进制文件。.cpp 文件就是文本文件。
 系统中的所有信息都是由一串比特（bit：位）表示的，区分不同数据对象的唯一方法就是根据上下文。
 C 语言的特点
 
 C 语言小而简单
 C 语言是为了实现 unix 而设计的
-C 语言与 unix 关系密切
+C 语言与 unix...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/CSAPP/%E7%AC%AC%E4%B8%80%E7%AB%A0/" itemprop="url" title="第一章"><i class="ic i-flag"></i>第一章</a>
+      </span>
+    </div>
+    <a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/" itemprop="url" title="CSAPP:第一章" class="btn">more...</a>
+  </div>
+</article>
 
-C 语言是系统级编程的首选，也非常适用于应用级程序。
-1.2 程序被其他程序翻译成不同的格式从源程序到目标程序要经历四个步骤：
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" itemprop="url" title="CSAPP:第二章"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-05 15:50:37">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-05T15:50:37+08:00">2022-10-05</time>
+  </span>
+</div>
 
-源程序被预处理器处理得到修改了的源程序（文本文件，hello.i）
-再由编译器处理得到汇编程序（文本文件,hello.s）
-汇编程序由汇编器处理得到可重定位目标程序（二进制文件,hello.o）
-最后由链接器链接得到可执行目标程序（二进制文件,hello）
-
-预处理阶段
-预处理器根据 # 开头的命令修改原始 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" title="CSAPP:第二章">CSAPP:第二章</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-05T07:50:37.000Z" title="发表于 2022-10-05 15:50:37">2022-10-05</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-08T13:23:56.778Z" title="更新于 2022-10-08 21:23:56">2022-10-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/CSAPP/">CSAPP</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/CSAPP/%E7%AC%AC%E4%BA%8C%E7%AB%A0/">第二章</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/">深入理解计算机系统</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/CSAPP/">CSAPP</a></span></div><div class="content">CSAPP:第二章2、信息的表示和处理计算机使用二值信号存储和表示信息
+    <h3><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" itemprop="url" title="CSAPP:第二章">CSAPP:第二章</a></h3>
+    <div class="excerpt">
+        # CSAPP: 第二章
+# 2、信息的表示和处理
+计算机使用二值信号存储和表示信息
 当计算结果太大以至于不能表示时，就会产生溢出。
 浮点数表示的精度有限，因而浮点运算是不可结合的。
 整数的表示范围小但是精确，浮点数表示的范围大但是是近似的。
 许多安全漏洞是由算术运算的微妙细节导致的。
-2.1 信息存储计算机一般使用字节作为最小的可寻址的内存单位。
+# 2.1 信息存储
+计算机一般使用字节作为最小的可寻址的内存单位。
 在机器级程序中不包含关于数据类型的信息。
 指针的值是某个存储块的第一个字节的虚拟地址。
 每个程序对象可以视为一个字节块。
-2.1.1 十六进制表示法十六进制以 0x 开头。
+# 2.1.1 十六进制表示法
+十六进制以 0x 开头。
 A：10；C:12；F：15
-2.1.2 字数据大小每个计算机有对应的字长，虚拟地址用一个字来编码，所以字长决定了虚拟地址空间的大小。64 位机器的指针类型长度为 8 字节
-32位机器的虚拟地址空间为 4GB，64 位字长的虚拟地址空间位 16 EB。
-int32_t 和 int64_t 类型分别为 4 字节和 8 字节，不受机器影响。使用确定大小的整数类型很有用。
-对 32 位和 64 位机器而言，char、short、int、long long 长度都是一样的，为  1，2，4， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/04/Mysql/" title="MySql">MySql</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-04T09:55:38.762Z" title="发表于 2022-10-04 17:55:38">2022-10-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-08T13:21:48.904Z" title="更新于 2022-10-08 21:21:48">2022-10-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">计算机语言学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/">SQL语言</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/MySQL/">MySQL</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></span></div><div class="content">Mysql1、Sql语句(1) DDL——数据定义语言，用来定义数据库对象(数据库、表、字段)
+# 2.1.2...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/CSAPP/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" itemprop="url" title="第二章"><i class="ic i-flag"></i>第二章</a>
+      </span>
+    </div>
+    <a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" itemprop="url" title="CSAPP:第二章" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/04/Mysql/" itemprop="url" title="MySql"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giclh5u05ej20zk0m87df.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-04 17:55:38">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-04T17:55:38+08:00">2022-10-04</time>
+  </span>
+</div>
+
+    <h3><a href="/2022/10/04/Mysql/" itemprop="url" title="MySql">MySql</a></h3>
+    <div class="excerpt">
+        # Mysql
+# 1、Sql 语句
+# (1) DDL—— 数据定义语言，用来定义数据库对象 (数据库、表、字段)
 
 查询所有数据库
 
-1&gt;show databases；
-
+show databases；
 
 查询当前数据库
 
-1&gt;select database();
-
+select database();
 
 创建数据库
 
-12&gt;creat database [if not exists] 数据库名 [default charset 字符集] [collate 排序规则];&gt;--if not exists 表示若数据库存在，则不创建
-
+creat database [if not exists] 数据库名 [default charset 字符集] [collate 排序规则];
+--if not exists 表示若数据库存在，则不创建
 
 删除数据库
 
-12&gt;drop database[if exists]数据库名；&gt;--if exists 表示若数据库不存在，则不删除
+drop database[if exists]数据库名；
+--if exists...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/" itemprop="url" title="SQL 语言"><i class="ic i-flag"></i>SQL 语言</a>
+      </span>
+    </div>
+    <a href="/2022/10/04/Mysql/" itemprop="url" title="MySql" class="btn">more...</a>
+  </div>
+</article>
 
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/03/%E7%AE%97%E6%B3%95/" itemprop="url" title="算法和数据结构"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1gipeun65urj20zk0m81ii.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-03 19:09:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-03T19:09:00+08:00">2022-10-03</time>
+  </span>
+</div>
 
-使用数据库
+    <h3><a href="/2022/10/03/%E7%AE%97%E6%B3%95/" itemprop="url" title="算法和数据结构">算法和数据结构</a></h3>
+    <div class="excerpt">
+        # 算法
+# 一、排序（升序）
 
-1&gt;use 数据库名；
-
-
-查询当前数据库所有表
-
-1&gt;show tables；
-
-
-查询表结构
-
-1&gt;desc 表名；
-
-
-查询指定表的建表语句
-
-1&gt;show create table 表名；
-
-
-表创建
-
-1234567&gt;create table 表名(&gt;字段1 字段1类型[COMMENT 字段1注释],&gt;字段 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/03/%E7%AE%97%E6%B3%95/" title="算法和数据结构">算法和数据结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-03T11:09:00.399Z" title="发表于 2022-10-03 19:09:00">2022-10-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-04T09:48:11.185Z" title="更新于 2022-10-04 17:48:11">2022-10-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法和数据结构</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content">算法一、排序（升序）
 选择排序
-
 
 寻找数组中最小的元素，将起与数组的第一个元素交换位置。再次，在剩下的元素中找到最小的元素，将它与数组的第二个元素交换位置。如此，知道整个数组排完序。
 
-对于长度为 N 的数组，选择排序需要打约$N^2&#x2F;2$次比较和 N 次交换
+对于长度为 N 的数组，选择排序需要打约N2/2N^2/2N2/2 次比较和 N 次交换
 
 代码
-12345678910111213141516171819202122template &lt;typename T&gt;void selection_sort(T *array)&#123;    if(array.size()&lt;=1)        return;    else    &#123;          for(int i=0;i&lt;array.size();i++)      &#123;        int min=i;        for(int j=i+1;j&lt;array.size();j++)        &#123;            if(array[min]&gt;=array[j])            &#123;               ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" title="《计算机网络：自定向下》第一章：概述">《计算机网络：自定向下》第一章：概述</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-03T10:32:49.693Z" title="发表于 2022-10-03 18:32:49">2022-10-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-03T11:34:45.048Z" title="更新于 2022-10-03 19:34:45">2022-10-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">第一章：概述1. 介绍
+template &amp;lt;typename T&amp;gt;
+void selection_sort(T *array)
+&amp;#123;
+if(array.size()&amp;lt;=1)
+return;
+else
+&amp;#123;
+for(int...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" title="算法和数据结构"><i class="ic i-flag"></i>算法和数据结构</a>
+      </span>
+    </div>
+    <a href="/2022/10/03/%E7%AE%97%E6%B3%95/" itemprop="url" title="算法和数据结构" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" itemprop="url" title="《计算机网络：自定向下》第一章：概述"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-03 18:32:49">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-03T18:32:49+08:00">2022-10-03</time>
+  </span>
+</div>
+
+    <h3><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" itemprop="url" title="《计算机网络：自定向下》第一章：概述">《计算机网络：自定向下》第一章：概述</a></h3>
+    <div class="excerpt">
+        # 第一章：概述
+# 1. 介绍
+
 TCP：传输控制协议。提供面向连接的服务。基于 TCP 的传输可靠性高，能够传输准确、完整的信息，但是信息的实时性有失准确。
 
 UDP：用户数据报协议。提供无连接的服务。基于 UDP 的传输能够传输实时信息，信息不会产生延迟，但是信息的可靠性不高。
@@ -249,232 +376,460 @@ UDP：用户数据报协议。提供无连接的服务。基于 UDP 的传输能
 
 ISP：网络服务提供商
 
-套接字接口(Socket interface):因特网发送程序必须遵守的规则集合。规定了两个不同端系统的两个程序在因特网基础设施交互数据的方式。
+套接字接口 (Socket interface):...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" title="计算机网络"><i class="ic i-flag"></i>计算机网络</a>
+      </span>
+    </div>
+    <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" itemprop="url" title="《计算机网络：自定向下》第一章：概述" class="btn">more...</a>
+  </div>
+</article>
 
-互联网子系统：网络核心、网络边缘、网络的接入
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" itemprop="url" title="《计算机网络：自定向下》第三章：传输层"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-03 18:32:49">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-03T18:32:49+08:00">2022-10-03</time>
+  </span>
+</div>
 
-网络边缘由接入网连接到网络核心，从而能够完成不同端系统之间的信息交互，网络核心起到数据交换的作用。
-
-
-2. 网络边缘
-端系统：通常把与因特网相连的计算机和其他设备被称为端系统，处于因特网边缘，被称为端系统，也称为主机，主机容纳(运行)应用程序。主机又被分为：客户端和服务器。
-
-网络边缘作用：运行应用程序。
-
-客户段&#x2F;服务器（C&#x2F;S）模式：客户向服务器请求、接收服务。资源全部储存在服务 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" title="《计算机网络：自定向下》第三章：传输层">《计算机网络：自定向下》第三章：传输层</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-03T10:32:49.649Z" title="发表于 2022-10-03 18:32:49">2022-10-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-03T11:30:02.696Z" title="更新于 2022-10-03 19:30:02">2022-10-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">第三章：传输层1. 概述和传输层服务(1). 传输协议和服务
+    <h3><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" itemprop="url" title="《计算机网络：自定向下》第三章：传输层">《计算机网络：自定向下》第三章：传输层</a></h3>
+    <div class="excerpt">
+        # 第三章：传输层
+# 1. 概述和传输层服务
+# (1). 传输协议和服务
 
 为运行在不同和主机上的应用进程提供逻辑通信
 传输协议运行在端系统
+
 发送方：将应用层的报文分成报文段，然后传递给网络层
 接收方：将报文段重组成报文，然后传递给应用层
 
-
 有多个传输层协议可供应用选择
+
 Internet：TCP 和 UDP
 
-
-
-
-(2). 传输层 VS 网络层
+# (2). 传输层 VS 网络层
 
 网络层服务：主机之间的逻辑通信
 传输层服务：进程之间的逻辑通信
+
 依赖于网络层的服务
+
 延时、带宽
 
-
 并对网络层的服务进行增强
+
 数据丢失、顺序混乱、加密
 
+# (3). Internet...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" title="计算机网络"><i class="ic i-flag"></i>计算机网络</a>
+      </span>
+    </div>
+    <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" itemprop="url" title="《计算机网络：自定向下》第三章：传输层" class="btn">more...</a>
+  </div>
+</article>
 
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" itemprop="url" title="《计算机网络：自定向下》第二章：应用层"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giph4wqtg4j20zk0m8x6p.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-03 18:32:49">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-03T18:32:49+08:00">2022-10-03</time>
+  </span>
+</div>
 
-
-
-
-
-(3). Internet 传输协议
-
-可靠的、保序的传输：TCP
-
-多路复用、解复用
-拥塞控制
-流量控制
-建立连接
-
-
-不可靠、不保序的传输：UDP
-
-多路复用、解复用
-
-没有为尽力而为的 IP 服务添加更多的其他额外服务
-
-
-
-都不提供的服务：
-
-延时保证
-带宽保证
-
-
-
-
-2. 多路复用&#x2F;解复用
-
-在发送方主机多路复用
-
-从多个套接字接收来自多个进程的报文，根据套接字对应的 IP 地址和端口号等信息对报文段用头部加以封装(该头部信息用于以后的解复用)
-
-
-在接收方主机解复 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" title="《计算机网络：自定向下》第二章：应用层">《计算机网络：自定向下》第二章：应用层</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-03T10:32:49.569Z" title="发表于 2022-10-03 18:32:49">2022-10-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-03T11:29:29.772Z" title="更新于 2022-10-03 19:29:29">2022-10-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">二. 第二章：应用层1. 应用层原理(1).创建一个新的网络应用
+    <h3><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" itemprop="url" title="《计算机网络：自定向下》第二章：应用层">《计算机网络：自定向下》第二章：应用层</a></h3>
+    <div class="excerpt">
+        # 二。第二章：应用层
+# 1. 应用层原理
+# (1). 创建一个新的网络应用
 
 编程：
+
 在不同的端系统上运行
 通过网络基础设施提供的服务应用进程彼此通信
 如 Web：
+
 Web 服务器软件与浏览器软件通信
 
-
-
-
 网络核心中没有应用层软件
+
 网络核心中没有应用层功能
 网络核心只有再端系统上存在，快速网络应用开发和部署
 
+# (2). 网络应用的体系加购
 
+客户 — 服务器模式 (C/S：client/server)
 
+对等模式 (P2P：Peer to Peer)
 
-(2). 网络应用的体系加购
+混合体：客户 — 服务器和对等体系结构
 
-客户—服务器模式(C&#x2F;S：client&#x2F;server)
+# (3). 进程通信
 
+# (4)....
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" title="计算机网络"><i class="ic i-flag"></i>计算机网络</a>
+      </span>
+    </div>
+    <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" itemprop="url" title="《计算机网络：自定向下》第二章：应用层" class="btn">more...</a>
+  </div>
+</article>
 
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/" itemprop="url" title="《C#图解教程》阅读记忆点"><img data-src="https://tva1.sinaimg.cn/mw690/6833939bly1giclhnx9glj20zk0m8npd.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-03 15:00:03">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-03T15:00:03+08:00">2022-10-03</time>
+  </span>
+</div>
 
-对等模式(P2P：Peer to Peer)
+    <h3><a href="/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/" itemprop="url" title="《C#图解教程》阅读记忆点">《C#图解教程》阅读记忆点</a></h3>
+    <div class="excerpt">
+        # 《C# 图解教程》阅读记忆点
+# 一、数据类型
+# 1. 栈和堆
 
-
-
-混合体：客户—服务器和对等体系结构
-
-
-
-
-
-(3).进程通信
-
-
-(4).分布式进程需要解决的问题
-
-
-
-标识进程，需要定义两种信息：
-
-主机的地址
-主机由其 IP 地址标识
-
-
-再目的主机中指定接收进程的标识符
-用目的端口号来进行标识，特定的服务端拥有特定的端口号
-
-
-
-
-
-
-TCP 之上的套接字(socket)
-
-
-
-UDP 之上的套接字(socket)
-
-
-套接字
-
-
-
-应用层协议
-
-
-
-Internet 传输层提供的服务
-
-TCP 服务
-可靠的传输服务
-流量控制：发送方不会淹没接收方
-拥塞控制：当网络出现用 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/" title="《C#图解教程》阅读记忆点">《C#图解教程》阅读记忆点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-03T07:00:03.631Z" title="发表于 2022-10-03 15:00:03">2022-10-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-08T13:22:07.156Z" title="更新于 2022-10-08 21:22:07">2022-10-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">计算机语言学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/C/">C#</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C/">C#</a></span></div><div class="content">《C#图解教程》阅读记忆点一、数据类型1. 栈和堆
 栈
 
 堆
 
+堆是一块内存区域，在堆里可以分配大块的内存用于存储某种类型的数据对象。堆中的内存能够以任意顺序存入和移除.
+CLR 的自动垃圾收集器在判断出程序的代码不在访问某项数据时，会自动清除无主的堆对象.
 
+# 2. 值类型和引用类型
 
-堆是一块内存区域,在堆里可以分配大块的内存用于存储某种类型的数据对象.堆中的内存能够以任意顺序存入和移除.
-CLR 的自动垃圾收集器在判断出程序的代码不在访问某项数据时,会自动清除无主的堆对象.
-
-2. 值类型和引用类型
-C#中数据分为值类型和引用类型。这两种类型的对象在内存中的存储方式不同
+C# 中数据分为值类型和引用类型。这两种类型的对象在内存中的存储方式不同
 值类型只需要一段单独的内存，它总是位于堆中。
 引用类型需要两段内存。第一段存储的实际数据总是存储在堆中。第二段的是一个引用，指向数据在堆中的从存放位置。
 
+# 3....
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/C/" itemprop="url" title="C#"><i class="ic i-flag"></i>C#</a>
+      </span>
+    </div>
+    <a href="/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/" itemprop="url" title="《C#图解教程》阅读记忆点" class="btn">more...</a>
+  </div>
+</article>
 
-3. 嵌套快中的局部变量
-可以有任意数量的块,并且他们既可以是顺序的也可以是嵌套的.块可以嵌套到任何级别.
-局部变量可以在嵌套块的内部声明,并且和所有的局部变量一样,他们的生存期和可见性仅局限与声明它们的块及其内嵌快.
+    </div>
 
-二、方法1. 方法的引用参数和值参数1.值参数
+  </div>
 
-在方法使用值参数,在方法被调用时，系统在栈中为形参分配空间，并将实参的值赋值给形参。
-1234567891011121314151617181920212223calss MyCalss&#123;    p ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar(1).png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Maple</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/maplelearC"><i class="fab fa-github"></i><span>GitHub</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">没有BUG的代码是不完整的！</div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            <a class="card-more-btn" href="/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
-            </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item parent"><a class="card-category-list-link" href="/categories/CSAPP/"><span class="card-category-list-name">CSAPP</span><span class="card-category-list-count">2</span><i class="fas fa-caret-left expand"></i></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CSAPP/%E7%AC%AC%E4%B8%80%E7%AB%A0/"><span class="card-category-list-name">第一章</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CSAPP/%E7%AC%AC%E4%BA%8C%E7%AB%A0/"><span class="card-category-list-name">第二章</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="card-category-list-name">算法和数据结构</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="card-category-list-name">计算机网络</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item parent"><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">计算机语言学习</span><span class="card-category-list-count">3</span><i class="fas fa-caret-left expand"></i></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/C/"><span class="card-category-list-name">C#</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/"><span class="card-category-list-name">Lua</span><span class="card-category-list-count">1</span></a></li></ul></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/C/" style="font-size: 1.1em; color: #999">C#</a> <a href="/tags/CSAPP/" style="font-size: 1.3em; color: #99a1ac">CSAPP</a> <a href="/tags/Lua/" style="font-size: 1.1em; color: #999">Lua</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.1em; color: #999">数据库</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.1em; color: #999">数据结构</a> <a href="/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" style="font-size: 1.3em; color: #99a1ac">深入理解计算机系统</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.5em; color: #99a9bf">计算机网络</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><span class="card-archive-list-count">9</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">9</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-10-09T13:40:57.982Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: 135deg,"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Maple</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    window.typed = new Typed("#subtitle", {
-      strings: ["与君初相识，犹如故人归！"],
-      startDelay: 300,
-      typeSpeed: 150,
-      loop: false,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '与君初相识，犹如故人归！'
-  }
-}
+  
 
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script><script>(() => {
-  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
-  if ($mermaidWrap.length) {
-    window.runMermaid = () => {
-      window.loadMermaid = true
-      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
 
-      Array.from($mermaidWrap).forEach((item, index) => {
-        const mermaidSrc = item.firstElementChild
-        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
-        const mermaidID = 'mermaid-' + index
-        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
-        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
-          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
-        })
-      })
-    }
 
-    const loadMermaid = () => {
-      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
-    }
+        </div>
+        <div id="sidebar">
+          
+<div class="inner">
 
-    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
-  }
-})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Maple"
+      data-src="/images/avatar(1).png">
+  <p class="name" itemprop="name">Maple</p>
+  <div class="description" itemprop="description">Maple 的编程学习</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">9</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">9</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcGxlbGVhcmM=" title="https:&#x2F;&#x2F;github.com&#x2F;maplelearc"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOm1hcGxlbGVhcmNAZ21haWwuY29t" title="mailto:maplelearc@gmail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="分类于 算法和数据结构">算法和数据结构</a>
+</div>
+
+    <span><a href="/2022/10/03/%E7%AE%97%E6%B3%95/" title="算法和数据结构">算法和数据结构</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CSAPP/" title="分类于 CSAPP">CSAPP</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/CSAPP/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="分类于 第二章">第二章</a>
+</div>
+
+    <span><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" title="CSAPP:第二章">CSAPP:第二章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+</div>
+
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" title="《计算机网络：自定向下》第一章：概述">《计算机网络：自定向下》第一章：概述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/" title="分类于 SQL 语言">SQL 语言</a>
+</div>
+
+    <span><a href="/2022/10/04/Mysql/" title="MySql">MySql</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/" title="分类于 Lua">Lua</a>
+</div>
+
+    <span><a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" title="Lua入门学习">Lua入门学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+</div>
+
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" title="《计算机网络：自定向下》第三章：传输层">《计算机网络：自定向下》第三章：传输层</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CSAPP/" title="分类于 CSAPP">CSAPP</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/CSAPP/%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="分类于 第一章">第一章</a>
+</div>
+
+    <span><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/" title="CSAPP:第一章">CSAPP:第一章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/C/" title="分类于 C#">C#</a>
+</div>
+
+    <span><a href="/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/" title="《C#图解教程》阅读记忆点">《C#图解教程》阅读记忆点</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+</div>
+
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" title="《计算机网络：自定向下》第二章：应用层">《计算机网络：自定向下》第二章：应用层</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Maple @ Maple Blog</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

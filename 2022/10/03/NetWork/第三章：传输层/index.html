@@ -1,181 +1,276 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>《计算机网络：自定向下》第三章：传输层 | Maple Blog</title><meta name="keywords" content="计算机网络"><meta name="author" content="Maple"><meta name="copyright" content="Maple"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第三章：传输层1. 概述和传输层服务(1). 传输协议和服务  为运行在不同和主机上的应用进程提供逻辑通信 传输协议运行在端系统 发送方：将应用层的报文分成报文段，然后传递给网络层 接收方：将报文段重组成报文，然后传递给应用层   有多个传输层协议可供应用选择 Internet：TCP 和 UDP     (2). 传输层 VS 网络层  网络层服务：主机之间的逻辑通信 传输层服务：进程之间的逻辑">
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="" href="https://maplelearc.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="" href="https://maplelearc.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="" href="https://maplelearc.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="计算机网络" />
+
+
+<link rel="canonical" href="https://maplelearc.github.io/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/">
+
+
+<meta name="description" content="# 第三章：传输层 # 1. 概述和传输层服务 # (1). 传输协议和服务   为运行在不同和主机上的应用进程提供逻辑通信 传输协议运行在端系统  发送方：将应用层的报文分成报文段，然后传递给网络层 接收方：将报文段重组成报文，然后传递给应用层   有多个传输层协议可供应用选择  Internet：TCP 和 UDP     # (2). 传输层 VS 网络层   网络层服务：主机之间的逻辑通信">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《计算机网络：自定向下》第三章：传输层">
 <meta property="og:url" content="https://maplelearc.github.io/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/index.html">
-<meta property="og:site_name" content="Maple Blog">
-<meta property="og:description" content="第三章：传输层1. 概述和传输层服务(1). 传输协议和服务  为运行在不同和主机上的应用进程提供逻辑通信 传输协议运行在端系统 发送方：将应用层的报文分成报文段，然后传递给网络层 接收方：将报文段重组成报文，然后传递给应用层   有多个传输层协议可供应用选择 Internet：TCP 和 UDP     (2). 传输层 VS 网络层  网络层服务：主机之间的逻辑通信 传输层服务：进程之间的逻辑">
+<meta property="og:site_name">
+<meta property="og:description" content="# 第三章：传输层 # 1. 概述和传输层服务 # (1). 传输协议和服务   为运行在不同和主机上的应用进程提供逻辑通信 传输协议运行在端系统  发送方：将应用层的报文分成报文段，然后传递给网络层 接收方：将报文段重组成报文，然后传递给应用层   有多个传输层协议可供应用选择  Internet：TCP 和 UDP     # (2). 传输层 VS 网络层   网络层服务：主机之间的逻辑通信">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://maplelearc.github.io/img/preview2.jpg">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220418221316700.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419141823311.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419143001305.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419143333624.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419143847516.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419144458370.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419145440402.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419145959385.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419150123327.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419200802380.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419201147064.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419201737116.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419203025590.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419204200758.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419205119533.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419205349368.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419210028291.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419210126707.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419210300325.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419210609748.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419211136539.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419211729788.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419212606597.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419212646137.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419212806202.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419213042447.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419213559365.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419213920016.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419214050639.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220419214152849.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423155619410.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423155829103.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423161536259.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423162303614.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423162953639.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423163025528.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423164848094.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423165414206.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220423165709674.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220426135711627.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220426135903078.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220426140218407.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220426142126406.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429135752212.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429135827382.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429140524096.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429142719285.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429151155134.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429153002979.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429153216660.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429153325916.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429153512487.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429153530821.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429154210009.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429154259596.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429154435255.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429154752232.png">
+<meta property="og:image" content="http://lgqimg.changzer.cn/image-20220429154816391.png">
+<meta property="og:image" content="c:%5CUsers%5C24191%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220429155146589.png">
 <meta property="article:published_time" content="2022-10-03T10:32:49.649Z">
 <meta property="article:modified_time" content="2022-10-03T11:30:02.696Z">
 <meta property="article:author" content="Maple">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://maplelearc.github.io/img/preview2.jpg"><link rel="shortcut icon" href="/img/thumbbig-10411.webp"><link rel="canonical" href="https://maplelearc.github.io/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: undefined,
-  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#FFFAFA","bgDark":"#1f1f1f","position":"top-left"},
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: true
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '《计算机网络：自定向下》第三章：传输层',
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: true,
-  postUpdate: '2022-10-03 19:30:02'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<meta name="twitter:image" content="http://lgqimg.changzer.cn/image-20220418221316700.png">
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+  <title>
+《计算机网络：自定向下》第三章：传输层 - 计算机网络 |
+Maple Blog =  = 与君初相识，犹如故人归</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">《计算机网络：自定向下》第三章：传输层
+  </h1>
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+<div class="meta">
+  <span class="item" title="创建时间：2022-10-03 18:32:49">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-10-03T18:32:49+08:00">2022-10-03</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Maple Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="item" rel="index" title="分类于 计算机网络"><span itemprop="name">计算机网络</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://maplelearc.github.io/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar(1).png">
+    <meta itemprop="name" content="Maple">
+    <meta itemprop="description" content="与君初相识，犹如故人归, Maple 的编程学习">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar(1).png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/preview2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Maple Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《计算机网络：自定向下》第三章：传输层</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-03T10:32:49.649Z" title="发表于 2022-10-03 18:32:49">2022-10-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-03T11:30:02.696Z" title="更新于 2022-10-03 19:30:02">2022-10-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《计算机网络：自定向下》第三章：传输层"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第三章：传输层"><a href="#第三章：传输层" class="headerlink" title="第三章：传输层"></a>第三章：传输层</h1><h3 id="1-概述和传输层服务"><a href="#1-概述和传输层服务" class="headerlink" title="1. 概述和传输层服务"></a>1. 概述和传输层服务</h3><h4 id="1-传输协议和服务"><a href="#1-传输协议和服务" class="headerlink" title="(1). 传输协议和服务"></a>(1). 传输协议和服务</h4><blockquote>
+
+    <h1 id="第三章传输层"><a class="anchor" href="#第三章传输层">#</a> 第三章：传输层</h1>
+<h3 id="1-概述和传输层服务"><a class="anchor" href="#1-概述和传输层服务">#</a> 1. 概述和传输层服务</h3>
+<h4 id="1-传输协议和服务"><a class="anchor" href="#1-传输协议和服务">#</a> (1). 传输协议和服务</h4>
+<blockquote>
 <ul>
 <li>为运行在不同和主机上的应用进程提供逻辑通信</li>
-<li>传输协议运行在端系统<ul>
+<li>传输协议运行在端系统
+<ul>
 <li>发送方：将应用层的报文分成报文段，然后传递给网络层</li>
 <li>接收方：将报文段重组成报文，然后传递给应用层</li>
 </ul>
 </li>
-<li>有多个传输层协议可供应用选择<ul>
+<li>有多个传输层协议可供应用选择
+<ul>
 <li>Internet：TCP 和 UDP</li>
 </ul>
 </li>
 </ul>
 </blockquote>
-<h4 id="2-传输层-VS-网络层"><a href="#2-传输层-VS-网络层" class="headerlink" title="(2). 传输层 VS 网络层"></a>(2). 传输层 VS 网络层</h4><blockquote>
+<h4 id="2-传输层-vs-网络层"><a class="anchor" href="#2-传输层-vs-网络层">#</a> (2). 传输层 VS 网络层</h4>
+<blockquote>
 <ul>
 <li>网络层服务：主机之间的逻辑通信</li>
-<li>传输层服务：进程之间的逻辑通信<ul>
-<li>依赖于网络层的服务<ul>
+<li>传输层服务：进程之间的逻辑通信
+<ul>
+<li>依赖于网络层的服务
+<ul>
 <li>延时、带宽</li>
 </ul>
 </li>
-<li>并对网络层的服务进行增强<ul>
+<li>并对网络层的服务进行增强
+<ul>
 <li>数据丢失、顺序混乱、加密</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><img src="http://lgqimg.changzer.cn/image-20220418221316700.png" alt="image-20220418221316700"></li>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220418221316700.png" alt="image-20220418221316700" /></li>
 </ul>
 </blockquote>
-<h4 id="3-Internet-传输协议"><a href="#3-Internet-传输协议" class="headerlink" title="(3). Internet 传输协议"></a>(3). Internet 传输协议</h4><blockquote>
+<h4 id="3-internet-传输协议"><a class="anchor" href="#3-internet-传输协议">#</a> (3). Internet 传输协议</h4>
+<blockquote>
 <ul>
-<li><p>可靠的、保序的传输：TCP</p>
+<li>
+<p>可靠的、保序的传输：TCP</p>
 <ul>
 <li>多路复用、解复用</li>
 <li>拥塞控制</li>
@@ -183,15 +278,19 @@
 <li>建立连接</li>
 </ul>
 </li>
-<li><p>不可靠、不保序的传输：UDP</p>
+<li>
+<p>不可靠、不保序的传输：UDP</p>
 <ul>
-<li><p>多路复用、解复用</p>
+<li>
+<p>多路复用、解复用</p>
 </li>
-<li><p>没有为尽力而为的 IP 服务添加更多的其他额外服务</p>
+<li>
+<p>没有为尽力而为的 IP 服务添加更多的其他额外服务</p>
 </li>
 </ul>
 </li>
-<li><p>都不提供的服务：</p>
+<li>
+<p>都不提供的服务：</p>
 <ul>
 <li>延时保证</li>
 <li>带宽保证</li>
@@ -199,203 +298,265 @@
 </li>
 </ul>
 </blockquote>
-<h3 id="2-多路复用-x2F-解复用"><a href="#2-多路复用-x2F-解复用" class="headerlink" title="2. 多路复用&#x2F;解复用"></a>2. 多路复用&#x2F;解复用</h3><blockquote>
-<ul>
-<li><p>在发送方主机多路复用</p>
+<h3 id="2-多路复用解复用"><a class="anchor" href="#2-多路复用解复用">#</a> 2. 多路复用 / 解复用</h3>
 <blockquote>
-<p>从多个套接字接收来自多个进程的报文，根据套接字对应的 IP 地址和端口号等信息对报文段用头部加以封装(该头部信息用于以后的解复用)</p>
-</blockquote>
-</li>
-<li><p>在接收方主机解复用</p>
+<ul>
+<li>
+<p>在发送方主机多路复用</p>
 <blockquote>
-<p>根据报文段的头部信息中的 IP 地址和端口号将收到的报文段发给正确的套接字(和对应的应用进程)</p>
+<p>从多个套接字接收来自多个进程的报文，根据套接字对应的 IP 地址和端口号等信息对报文段用头部加以封装 (该头部信息用于以后的解复用)</p>
 </blockquote>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419141823311.png" alt="image-20220419141823311"></p>
-</li>
-</ul>
+<li>
+<p>在接收方主机解复用</p>
+<blockquote>
+<p>根据报文段的头部信息中的 IP 地址和端口号将收到的报文段发给正确的套接字 (和对应的应用进程)</p>
 </blockquote>
-<h3 id="3-无连接传输-UDP"><a href="#3-无连接传输-UDP" class="headerlink" title="3. 无连接传输 UDP"></a>3. 无连接传输 UDP</h3><blockquote>
-<ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419143001305.png" alt="image-20220419143001305"></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419143333624.png" alt="image-20220419143333624"></p>
-</li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419143847516.png" alt="image-20220419143847516"></p>
-</li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419144458370.png" alt="image-20220419144458370"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419141823311.png" alt="image-20220419141823311" /></p>
 </li>
 </ul>
 </blockquote>
-<h3 id="4-可靠数据传输-RDT-的原理"><a href="#4-可靠数据传输-RDT-的原理" class="headerlink" title="4. 可靠数据传输(RDT)的原理"></a>4. 可靠数据传输(RDT)的原理</h3><h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="(1)问题描述"></a>(1)问题描述</h4><blockquote>
+<h3 id="3-无连接传输-udp"><a class="anchor" href="#3-无连接传输-udp">#</a> 3. 无连接传输 UDP</h3>
+<blockquote>
 <ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220419145440402.png" alt="image-20220419145440402"></li>
-</ul>
-</blockquote>
-<h4 id="2-RDT"><a href="#2-RDT" class="headerlink" title="(2)RDT"></a>(2)RDT</h4><blockquote>
-<ul>
-<li><p>RDT 1.0** &gt; <img src="http://lgqimg.changzer.cn/image-20220419145959385.png" alt="image-20220419145959385"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419143001305.png" alt="image-20220419143001305" /></p>
 </li>
-<li><p><strong>RDT 2.0</strong> &gt; <img src="http://lgqimg.changzer.cn/image-20220419150123327.png" alt="image-20220419150123327"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419143333624.png" alt="image-20220419143333624" /></p>
 </li>
-<li><p><strong>RDT 2.1</strong> &gt; <img src="http://lgqimg.changzer.cn/image-20220419200802380.png" alt="image-20220419200802380"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220419201147064.png" alt="image-20220419201147064"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419143847516.png" alt="image-20220419143847516" /></p>
 </li>
-<li><p><strong>RDT 2.2</strong> &gt; <img src="http://lgqimg.changzer.cn/image-20220419201737116.png" alt="image-20220419201737116"></p>
-</li>
-<li><p><strong>RDT 3.0</strong> &gt; <img src="http://lgqimg.changzer.cn/image-20220419203025590.png" alt="image-20220419203025590"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220419204200758.png" alt="image-20220419204200758"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419144458370.png" alt="image-20220419144458370" /></p>
 </li>
 </ul>
 </blockquote>
-<h4 id="3-流水协议"><a href="#3-流水协议" class="headerlink" title="(3). 流水协议"></a>(3). 流水协议</h4><blockquote>
+<h3 id="4-可靠数据传输rdt的原理"><a class="anchor" href="#4-可靠数据传输rdt的原理">#</a> 4. 可靠数据传输 (RDT) 的原理</h3>
+<h4 id="1问题描述"><a class="anchor" href="#1问题描述">#</a> (1) 问题描述</h4>
+<blockquote>
 <ul>
-<li><p>流水线协议<br><img src="http://lgqimg.changzer.cn/image-20220419205119533.png" alt="image-20220419205119533"></p>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220419145440402.png" alt="image-20220419145440402" /></li>
+</ul>
+</blockquote>
+<h4 id="2rdt"><a class="anchor" href="#2rdt">#</a> (2)RDT</h4>
+<blockquote>
+<ul>
+<li>
+<p>RDT 1.0** &gt; <img data-src="http://lgqimg.changzer.cn/image-20220419145959385.png" alt="image-20220419145959385" /></p>
 </li>
-<li><p>滑动窗口协议<br><img src="http://lgqimg.changzer.cn/image-20220419205349368.png" alt="image-20220419205349368"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220419210028291.png" alt="image-20220419210028291"></p>
+<li>
+<p><strong>RDT 2.0</strong> &gt; <img data-src="http://lgqimg.changzer.cn/image-20220419150123327.png" alt="image-20220419150123327" /></p>
+</li>
+<li>
+<p><strong>RDT 2.1</strong> &gt; <img data-src="http://lgqimg.changzer.cn/image-20220419200802380.png" alt="image-20220419200802380" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419201147064.png" alt="image-20220419201147064" /></p>
+</li>
+<li>
+<p><strong>RDT 2.2</strong> &gt; <img data-src="http://lgqimg.changzer.cn/image-20220419201737116.png" alt="image-20220419201737116" /></p>
+</li>
+<li>
+<p><strong>RDT 3.0</strong> &gt; <img data-src="http://lgqimg.changzer.cn/image-20220419203025590.png" alt="image-20220419203025590" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419204200758.png" alt="image-20220419204200758" /></p>
+</li>
+</ul>
+</blockquote>
+<h4 id="3-流水协议"><a class="anchor" href="#3-流水协议">#</a> (3). 流水协议</h4>
+<blockquote>
 <ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220419210126707.png" alt="image-20220419210126707"></li>
+<li>
+<p>流水线协议<br />
+<img data-src="http://lgqimg.changzer.cn/image-20220419205119533.png" alt="image-20220419205119533" /></p>
+</li>
+<li>
+<p>滑动窗口协议<br />
+<img data-src="http://lgqimg.changzer.cn/image-20220419205349368.png" alt="image-20220419205349368" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419210028291.png" alt="image-20220419210028291" /></p>
+<ul>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220419210126707.png" alt="image-20220419210126707" /></li>
 </ul>
 </li>
 </ul>
-<p>​ <img src="http://lgqimg.changzer.cn/image-20220419210300325.png" alt="image-20220419210300325"></p>
+<p>​ <img data-src="http://lgqimg.changzer.cn/image-20220419210300325.png" alt="image-20220419210300325" /></p>
 <ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419210609748.png" alt="image-20220419210609748"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220419211136539.png" alt="image-20220419211136539"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419210609748.png" alt="image-20220419210609748" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419211136539.png" alt="image-20220419211136539" /></p>
 </li>
-<li><ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220419211729788.png" alt="image-20220419211729788"></li>
+<li>
+<ul>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220419211729788.png" alt="image-20220419211729788" /></li>
 </ul>
 </li>
 </ul>
-<p><img src="http://lgqimg.changzer.cn/image-20220419212606597.png" alt="image-20220419212606597"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220419212646137.png" alt="image-20220419212646137"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220419212806202.png" alt="image-20220419212806202"></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419212606597.png" alt="image-20220419212606597" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419212646137.png" alt="image-20220419212646137" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419212806202.png" alt="image-20220419212806202" /></p>
 <ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419213042447.png" alt="image-20220419213042447"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419213042447.png" alt="image-20220419213042447" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419213559365.png" alt="image-20220419213559365"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419213559365.png" alt="image-20220419213559365" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220419213920016.png" alt="image-20220419213920016"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419213920016.png" alt="image-20220419213920016" /></p>
 </li>
 <li></li>
 </ul>
-<p><img src="http://lgqimg.changzer.cn/image-20220419214050639.png" alt="image-20220419214050639"></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220419214050639.png" alt="image-20220419214050639" /></p>
 <ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220419214152849.png" alt="image-20220419214152849"></li>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220419214152849.png" alt="image-20220419214152849" /></li>
 </ul>
 </blockquote>
-<h3 id="5、面向连接的传输：TCP"><a href="#5、面向连接的传输：TCP" class="headerlink" title="5、面向连接的传输：TCP"></a>5、面向连接的传输：TCP</h3><h4 id="1-TCP-概述"><a href="#1-TCP-概述" class="headerlink" title="(1). TCP 概述"></a>(1). TCP 概述</h4><blockquote>
+<h3 id="5-面向连接的传输tcp"><a class="anchor" href="#5-面向连接的传输tcp">#</a> 5、面向连接的传输：TCP</h3>
+<h4 id="1-tcp-概述"><a class="anchor" href="#1-tcp-概述">#</a> (1). TCP 概述</h4>
+<blockquote>
 <ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220423155619410.png" alt="image-20220423155619410"></li>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220423155619410.png" alt="image-20220423155619410" /></li>
 </ul>
 </blockquote>
-<h4 id="2-TCP-报文结构"><a href="#2-TCP-报文结构" class="headerlink" title="(2). TCP 报文结构"></a>(2). TCP 报文结构</h4><blockquote>
+<h4 id="2-tcp-报文结构"><a class="anchor" href="#2-tcp-报文结构">#</a> (2). TCP 报文结构</h4>
+<blockquote>
 <ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220423155829103.png" alt="image-20220423155829103"><ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220423161536259.png" alt="image-20220423161536259"></li>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220423155829103.png" alt="image-20220423155829103" />
+<ul>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220423161536259.png" alt="image-20220423161536259" /></li>
 </ul>
 </li>
 </ul>
 </blockquote>
-<h4 id="3-往返时间的估计与超时"><a href="#3-往返时间的估计与超时" class="headerlink" title="(3). 往返时间的估计与超时"></a>(3). 往返时间的估计与超时</h4><blockquote>
+<h4 id="3-往返时间的估计与超时"><a class="anchor" href="#3-往返时间的估计与超时">#</a> (3). 往返时间的估计与超时</h4>
+<blockquote>
 <ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220423162303614.png" alt="image-20220423162303614"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220423162303614.png" alt="image-20220423162303614" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220423162953639.png" alt="image-20220423162953639"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220423163025528.png" alt="image-20220423163025528"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220423162953639.png" alt="image-20220423162953639" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220423163025528.png" alt="image-20220423163025528" /></p>
 </li>
 </ul>
 </blockquote>
-<h4 id="4-可靠数据传输"><a href="#4-可靠数据传输" class="headerlink" title="(4). 可靠数据传输"></a>(4). 可靠数据传输</h4><blockquote>
+<h4 id="4-可靠数据传输"><a class="anchor" href="#4-可靠数据传输">#</a> (4). 可靠数据传输</h4>
+<blockquote>
 <ul>
-<li><p>TCP 在 IP 不可靠传输服务的基础上建立了 rdt</p>
+<li>
+<p>TCP 在 IP 不可靠传输服务的基础上建立了 rdt</p>
 <ul>
-<li>管道化的报文段<ul>
+<li>管道化的报文段
+<ul>
 <li>GBN or SR</li>
 </ul>
 </li>
-<li>累积确认(像 GBN)</li>
+<li>累积确认 (像 GBN)</li>
 <li>单个冲传定时器</li>
 <li>是否可以接收乱序的，没有规范</li>
 </ul>
 </li>
-<li><p>通过以下时间出发重传</p>
+<li>
+<p>通过以下时间出发重传</p>
 <ul>
-<li>超时(只重发那个最早的未确认段：SR)</li>
-<li>重复的确认<ul>
+<li>超时 (只重发那个最早的未确认段：SR)</li>
+<li>重复的确认
+<ul>
 <li>例子：收到了 ACK50，之后又收到 3 个 ACK50</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>首先考虑简化的 TCP 发送方：</p>
+<li>
+<p>首先考虑简化的 TCP 发送方：</p>
 <ul>
 <li>忽略重复的确认</li>
 <li>忽略流量控制和拥塞控制</li>
 </ul>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220423164848094.png" alt="image-20220423164848094"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220423164848094.png" alt="image-20220423164848094" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220423165414206.png" alt="image-20220423165414206"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220423165414206.png" alt="image-20220423165414206" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220423165709674.png" alt="image-20220423165709674"></p>
-</li>
-</ul>
-</blockquote>
-<h4 id="5-流量控制"><a href="#5-流量控制" class="headerlink" title="(5). 流量控制"></a>(5). 流量控制</h4><blockquote>
-<ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220426135711627.png" alt="image-20220426135711627"></p>
-</li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220426135903078.png" alt="image-20220426135903078"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220423165709674.png" alt="image-20220423165709674" /></p>
 </li>
 </ul>
 </blockquote>
-<h4 id="6-连接管理"><a href="#6-连接管理" class="headerlink" title="(6). 连接管理"></a>(6). 连接管理</h4><blockquote>
+<h4 id="5-流量控制"><a class="anchor" href="#5-流量控制">#</a> (5). 流量控制</h4>
+<blockquote>
 <ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220426140218407.png" alt="image-20220426140218407"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220426135711627.png" alt="image-20220426135711627" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220426142126406.png" alt="image-20220426142126406"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220426135903078.png" alt="image-20220426135903078" /></p>
 </li>
 </ul>
 </blockquote>
-<h3 id="6、拥塞控制原理"><a href="#6、拥塞控制原理" class="headerlink" title="6、拥塞控制原理"></a>6、拥塞控制原理</h3><blockquote>
+<h4 id="6-连接管理"><a class="anchor" href="#6-连接管理">#</a> (6). 连接管理</h4>
+<blockquote>
 <ul>
-<li><p>拥塞：</p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220426140218407.png" alt="image-20220426140218407" /></p>
+</li>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220426142126406.png" alt="image-20220426142126406" /></p>
+</li>
+</ul>
+</blockquote>
+<h3 id="6-拥塞控制原理"><a class="anchor" href="#6-拥塞控制原理">#</a> 6、拥塞控制原理</h3>
+<blockquote>
+<ul>
+<li>
+<p>拥塞：</p>
 <ul>
 <li>非正常的定义：“太多的数据需要网络传输，超过了网络的处理能力”</li>
 <li>与流量控制表现不同</li>
-<li>拥塞的表现：<ul>
-<li>分组丢失(路由器缓冲区溢出)</li>
-<li>分组经历比较长的延迟(在路由器的队列中排队)</li>
+<li>拥塞的表现：
+<ul>
+<li>分组丢失 (路由器缓冲区溢出)</li>
+<li>分组经历比较长的延迟 (在路由器的队列中排队)</li>
 </ul>
 </li>
 <li>网络中前 10 位的问题！</li>
 </ul>
 </li>
-<li><p>原因：</p>
+<li>
+<p>原因：</p>
 <ul>
-<li><p>代价：1. 延迟大 2. 需要更大的输出速率 3. 在拥塞时，会重传许多不必要的分组，加速拥塞 4. 在拥塞时，有些分组上游的传输能力被浪费掉，无法进行传输</p>
+<li>
+<p>代价：1. 延迟大 2. 需要更大的输出速率 3. 在拥塞时，会重传许多不必要的分组，加速拥塞 4. 在拥塞时，有些分组上游的传输能力被浪费掉，无法进行传输</p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429135752212.png" alt="image-20220429135752212"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429135752212.png" alt="image-20220429135752212" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429135827382.png" alt="image-20220429135827382"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429135827382.png" alt="image-20220429135827382" /></p>
 </li>
-<li><p>死锁<img src="http://lgqimg.changzer.cn/image-20220429140524096.png" alt="image-20220429140524096"></p>
+<li>
+<p>死锁<img data-src="http://lgqimg.changzer.cn/image-20220429140524096.png" alt="image-20220429140524096" /></p>
 </li>
 </ul>
 </li>
-<li><p>拥塞控制方法</p>
+<li>
+<p>拥塞控制方法</p>
 <ol>
-<li>端到端拥塞控制<ul>
-<li>没有来自网络的显示反馈<br>端系统根据延迟和丢失事件推断是否拥有拥塞</li>
+<li>端到端拥塞控制
+<ul>
+<li>没有来自网络的显示反馈<br />
+端系统根据延迟和丢失事件推断是否拥有拥塞</li>
 <li>TCP 采用的方法</li>
 </ul>
 </li>
-<li>网络辅助的拥塞控制<ul>
-<li>路由器提供给端系统以反馈信息<ul>
-<li>单个 bit 置位，显示有拥塞(SNA,DECbit,TCP&#x2F;IP ECN,ATM)</li>
+<li>网络辅助的拥塞控制
+<ul>
+<li>路由器提供给端系统以反馈信息
+<ul>
+<li>单个 bit 置位，显示有拥塞 (SNA,DECbit,TCP/IP ECN,ATM)</li>
 <li>显式提供发送端可以采用的速率</li>
 </ul>
 </li>
@@ -403,107 +564,428 @@
 </li>
 </ol>
 </li>
-<li><p>案例：</p>
+<li>
+<p>案例：</p>
 <ul>
-<li><img src="http://lgqimg.changzer.cn/image-20220429142719285.png" alt="image-20220429142719285"></li>
+<li><img data-src="http://lgqimg.changzer.cn/image-20220429142719285.png" alt="image-20220429142719285" /></li>
 </ul>
 </li>
 </ul>
 </blockquote>
-<h3 id="7、TCP-拥塞"><a href="#7、TCP-拥塞" class="headerlink" title="7、TCP 拥塞"></a>7、TCP 拥塞</h3><blockquote>
+<h3 id="7-tcp-拥塞"><a class="anchor" href="#7-tcp-拥塞">#</a> 7、TCP 拥塞</h3>
+<blockquote>
 <ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429151155134.png" alt="image-20220429151155134"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429151155134.png" alt="image-20220429151155134" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429153002979.png" alt="image-20220429153002979"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220429153216660.png" alt="image-20220429153216660"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429153002979.png" alt="image-20220429153002979" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429153216660.png" alt="image-20220429153216660" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429153325916.png" alt="image-20220429153325916"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429153325916.png" alt="image-20220429153325916" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429153512487.png" alt="image-20220429153512487"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220429153530821.png" alt="image-20220429153530821"></p>
-<p><img src="http://lgqimg.changzer.cn/image-20220429154210009.png" alt="image-20220429154210009"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429153512487.png" alt="image-20220429153512487" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429153530821.png" alt="image-20220429153530821" /></p>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429154210009.png" alt="image-20220429154210009" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429154259596.png" alt="image-20220429154259596"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429154259596.png" alt="image-20220429154259596" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429154435255.png" alt="image-20220429154435255"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429154435255.png" alt="image-20220429154435255" /></p>
 </li>
-<li><ul>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429154752232.png" alt="image-20220429154752232"></p>
+<li>
+<ul>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429154752232.png" alt="image-20220429154752232" /></p>
 </li>
-<li><p><img src="http://lgqimg.changzer.cn/image-20220429154816391.png" alt="image-20220429154816391"></p>
-<p><img src="C:\Users\24191\AppData\Roaming\Typora\typora-user-images\image-20220429155146589.png" alt="image-20220429155146589"></p>
+<li>
+<p><img data-src="http://lgqimg.changzer.cn/image-20220429154816391.png" alt="image-20220429154816391" /></p>
+<p><img data-src="C:%5CUsers%5C24191%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20220429155146589.png" alt="image-20220429155146589" /></p>
 </li>
 </ul>
 </li>
 </ul>
 </blockquote>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://maplelearc.github.io">Maple</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://maplelearc.github.io/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/">https://maplelearc.github.io/2022/10/03/NetWork/第三章：传输层/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://maplelearc.github.io" target="_blank">Maple Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></div><div class="post_share"><div class="social-share" data-image="/img/preview2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" title="《计算机网络：自定向下》第一章：概述"><img class="cover" src="/img/preview2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-03</div><div class="title">《计算机网络：自定向下》第一章：概述</div></div></a></div><div><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" title="《计算机网络：自定向下》第二章：应用层"><img class="cover" src="/img/preview2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-03</div><div class="title">《计算机网络：自定向下》第二章：应用层</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="toc-number">1.</span> <span class="toc-text">第三章：传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0%E5%92%8C%E4%BC%A0%E8%BE%93%E5%B1%82%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.0.1.</span> <span class="toc-text">1. 概述和传输层服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE%E5%92%8C%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">(1). 传输协议和服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BC%A0%E8%BE%93%E5%B1%82-VS-%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">(2). 传输层 VS 网络层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Internet-%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.0.1.3.</span> <span class="toc-text">(3). Internet 传输协议</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8-x2F-%E8%A7%A3%E5%A4%8D%E7%94%A8"><span class="toc-number">1.0.2.</span> <span class="toc-text">2. 多路复用&#x2F;解复用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%A0%E8%BF%9E%E6%8E%A5%E4%BC%A0%E8%BE%93-UDP"><span class="toc-number">1.0.3.</span> <span class="toc-text">3. 无连接传输 UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93-RDT-%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.4.</span> <span class="toc-text">4. 可靠数据传输(RDT)的原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">(1)问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-RDT"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">(2)RDT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%B5%81%E6%B0%B4%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.0.4.3.</span> <span class="toc-text">(3). 流水协议</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BC%A0%E8%BE%93%EF%BC%9ATCP"><span class="toc-number">1.0.5.</span> <span class="toc-text">5、面向连接的传输：TCP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-TCP-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.0.5.1.</span> <span class="toc-text">(1). TCP 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-TCP-%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84"><span class="toc-number">1.0.5.2.</span> <span class="toc-text">(2). TCP 报文结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4%E7%9A%84%E4%BC%B0%E8%AE%A1%E4%B8%8E%E8%B6%85%E6%97%B6"><span class="toc-number">1.0.5.3.</span> <span class="toc-text">(3). 往返时间的估计与超时</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93"><span class="toc-number">1.0.5.4.</span> <span class="toc-text">(4). 可靠数据传输</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">1.0.5.5.</span> <span class="toc-text">(5). 流量控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86"><span class="toc-number">1.0.5.6.</span> <span class="toc-text">(6). 连接管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.6.</span> <span class="toc-text">6、拥塞控制原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7%E3%80%81TCP-%E6%8B%A5%E5%A1%9E"><span class="toc-number">1.0.7.</span> <span class="toc-text">7、TCP 拥塞</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: 135deg,"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Maple</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
-  window.MathJax = {
-    tex: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"]],
-      tags: 'ams'
-    },
-    chtml: {
-      scale: 1.2
-    },
-    options: {
-      renderActions: {
-        findScript: [10, doc => {
-          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-            const display = !!node.type.match(/; *mode=display/)
-            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-            const text = document.createTextNode('')
-            node.parentNode.replaceChild(text, node)
-            math.start = {node: text, delim: '', n: 0}
-            math.end = {node: text, delim: '', n: 0}
-            doc.math.push(math)
-          }
-        }, ''],
-        insertScript: [200, () => {
-          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
-            const target = node.parentNode
-            if (target.nodeName.toLowerCase() === 'li') {
-              target.parentNode.classList.add('has-jax')
-            } else {
-              target.classList.add('has-jax')
-            }
-          });
-        }, '', false]
-      }
-    }
-  }
+
+      <div class="tags">
+          <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"><i class="ic i-tag"></i> 计算机网络</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-10-03 19:30:02" itemprop="dateModified" datetime="2022-10-03T19:30:02+08:00">2022-10-03</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Maple 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Maple 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Maple 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Maple <i class="ic i-at"><em>@</em></i>
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://maplelearc.github.io/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" title="《计算机网络：自定向下》第三章：传输层">https://maplelearc.github.io/2022/10/03/NetWork/第三章：传输层/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
   
-  const script = document.createElement('script')
-  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
-  script.id = 'MathJax-script'
-  script.async = true
-  document.head.appendChild(script)
-} else {
-  MathJax.startup.document.state(0)
-  MathJax.texReset()
-  MathJax.typeset()
-}</script><script>(() => {
-  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
-  if ($mermaidWrap.length) {
-    window.runMermaid = () => {
-      window.loadMermaid = true
-      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
 
-      Array.from($mermaidWrap).forEach((item, index) => {
-        const mermaidSrc = item.firstElementChild
-        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
-        const mermaidID = 'mermaid-' + index
-        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
-        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
-          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
-        })
-      })
-    }
+<div class="post-nav">
+    <div class="item left">
+      
 
-    const loadMermaid = () => {
-      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
-    }
+  <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesrnqv3j20zk0m8ava.jpg" title="《计算机网络：自定向下》第二章：应用层">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机网络</span>
+  <h3>《计算机网络：自定向下》第二章：应用层</h3>
+  </a>
 
-    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
-  }
-})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giciukx8a7j20zk0m8aio.jpg" title="《计算机网络：自定向下》第一章：概述">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 计算机网络</span>
+  <h3>《计算机网络：自定向下》第一章：概述</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="toc-number">1.</span> <span class="toc-text"> 第三章：传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A6%82%E8%BF%B0%E5%92%8C%E4%BC%A0%E8%BE%93%E5%B1%82%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.0.1.</span> <span class="toc-text"> 1. 概述和传输层服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE%E5%92%8C%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.0.1.1.</span> <span class="toc-text"> (1). 传输协议和服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BC%A0%E8%BE%93%E5%B1%82-vs-%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-number">1.0.1.2.</span> <span class="toc-text"> (2). 传输层 VS 网络层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-internet-%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.0.1.3.</span> <span class="toc-text"> (3). Internet 传输协议</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E8%A7%A3%E5%A4%8D%E7%94%A8"><span class="toc-number">1.0.2.</span> <span class="toc-text"> 2. 多路复用 &#x2F; 解复用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%A0%E8%BF%9E%E6%8E%A5%E4%BC%A0%E8%BE%93-udp"><span class="toc-number">1.0.3.</span> <span class="toc-text"> 3. 无连接传输 UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93rdt%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.4.</span> <span class="toc-text"> 4. 可靠数据传输 (RDT) 的原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.0.4.1.</span> <span class="toc-text"> (1) 问题描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2rdt"><span class="toc-number">1.0.4.2.</span> <span class="toc-text"> (2)RDT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%B5%81%E6%B0%B4%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.0.4.3.</span> <span class="toc-text"> (3). 流水协议</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BC%A0%E8%BE%93tcp"><span class="toc-number">1.0.5.</span> <span class="toc-text"> 5、面向连接的传输：TCP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-tcp-%E6%A6%82%E8%BF%B0"><span class="toc-number">1.0.5.1.</span> <span class="toc-text"> (1). TCP 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-tcp-%E6%8A%A5%E6%96%87%E7%BB%93%E6%9E%84"><span class="toc-number">1.0.5.2.</span> <span class="toc-text"> (2). TCP 报文结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%BE%80%E8%BF%94%E6%97%B6%E9%97%B4%E7%9A%84%E4%BC%B0%E8%AE%A1%E4%B8%8E%E8%B6%85%E6%97%B6"><span class="toc-number">1.0.5.3.</span> <span class="toc-text"> (3). 往返时间的估计与超时</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%8F%AF%E9%9D%A0%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93"><span class="toc-number">1.0.5.4.</span> <span class="toc-text"> (4). 可靠数据传输</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="toc-number">1.0.5.5.</span> <span class="toc-text"> (5). 流量控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86"><span class="toc-number">1.0.5.6.</span> <span class="toc-text"> (6). 连接管理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.6.</span> <span class="toc-text"> 6、拥塞控制原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-tcp-%E6%8B%A5%E5%A1%9E"><span class="toc-number">1.0.7.</span> <span class="toc-text"> 7、TCP 拥塞</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" rel="bookmark" title="《计算机网络：自定向下》第二章：应用层">《计算机网络：自定向下》第二章：应用层</a></li><li class="active"><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" rel="bookmark" title="《计算机网络：自定向下》第三章：传输层">《计算机网络：自定向下》第三章：传输层</a></li><li><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" rel="bookmark" title="《计算机网络：自定向下》第一章：概述">《计算机网络：自定向下》第一章：概述</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Maple"
+      data-src="/images/avatar(1).png">
+  <p class="name" itemprop="name">Maple</p>
+  <div class="description" itemprop="description">Maple 的编程学习</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">9</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">9</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">9</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcGxlbGVhcmM=" title="https:&#x2F;&#x2F;github.com&#x2F;maplelearc"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOm1hcGxlbGVhcmNAZ21haWwuY29t" title="mailto:maplelearc@gmail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/" title="分类于 Lua">Lua</a>
+</div>
+
+    <span><a href="/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/" title="Lua入门学习">Lua入门学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+</div>
+
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E4%BC%A0%E8%BE%93%E5%B1%82/" title="《计算机网络：自定向下》第三章：传输层">《计算机网络：自定向下》第三章：传输层</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CSAPP/" title="分类于 CSAPP">CSAPP</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/CSAPP/%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="分类于 第一章">第一章</a>
+</div>
+
+    <span><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/" title="CSAPP:第一章">CSAPP:第一章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/" title="分类于 SQL 语言">SQL 语言</a>
+</div>
+
+    <span><a href="/2022/10/04/Mysql/" title="MySql">MySql</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/CSAPP/" title="分类于 CSAPP">CSAPP</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/CSAPP/%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="分类于 第二章">第二章</a>
+</div>
+
+    <span><a href="/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/" title="CSAPP:第二章">CSAPP:第二章</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="分类于 算法和数据结构">算法和数据结构</a>
+</div>
+
+    <span><a href="/2022/10/03/%E7%AE%97%E6%B3%95/" title="算法和数据结构">算法和数据结构</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+</div>
+
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BA%94%E7%94%A8%E5%B1%82/" title="《计算机网络：自定向下》第二章：应用层">《计算机网络：自定向下》第二章：应用层</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="分类于 计算机网络">计算机网络</a>
+</div>
+
+    <span><a href="/2022/10/03/NetWork/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0/" title="《计算机网络：自定向下》第一章：概述">《计算机网络：自定向下》第一章：概述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" title="分类于 计算机语言学习">计算机语言学习</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/C/" title="分类于 C#">C#</a>
+</div>
+
+    <span><a href="/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/" title="《C#图解教程》阅读记忆点">《C#图解教程》阅读记忆点</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Maple @ Maple Blog</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/10/03/NetWork/第三章：传输层/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

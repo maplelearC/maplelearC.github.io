@@ -1,0 +1,2131 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://maplelearc.github.io</id>
+    <title> • Posts by &#34;c#&#34; tag</title>
+    <link href="https://maplelearc.github.io" />
+    <updated>2022-10-03T07:00:03.631Z</updated>
+    <category term="MySQL" />
+    <category term="数据库" />
+    <category term="Lua" />
+    <category term="算法" />
+    <category term="数据结构" />
+    <category term="深入理解计算机系统" />
+    <category term="CSAPP" />
+    <category term="计算机网络" />
+    <category term="C#" />
+    <entry>
+        <id>https://maplelearc.github.io/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/</id>
+        <title>《C#图解教程》阅读记忆点</title>
+        <link rel="alternate" href="https://maplelearc.github.io/2022/10/03/%E3%80%8ACS%E5%9B%BE%E8%A7%A3%E6%95%99%E7%A8%8B%E3%80%8B%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BF%86%E7%82%B9/"/>
+        <content type="html">&lt;h1 id=&#34;c图解教程阅读记忆点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#c图解教程阅读记忆点&#34;&gt;#&lt;/a&gt; 《C# 图解教程》阅读记忆点&lt;/h1&gt;
+&lt;h2 id=&#34;一-数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-数据类型&#34;&gt;#&lt;/a&gt; 一、数据类型&lt;/h2&gt;
+&lt;h3 id=&#34;1-栈和堆&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-栈和堆&#34;&gt;#&lt;/a&gt; 1. 栈和堆&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;栈&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913201351108.png&#34; alt=&#34;image-20220913201351108&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;堆&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;堆是一块内存区域，在堆里可以分配大块的内存用于存储某种类型的数据对象。堆中的内存能够以任意顺序存入和移除.&lt;/li&gt;
+&lt;li&gt;CLR 的自动垃圾收集器在判断出程序的代码不在访问某项数据时，会自动清除无主的堆对象.&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913201848664.png&#34; alt=&#34;image-20220913201848664&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-值类型和引用类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-值类型和引用类型&#34;&gt;#&lt;/a&gt; 2. 值类型和引用类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C# 中数据分为值类型和引用类型。这两种类型的对象在内存中的存储方式不同&lt;/li&gt;
+&lt;li&gt;值类型只需要一段单独的内存，它总是位于堆中。&lt;/li&gt;
+&lt;li&gt;引用类型需要两段内存。第一段存储的实际数据总是存储在堆中。第二段的是一个引用，指向数据在堆中的从存放位置。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913200717360.png&#34; alt=&#34;image-20220913200717360&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913205013024.png&#34; alt=&#34;image-20220913205013024&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-嵌套快中的局部变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-嵌套快中的局部变量&#34;&gt;#&lt;/a&gt; 3. 嵌套快中的局部变量&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以有任意数量的块，并且他们既可以是顺序的也可以是嵌套的。块可以嵌套到任何级别.&lt;/li&gt;
+&lt;li&gt;局部变量可以在嵌套块的内部声明，并且和所有的局部变量一样，他们的生存期和可见性仅局限与声明它们的块及其内嵌快.&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913204838044.png&#34; alt=&#34;image-20220913204838044&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;二-方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-方法&#34;&gt;#&lt;/a&gt; 二、方法&lt;/h2&gt;
+&lt;h3 id=&#34;1-方法的引用参数和值参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-方法的引用参数和值参数&#34;&gt;#&lt;/a&gt; 1. 方法的引用参数和值参数&lt;/h3&gt;
+&lt;p&gt;1. 值参数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在方法使用值参数，在方法被调用时，系统在栈中为形参分配空间，并将实参的值赋值给形参。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;calss MyCalss
+&amp;#123;
+    public int Val=20;
+&amp;#125;
+
+calss Program
+&amp;#123;
+    static void MyMethod(MyCalss f1,int f2)
+    &amp;#123;
+        f1.Val=f1.Val+5;
+        f2=f2+5;
+        ConSole.WriteLine($&amp;quot;f1.Val:&amp;#123;f1.Val&amp;#125;，f2:&amp;#123;f2&amp;#125;&amp;quot;);
+    &amp;#125;
+
+    static void Main()
+    &amp;#123;
+        MyClass a1=new MyClass();
+        int a2 = 10;
+
+        MyMethod(a1,a2);
+        ConSole.WriteLine($&amp;quot;a1.Val:&amp;#123;a1.Val&amp;#125;，a2:&amp;#123;a2&amp;#125;&amp;quot;);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果输出为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;f1.Val:&amp;#123;25&amp;#125;，f2:&amp;#123;15&amp;#125;
+a1.Val:&amp;#123;25&amp;#125;，a2:&amp;#123;10&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在方法被调用前，用作实参的变量 a2 已经在栈里面了。&lt;/li&gt;
+&lt;li&gt;在方法开始时，系统在栈中为形参分配空间，并从实参复制值。
+&lt;ul&gt;
+&lt;li&gt;因为 a1 是引用类型的，所以引用被复制，结果实参和形参都引用堆中的同一数据。&lt;/li&gt;
+&lt;li&gt;因为 a2 是值类型的，所以值被复制，产生了一个独立的数据项。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在方法的结尾，f2 和对象 f1 的字段都被加上了 5.
+&lt;ul&gt;
+&lt;li&gt;方法执行后，形参从栈出弹出。&lt;/li&gt;
+&lt;li&gt;a2，值类型，它的值不受方法行为的影响。&lt;/li&gt;
+&lt;li&gt;a1，引用类型，但它的值被方法的行为改变了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913213459760.png&#34; alt=&#34;image-20220913213459760&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;引用参数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用引用参数时，必须在方法的声明和调和中都使用&lt;strong&gt; ref&lt;/strong&gt; 修饰符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实参必须是变量，在用作实参前必须被赋值。如果是引用类型变量，可以赋值为一个引用或&lt;strong&gt; null&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法使用引用参数时，系统不会再栈上位形参分配内存，形参的参数名将作为实参变量名，指向相同的内存位置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;  calss MyCalss
+  &amp;#123;
+      public int Val=20;
+  &amp;#125;
+
+  calss Program
+  &amp;#123;
+      static void MyMethod(ref MyCalss f1,ref int f2)
+      &amp;#123;
+          f1.Val=f1.Val+5;
+          f2=f2+5;
+          ConSole.WriteLine($&amp;quot;f1.Val:&amp;#123;f1.Val&amp;#125;，f2:&amp;#123;f2&amp;#125;&amp;quot;);
+      &amp;#125;
+
+      static void Main()
+      &amp;#123;
+          MyClass a1=new MyClass();
+          int a2 = 10;
+
+          MyMethod(ref a1,ref a2);
+          ConSole.WriteLine($&amp;quot;a1.Val:&amp;#123;a1.Val&amp;#125;，a2:&amp;#123;a2&amp;#125;&amp;quot;);
+      &amp;#125;
+  &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果输出为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;f1.Val:&amp;#123;25&amp;#125;，f2:&amp;#123;15&amp;#125;
+a1.Val:&amp;#123;25&amp;#125;，a2:&amp;#123;15&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在方法调用前，将要被用作实参的便改良 a1 和 a2 已经栈里了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在方法的开始，形参名被设置位实参的别名。变量 a1 和 f1 引用相同的内存位置，a2 和 f2 引用相同的内存位置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在方法的结束位置，f2 和 f1 的对象的字段都被加上了 5。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法被执行后，形参的名称已经失效，但是值类型 a2 的值和引用类型 a1 所指向的对象的值都被方法内的行为改变了。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913215058035.png&#34; alt=&#34;image-20220913215058035&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-引用类型作为值参数和引用参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-引用类型作为值参数和引用参数&#34;&gt;#&lt;/a&gt; 2. 引用类型作为值参数和引用参数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;引用类型作为值参数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将引用类型对象作为值参数传递如果在方法内创建一个新对象并赋值给形参，将切断形参与实参之间的关联，并且在方法调用结束后，新对象也将不复存在。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyClass&amp;#123;
+    public int Val = 20;
+&amp;#125;
+class Program
+&amp;#123;
+    static void ReFAsParameter(MyClass f1)
+    &amp;#123;
+        f1.Val = 50;
+        Console.WriteLine($&amp;quot;After member assignment：&amp;#123;f1.Val&amp;#125;&amp;quot;);
+        f1=new MyClass();
+        Console.WriteLine($&amp;quot;After new object cretion：&amp;#123;f1.Val&amp;#125;&amp;quot;);
+    &amp;#125;
+
+    static void Main()
+    &amp;#123;
+        MyClass a1 = new MyClass();
+
+        Console.WriteLine($&amp;quot;Before method call：&amp;#123;a1.Val&amp;#125;&amp;quot;);
+        ReFAsParameter(a1);
+        Console.WriteLine($&amp;quot;After method call：&amp;#123;a1.Val&amp;#125;&amp;quot;);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;Before method call：20
+After member assignment：50
+After new object cretion：20
+After method call：50
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果表明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在方法开始时，实参和形参指向堆中的相同对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在位对象成员赋值之后，他们仍指向堆中相同的对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当方法分配新的对象并复制给形参时，方法外部的实参仍指向原时对象，而形参指向的是新对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在方法调用之后，实参指向原时对象，形参和新对象都会消失&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913221643242.png&#34; alt=&#34;image-20220913221643242&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;引用类型作为引用参数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;将引用类型对象作为引用参数传递如果在方法内创建一个新对象并赋值给形参，在方法结束后该对象依然存在，并且是实参所引用的值。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyClass&amp;#123;
+    public int Val = 20;
+&amp;#125;
+class Program
+&amp;#123;
+    static void ReFAsParameter(ref MyClass f1)
+    &amp;#123;
+        f1.Val = 50;
+        Console.WriteLine($&amp;quot;After member assignment：&amp;#123;f1.Val&amp;#125;&amp;quot;);
+        f1=new MyClass();
+        Console.WriteLine($&amp;quot;After new object cretion：&amp;#123;f1.Val&amp;#125;&amp;quot;);
+    &amp;#125;
+
+    static void Main()
+    &amp;#123;
+        MyClass a1 = new MyClass();
+
+        Console.WriteLine($&amp;quot;Before method call：&amp;#123;a1.Val&amp;#125;&amp;quot;);
+        ReFAsParameter(ref a1);
+        Console.WriteLine($&amp;quot;After method call：&amp;#123;a1.Val&amp;#125;&amp;quot;);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;Before method call：20
+After member assignment：50
+After new object cretion：20
+After method call：20
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在方法调用时，形参和实参指向堆中相同的对象。&lt;/li&gt;
+&lt;li&gt;对成员值的修改会同时影响到形参和实参。&lt;/li&gt;
+&lt;li&gt;当方法创建新的对象并赋值给形参时，形参和实参的引用都指向该新对象。&lt;/li&gt;
+&lt;li&gt;在方法结束后，实参指向在方法内创建的新对象&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220913221820856.png&#34; alt=&#34;image-20220913221820856&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-输出参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-输出参数&#34;&gt;#&lt;/a&gt; 3. 输出参数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;输出参数用于从方法体内把数据传出到调用代码，他们的行为与引用参数类似。如同引用参数，输出参数有以下要求：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;必须声明和调用中都使用修饰符。输出参数的修饰符是&lt;strong&gt; out&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;和引用参数相似，实参必须是变量，而不能是其他类型的表达式。因为方法需要内存位置来保存返回值。&lt;br /&gt;
+例子：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C#&#34;&gt;void MyMethod(out int val)&amp;#123;&amp;#125;
+...
+int y = 1;
+MyMethod(out y );
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输出参数的形参充当实参的别名。形参与实参都是同一块内存位置的名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输出参数规则&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在方法内部，给输出参数赋值之后才能读取它。这意味着参数的初始值的无关的，而且没有必要再方法调用之前为实参赋值。&lt;/li&gt;
+&lt;li&gt;在方法内部，再方法返回之前，代码中每条可能的路径都必须为所有输出参数赋值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-参数数组&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-参数数组&#34;&gt;#&lt;/a&gt; 4. 参数数组&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;参数数组允许特定的零个或多个实参定义一个特定的形参。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一个参数列表中只能有一个参数列表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果有，它必须是列表中的最后一个&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有参数数组表示的所有参数必须是同一个类型的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;声明参数数组时，必须：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在数据类型前使用&lt;strong&gt; params&lt;/strong&gt; 修饰符&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再数据后放置空的方括号&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;void ListInit(params int[] inVals)&amp;#123;&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法调用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可以使用一个用逗号分隔的相应数据类型的列表。&lt;strong&gt;被称为&lt;/strong&gt;延伸式&lt;/strong&gt;可在调用中使用独立的实参。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;ListInit(1,2,3,4);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;在使用一个参数数组使用独立参数的调用时，编译器会执行：
+&lt;ol&gt;
+&lt;li&gt;接受参数列表，用它们在堆中创建并初始化一个数组。&lt;/li&gt;
+&lt;li&gt;把数组的引用报存到栈中的形参里。&lt;/li&gt;
+&lt;li&gt;如果在对应形参数组的位置没有实参，编译器会创建一个有零个元素的数组使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;如果数组参数是值类型，那么值被复制，实参在方法内部不受影响。如果数组参数是引用类型，那么引用被复制，实参引用的对象在方祛内部会受到影响。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一个相应数据类型的一维数组。&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;int[] intArrary=&amp;#123;1,2,3,4&amp;#125;;
+ListInit(intArrary);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5-ref局部变量和ref返回&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-ref局部变量和ref返回&#34;&gt;#&lt;/a&gt; 5. &lt;em&gt;ref&lt;/em&gt; 局部变量和&lt;em&gt; ref&lt;/em&gt; 返回&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ref&lt;/strong&gt; 局部变量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ref 局部变量可以创建一个变量的别名，即引用的对象是值类型。&lt;/li&gt;
+&lt;li&gt;对任意一个变量的赋值都会反映到另一个变量上。因为两个的引用对象是相同的，即使是值类型也如此。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;ref int y =ref x; //创建int变量x，别名为y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ref&lt;/strong&gt; 返回&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用 ref 返回，也要使用两次&lt;strong&gt; ref&lt;/strong&gt; 关键字：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一次是在方法的返回类型声明之前&lt;/li&gt;
+&lt;li&gt;另一次是在 return 关键字之后，被返回对象的变量名之前&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;private int Val;
+public ref int RefToVal(int val)
+&amp;#123;
+    return ref Val;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;限制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;返回值为 void 的方法无法声明为&lt;strong&gt; ref&lt;/strong&gt; 返回方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ref return&lt;/strong&gt; 表达式无法返回以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;空值&lt;/li&gt;
+&lt;li&gt;常量&lt;/li&gt;
+&lt;li&gt;枚举成员&lt;/li&gt;
+&lt;li&gt;类或结构体的属性&lt;/li&gt;
+&lt;li&gt;指向只读位置的指针&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ref return&lt;/strong&gt; 表达式只能指向原先就在调用域内的位置，或者字段。所以无法指向方法的局部变量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ref&lt;/strong&gt; 局部变量只能被赋值一次。一旦被初始化，就无法指向不同的存储位置了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;即使将一个方法声明为&lt;strong&gt; ref&lt;/strong&gt; 返回方法，如果在调用该方法时省略了&lt;strong&gt; ref&lt;/strong&gt; 关键字，则返回的&lt;br /&gt;
+将是值，而不是指向值的内存位置的指针。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果将&lt;strong&gt; ref&lt;/strong&gt; 局部变量作为常规的实际参数传递给其他方法，则该方法仅获取该变量的一个&lt;br /&gt;
+副本。尽管&lt;strong&gt; ref&lt;/strong&gt; 局部变量包含指向存储位置的指针，但是当以这种方式使用时，它会传递&lt;br /&gt;
+值而不是引用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;6-命名参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-命名参数&#34;&gt;#&lt;/a&gt; 6. 命名参数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在调用方法时，形参的名字后面跟着冒号和实际的参数表达式或参数值。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyClass
+&amp;#123;
+    public int Calc(int a,int b,int c)&amp;#123;return a+b+c&amp;#125;;
+
+    static void Main()
+    &amp;#123;
+        MyClass mc = new MyClass();
+        int ro mc.Calc(4,3,2 )//位置参数
+		int r1 mc.Calc(4,b:3,c:2 )//位置参数和命名参数
+		int r2 mc.Calc(4,c:2,b:3 )//交换了顺序
+		int r3 mc.Calc(c:2,b:3,a:4);//所有都是命名参数
+		int r4=mc.Calc(c:2,b:1+2,a:3+1);//命名参数表达式
+
+        Console.WriteLine(&amp;quot;&amp;#123;r0&amp;#125;,&amp;#123;r1&amp;#125;,&amp;#123;r2&amp;#125;,&amp;#123;r3&amp;#125;,&amp;#123;r4&amp;#125;&amp;quot;);
+    &amp;#125;
+&amp;#125;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;14,14,14,14,14
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;命名参数对于自描述的程序来说很有用，因为我们可以在方法调用的时候显示哪个值赋给哪个形参。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;7-可选参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-可选参数&#34;&gt;#&lt;/a&gt; 7. 可选参数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;可选参数就是可以在调用方法的时候包含这个参数，也可以省略它。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyClass
+&amp;#123;
+    public int Clac(int a,int b=3)
+    &amp;#123;
+        return a+b;
+    &amp;#125;
+
+    static void Main()
+    &amp;#123;
+        MyClass mc = new MyClass();
+
+        int r0=mc.Clac(5,6);
+        int r1=mc.Clac(5);
+
+        Console.WriteLine(&amp;quot;&amp;#123;r0&amp;#125;,&amp;#123;r1&amp;#125;&amp;quot;);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;11,8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在代码中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;形参 b 的默认值为 3。&lt;/li&gt;
+&lt;li&gt;如果调用方法的时候只有一个参数，方法会使用 3 作为的二个参数的初始值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可选参数的声明限制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不是所有的参数类型都可以作为可选参数。
+&lt;ul&gt;
+&lt;li&gt;只要值类型的默认值在编译的时候可以确定，就可以使用值类型作为可选类型&lt;/li&gt;
+&lt;li&gt;只有在默认值是 null 的时候，引用类型才可以用作可选参数&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220915192549731.png&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;所有必填参数必须在可选参数声明之前声明。如果有&lt;strong&gt; params&lt;/strong&gt;，必须在所有可选参数之后声明。&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220915193352286.png&#34; alt=&#34;image-20220915193352286&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可选参数省略：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必须从可选参数列表的最后开始省略，一直到列表开头。&lt;/li&gt;
+&lt;li&gt;可以省略最后一个可选参数，或是最后 n 个可选参数，但是不饿能随意选择省略任意的可选参数，省略必须从最后开始。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;8-栈帧&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-栈帧&#34;&gt;#&lt;/a&gt; 8. 栈帧&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在调用方法的时候，内存从栈的顶部开始分配，保存和方法关联的一些数据项。这块内存叫作方法的栈帧 (stack frame)。
+&lt;ul&gt;
+&lt;li&gt;栈帧保存内容：
+&lt;ul&gt;
+&lt;li&gt;返回地址，也就是在方法退出的时候继续执行的位置。&lt;/li&gt;
+&lt;li&gt;分配内存的的参数，也就是方法的值参数，还可能是参数数组 (如果有的话)。&lt;/li&gt;
+&lt;li&gt;和方法调用相关的其他管理数据项。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在方法调用时，整个栈帧都会压入栈。&lt;/li&gt;
+&lt;li&gt;在方法退出时，整个栈帧都会从栈上弹出。弹出栈帧有的时候也叫作栈展开 (unwind)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;三-深入理解类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三-深入理解类&#34;&gt;#&lt;/a&gt; 三、深入理解类&lt;/h2&gt;
+&lt;h3 id=&#34;1-静态字段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-静态字段&#34;&gt;#&lt;/a&gt; 1. 静态字段&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;静态字段被类的所有实例共享，所有实例都访问同一内存位置因此，如果该内存位置的值被一个实例改变了，这种改变对所有的实例都可见。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;strong&gt; static&lt;/strong&gt; 修饰符将字段声明为静态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从类外访问静态不需要使用类实例前缀可以使用类型和点运算符来访问静态成员，或是在该成员所属类中包含一个 using static 声明。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;using static System.Console; //在其他成员中包含WriteLine()
+class D
+&amp;#123;
+    int Mem1;
+    static int Mem2;
+&amp;#125;
+
+class C
+&amp;#123;
+    static void Main()
+    &amp;#123;
+        D.Mem2=5;
+    &amp;#125;
+
+&amp;#125;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态字段的生存期&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;即使类没有实例，静态成员也存在并且可以访问。&lt;/li&gt;
+&lt;li&gt;如果静态字段有生存周期，那么会在使用该类的任何静态成员之前初始化该字段，但不一定在程序执行的开始就初始化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-静态函数成员&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-静态函数成员&#34;&gt;#&lt;/a&gt; 2. 静态函数成员&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;静态成员如同静态字段，独立于任何类实例。即使没有类实例，任然可以调用静态方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态函数成员不能访问实例成员，但能访问其他静态成员。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class X
+&amp;#123;
+    static public int A;
+    static public void PrintValA()
+    &amp;#123;
+        COnsole.WriteLine(&amp;quot;Value of A:&amp;#123;0&amp;#125;&amp;quot;,A);
+    &amp;#125;
+&amp;#125;
+
+class Program
+&amp;#123;
+    static void Main()
+    &amp;#123;
+        X.A=10;
+        X.PrintValA();
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;Value of A:10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他静态成员类型&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220915204231609.png&#34; alt=&#34;image-20220915204231609&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-成员常量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-成员常量&#34;&gt;#&lt;/a&gt; 3. 成员常量&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;与局部常量类似，用于初始化成员常量的值在编译时必须时可计算的，而且通常时一个预定义简单类型或由他们组成表达式。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyClass
+&amp;#123;
+    const int IntVal1=100;
+    const int InVal2=2*IntVal1;  //IntVal1已经初始化
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyClass
+&amp;#123;
+    const int IntVal1;   //错误：必须初始化
+    IntVal1=100;         //错误：不允许赋值
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;C# 中没有全局常量。每个常量都必须声明在类型内。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常量与静态量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;成员常量像静态量一样，不需要使用类的实例就可以访问。&lt;/li&gt;
+&lt;li&gt;与真正的静态两不同，常量没有自己的存储位置，而是在编译器时被编译器替换。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-属性&#34;&gt;#&lt;/a&gt; 4. 属性&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;属性时代表类实例或类中的数据项的成员。使用属性就像写入或读取一个字段，语法相同。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;MyClass mc = new MyClass();
+
+mc.Filed = 5;          //给字段赋值
+mc. MyProperty = 10;   //该属性赋值
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性与字段类似，属性有以下特征：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是命名的类成员。&lt;/li&gt;
+&lt;li&gt;有类型。&lt;/li&gt;
+&lt;li&gt;可以被赋值和读取。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;和字段不相同，属性是一个成员函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它不一定为数据存储分配内存&lt;/li&gt;
+&lt;li&gt;它执行代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性是一组 (两个) 匹配的、命名的、成为访问器的方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;set&lt;/strong&gt; 访问器为属性赋值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;get&lt;/strong&gt; 访问器从属性获取值&lt;/p&gt;
+&lt;p&gt;int 类型名称为 MyValue 的属性展示：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;int MyValue
+&amp;#123;
+    set
+    &amp;#123;
+        SetAccessorCode
+    &amp;#125;
+    get
+    &amp;#123;
+        GetAccessorCode
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性声明和访问器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;set 和 get 访问器有预定义的语法和语义。可以把 set 访问器想象成一个方法，带有单一的参数，它 “设置” 属性的值。get 访问器没有参数并从属性返回一个值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;set&lt;/strong&gt; 访问器总是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;拥有一个单独的、隐式的值参，名称为 Value，与属性的类型相同。&lt;/li&gt;
+&lt;li&gt;拥有一个返回类型 void。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;get&lt;/strong&gt; 访问器总是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有参数。&lt;/li&gt;
+&lt;li&gt;拥有一个与属性类型相同的返回类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性结构声明 (访问器声明既没有显式的参数，也没有返回类型声明，已经隐含在属性中)&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220915213845985.png&#34; alt=&#34;image-20220915213845985&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;set 访问器中的隐式参数 value 是一个普通的值参。和其他值参一样，可以用它发送数据到方法体或访问器块。在块的内部，可以像普通变量那样使用 value, 包括对它赋值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问器的其他要点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;get&lt;/strong&gt; 访问器的所有执行路径必须包含一条&lt;strong&gt; return&lt;/strong&gt; 语句，它返回一个属性类型的值。&lt;/li&gt;
+&lt;li&gt;访问器&lt;strong&gt; set&lt;/strong&gt; 和&lt;strong&gt; get&lt;/strong&gt; 可以以任何顺序声明，并且，除了这两个访问器外，属性上不允许有其他方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性示例&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;属性本身没有任何存储。取而代之，访问器决定如何处理发送进来的数据。以及将什么数据发送出去。在这种情况下，属性使用一个名为 TheRealValue 的字段作为存储。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;set&lt;/strong&gt; 访问器接受它的输入参数 value，并把它的值赋给字段 TheRealValue。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;get&lt;/strong&gt; 访问器只是返回字段 TheRealValue 的值。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class C1
+&amp;#123;
+    private int theRealValue;       //字段：发配内存
+ 
+    public int MyValue
+    &amp;#123;
+        set&amp;#123;theRealValue=value;&amp;#125;    //属性：未分配内存
+        get&amp;#123;return theRealValue;&amp;#125;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;要写入一个属性，在赋值语句的左边使用属性的名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;要读取一个属性，把属性的名称用在表达式中。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;int MyValue      //属性声明
+&amp;#123;
+    set&amp;#123;……&amp;#125;
+    get&amp;#123;……&amp;#125;
+&amp;#125;
+ 
+MyValue=5;       //赋值：隐式调用set方法，MyValue为属性名称
+z=MyValue;       //表达式：隐式调用get方法
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;不能显示地调用访问器&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;y =Myvalue.get();  //错误！不能显式调用t访问器
+MyValue.set(5);   //错误！不能显式调用set访问器
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性和字段关联&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个常见的方式是在类中将字段声明为&lt;strong&gt; private&lt;/strong&gt; 以封装字段，并声明一个 public 属性来控制从类外部对该字段的访问。和属性关联的字段常被称为后备字段或后备存储&lt;/li&gt;
+&lt;li&gt;属性访问器并不局限于对关联的后备字段传进传出数据。访问器 get 和 set 能执行任何计算，也可以不执行任何计算。唯一必需的行为是 get 访问器要返回一个属性类型的值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只读和只写属性&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;要想不定义属性的某个访问器，可以忽略访问器的声明。
+&lt;ul&gt;
+&lt;li&gt;只有 get 访问器的属性称为只读属性。只读属性能够安全地将一个数据项从类或类的实例中传出，而不必让调用者修改属性值。&lt;/li&gt;
+&lt;li&gt;只有 set 访问器的属性称为只写属性。只写属性很少见，因为它们几乎没有实际用途。如果想在赋值时触发一个副作用，应该使用方法而不是属性。&lt;/li&gt;
+&lt;li&gt;两个访问器中至少有一个必须定义，否则编译器会产生一条错误消息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;属性和共有字段&lt;/p&gt;
+&lt;p&gt;属性比共有字段更好&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;属性是函数成员而不是数据成员，允许处理输入和输出，而共有字段不行。&lt;/li&gt;
+&lt;li&gt;属性可以只读或只写，而字段不行。&lt;/li&gt;
+&lt;li&gt;编译后的变量和编译后的属性语义不同。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自动实现属性&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;因为属性经常被关联到后备字段，所以 C# 提供了自动实现属性 (automatically implemented property 或 auto-implemented property, 常简称为 “自动属性”，auto-property), 允许只声明属性而不声明后备字段。编译器会为你创建隐藏的后备字段，并且自动挂接到 gt 和 st 访问器上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自动实现属性有以下要点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不声明后备字段 —— 编译器根据属性的类型分配存储。&lt;/li&gt;
+&lt;li&gt;不能提供访问器的方法体一它们必须被简单地声明为分号。get 担当简单的内存读，set 担当简单的写。但是，因为无法访问自动属性的方法体，所以在使用自动属性时调试代码通常会更加困难。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class C1
+&amp;#123;
+    public int MyValue
+    &amp;#123;
+        set;
+        get;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;静态属性&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;属性也可以声明为&lt;strong&gt; static&lt;/strong&gt;。静态属性的访问器和所有静态成员一样，具有以下特点 “
+&lt;ul&gt;
+&lt;li&gt;不能访问类的实例成员，但能被实例成员访问。&lt;/li&gt;
+&lt;li&gt;不管类是否有实例，他们都是存在的。&lt;/li&gt;
+&lt;li&gt;在类的内部，可以仅使用名称来引用静态属性。&lt;/li&gt;
+&lt;li&gt;在类的外部，可以通过类型或者使用&lt;strong&gt; using static&lt;/strong&gt; 结构来引用静态属性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5静态构造函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5静态构造函数&#34;&gt;#&lt;/a&gt; 5. 静态构造函数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;构造函数也可以声明为 static。实例构造函数初始化类的每个新实例，而 static 构造函数初始化类级别的项。通常，静态构造函数初始化类的静态字段。
+&lt;ul&gt;
+&lt;li&gt;初始化类级别的项。
+&lt;ul&gt;
+&lt;li&gt;在引用任何静态成员之前。&lt;/li&gt;
+&lt;li&gt;在创建类的任何实例之前。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;静态构造函数在以下方面与实例构造函数类似。
+&lt;ul&gt;
+&lt;li&gt;静态构造函数的名称必须和类名相同。&lt;/li&gt;
+&lt;li&gt;构造函数不能返回值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;静态构造函数在以下方面和实例构造函数不同。
+&lt;ul&gt;
+&lt;li&gt;静态构造函数声明中使用&lt;strong&gt; static&lt;/strong&gt; 关键字。&lt;/li&gt;
+&lt;li&gt;类只能由一个静态构造函数，而且不能带参数。&lt;/li&gt;
+&lt;li&gt;静态构造函数不能有修饰符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;6-对象初始化和析构函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-对象初始化和析构函数&#34;&gt;#&lt;/a&gt; 6. 对象初始化和析构函数&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;对象初始化&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象化初始化语法有两种。一种形式包括构造函数的参数列表，另一种不包括。&lt;/li&gt;
+&lt;li&gt;对象初始化内容：
+&lt;ul&gt;
+&lt;li&gt;创建对象的代码能够访问要初始化的字段和属性。&lt;/li&gt;
+&lt;li&gt;初始化发生在构造方法执行之后，因此在构造方法中设置的值可能会在之后对象初始化中重置为相同或不同的值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;public class Point
+&amp;#123;
+    public int X=1;
+    public int y=2;
+
+    class Program
+    &amp;#123;
+        static void Main()
+        &amp;#123;
+            Point pt1=new Point();
+            Point pt2=new Point &amp;#123;X=5,y=6&amp;#125;;
+        &amp;#125;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;析构函数&lt;/p&gt;
+&lt;p&gt;析构函数 (destructor) 执行在类的实例被销毁之前需要的清理或释放非托管资源的行为。非托管资源是指通过 Win32API 获得的文件句柄，或非托管内存块。使用 NET 资源是无法得到它们的，因此如果坚持使用正 T 类，就不需要为类编写析构函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;7-readonly修饰符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-readonly修饰符&#34;&gt;#&lt;/a&gt; 7. &lt;strong&gt;readonly&lt;/strong&gt; 修饰符&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;字段使用&lt;strong&gt; readonly&lt;/strong&gt; 修饰符声明，其作用类似于将字段声明为 const，一旦被设定就不能在改变。
+&lt;ul&gt;
+&lt;li&gt;const 字段只能在字段的声明语句中初始化，而 readonly 字段可以在下列任意位置设置它的值。
+&lt;ul&gt;
+&lt;li&gt;字段声明语句，类似于 const。&lt;/li&gt;
+&lt;li&gt;类的任何构造函数。如果是 static 字段，初始化必须在静态构造函数中完成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;const 字段的值必须可在编译时决定，而 readonly 字段的值可以在运行时决定。这种自由性允许你在不同的环境或不同的构造函数中设置不同的值。&lt;/li&gt;
+&lt;li&gt;const 的行为总是静态的，而对于 readonly 字段以下两点是正确的。
+&lt;ul&gt;
+&lt;li&gt;它可以是实例字段，也可以是静态字段。&lt;/li&gt;
+&lt;li&gt;它在内存中有存储位置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;8-索引器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-索引器&#34;&gt;#&lt;/a&gt; 8. 索引器&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;假设我们要定义一个类 Employee, 它带有 3 个 string 型字段，那么可以使用字段的名称方间们加 Main 中的代码所示&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class Employee
+&amp;#123;
+    public string LastName;
+	public string FirstName;
+	public string CityofBirth;
+&amp;#125;
+
+class Program
+&amp;#123;
+    static void Main()
+    &amp;#123;
+        Employee empl new Employee();
+
+		empl.LastName=&amp;quot;Doe&amp;quot;;
+		empl.FirstName:&amp;quot;Jane&amp;quot;;
+		empi:cityofBirth &amp;quot;Dallas&amp;quot;;
+		Console.WriteLine(&amp;quot;(0)&amp;quot;.empl:LastName);
+		Console.WriteLine(&amp;quot;(0)&amp;quot;,empl.FirstName);
+		Console.WriteLine(&amp;quot;(0]&amp;quot;.empl.CityofBirth);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然而有的时候，如果能使用索引访问它们将会很方便，好像该实例是字段的数组一样。这正是索引器能做的事。如果为类 Employee 写一个索引器。请注意没有使用点运算符，相反，索引器使用索引运算符，它由一对方括号和中间的索引组成。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class Employee
+&amp;#123;
+    public string LastName;
+	public string FirstName;
+	public string CityofBirth;
+&amp;#125;
+
+class Program
+&amp;#123;
+    static void Main()
+    &amp;#123;
+        Employee empl new Employee();
+
+		empl.LastName=&amp;quot;Doe&amp;quot;;
+		empl.FirstName=&amp;quot;Jane&amp;quot;;
+		empi:cityofBirth=&amp;quot;Dallas&amp;quot;;
+		Console.WriteLine(&amp;quot;(0)&amp;quot;.empl[0]);
+		Console.WriteLine(&amp;quot;(0)&amp;quot;,empl[1]);
+		Console.WriteLine(&amp;quot;(0]&amp;quot;.empl[2]);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引器是一组 get 和 set 访问器，与属性类似。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;string this [int index]
+&amp;#123;
+    set
+    &amp;#123;
+        SetAccessorCode
+    &amp;#125;
+    get
+    &amp;#123;
+        GetAccessorCode
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引器和属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;和属性一样，索引器不用分配内存来存储&lt;/li&gt;
+&lt;li&gt;索引器和属性都主要被用来访问其他数据成员，它们与这些成员关联，并为他们提供获取和设置访问。
+&lt;ul&gt;
+&lt;li&gt;属性同常表示单个数据成员。&lt;/li&gt;
+&lt;li&gt;索引器通常表示多个数据成员。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;索引器属意事项&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;和属性一样，索引器可以只有一个访问器，也可以两个都有。&lt;/li&gt;
+&lt;li&gt;索引器总是实例成员，因此不能被声明为 static。&lt;/li&gt;
+&lt;li&gt;和属性一样，实现 get 和 set 访问器的代码不一定要关联到某个字段或属性。这段代码可以做任何事情也可以什么也不用做，只要 get 访问器返回某个指定类型的值即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引器声明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;声明索引器注意点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;索引器没有名称。在名称的位置是关键字 this&lt;/li&gt;
+&lt;li&gt;参数列表在方括号中间&lt;/li&gt;
+&lt;li&gt;参数列表中至少声明一个参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;ReturnType this [Type param1,……]
+&amp;#123;
+    get
+    &amp;#123;
+ 
+    &amp;#125;
+    set
+    &amp;#123;
+ 
+    &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引器的 set 和 get 访问器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;set 索引器：当索引器被用于赋值时，set 访问器被调用，并接受两项数据。set 访问器中的代码必须检查索引参数，以确定数据应该存往何处，然后保存它。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个名为 value 的隐式参数，其中持有要保存的数据。&lt;/li&gt;
+&lt;li&gt;一个或更多个索引参数，表示数据应该保存到哪里。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;set 访问器语义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它的返回类型为 void。&lt;/li&gt;
+&lt;li&gt;它使用的参数列表和索引器声明中的相同。&lt;/li&gt;
+&lt;li&gt;它有一个名为 value 的隐式参数，值参类型和索引器类型相同。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;get 索引器：当使用索引器获取值时，可以通过一个或多个索引参数调用 get 访问器。get 访问器中的代码必须检查索引参数，以确定数据应该存往何处，然后保存它。&lt;/p&gt;
+&lt;p&gt;get 访问器语义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它的参数列表和索引器声明中的相同。&lt;/li&gt;
+&lt;li&gt;它返回与索引类型相同的值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引器示例&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class Employee
+&amp;#123;
+    public string LastName;                //调用字段0
+    public string FirstName;			   //调用字段1
+    public string CityOfBirth;			   //调用字段2
+ 
+    public string this[int index]		   //索引器声明
+    &amp;#123;
+        set								   //set访问器声明
+        &amp;#123;
+            switch(index)
+            &amp;#123;
+                case 0:LastName=value;
+                    break;
+                case 1:FirstName=value;
+                    break;
+                case 2:CityOfBirth=value;
+                    break;
+                defaul:
+                    throw new ArgumentoutofRangeException(&amp;quot;index&amp;quot;);
+            &amp;#125;
+        &amp;#125;
+        get								   //get访问器声明
+        &amp;#123;
+            switch(index)
+            &amp;#123;
+                case 0:return LastName;
+                case 1:return FirstName;
+                case 2:return CityOfBirth;
+ 
+                default:
+                    throw new ArgumentoutofRangeException(&amp;quot;index&amp;quot;);
+            &amp;#125;
+        &amp;#125;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class Class1
+&amp;#123;
+    int Temp0;					//私有字段
+    int Temp1;					//私有字段
+    public int this[int index]
+    &amp;#123;
+        get
+        &amp;#123;
+            return(0==index)?Temp0:Temp1;
+		&amp;#125;
+        set
+        &amp;#123;
+            if(0==index)
+                Temp0=value;
+            else
+                Temp1=value;
+        &amp;#125;
+    &amp;#125;
+&amp;#125;
+class Example
+&amp;#123;
+    static void Main()
+    &amp;#123;
+        Class1 a=new Class1();
+ 
+        Console.WriteLine(&amp;quot;Value -- T0:&amp;#123;0&amp;#125;,T1:&amp;#123;1&amp;#125;,a[0],a[1]&amp;quot;);
+        a[0]=15;
+        a[1]=20;
+         Console.WriteLine(&amp;quot;Value -- T0:&amp;#123;,a[0]&amp;#125;,T1:&amp;#123;,a[1]&amp;#125;&amp;quot;);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;Values -T0:0,T1:0
+Va1ues--T0:15,T1:20
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引器重载&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;只要索引器的参数列表不同，类就可以有任意多个索引器。索引器类型不同是不够的。这叫作索引器重载，因为所有的索引器都有相同的 “名称”：this 访问引用。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyClass
+&amp;#123;
+    public string this [int index]
+	&amp;#123;
+        get&amp;#123;&amp;#125;
+        set&amp;#123;&amp;#125;
+    &amp;#125;
+
+	public string this [int index1,int index2]
+    &amp;#123;
+        get&amp;#123;&amp;#125;
+        set&amp;#123;&amp;#125;
+    &amp;#125;
+
+	public int this [float index1]
+    &amp;#123;
+        get&amp;#123;&amp;#125;
+        set&amp;#123;&amp;#125;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;9-访问器的访问修饰符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9-访问器的访问修饰符&#34;&gt;#&lt;/a&gt; 9. 访问器的访问修饰符&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;默认情况，索引器和属性的两个访问器级别跟索引器和属性自身的访问级别相同。也可以为两个访问器分配不同的访问级别。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class Person
+&amp;#123;
+    public string Name&amp;#123;get;private set;&amp;#125;
+    public Person(string name)&amp;#123;Name=name;&amp;#125;
+&amp;#125;
+class Program
+    [
+static public void Main()
+    &amp;#123;
+        Person p=new Person(&amp;quot;Capt.Ernest Evans&amp;quot;);
+        Console.WriteLine(&amp;quot;Person&#39;s name is &amp;#123;P.Name&amp;#125;&amp;quot;);
+    &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;Person&#39;s name is Capt.Ernest Evans
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在上面的代码中，可以从类的外部读取属性，但是只能在类的内部设置它。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问器的修饰符限制条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仅当成员 (属性和索引器) 既有 get 访问器也有 set 访问器，其访问器才能访问修饰符。&lt;/li&gt;
+&lt;li&gt;虽然两个访问器都必须出现，但它们中只能有一个有访问修饰符。&lt;/li&gt;
+&lt;li&gt;访问器的访问修饰符的显示不惜比成员的访问级别更加严格。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220917195545721.png&#34; alt=&#34;image-20220917195545721&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;10-分部类和分布类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#10-分部类和分布类型&#34;&gt;#&lt;/a&gt; 10. 分部类和分布类型&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;类的声明可以分割成几个分布类的声明&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个分部类的声明都含有一些类成员的声明。&lt;/li&gt;
+&lt;li&gt;类的分部类声明可以在同一一个文件中也可以在不同文件中。&lt;/li&gt;
+&lt;li&gt;每个分部类声明必须被标注为 partial class, 而不是单独的关键字 class。分部类声明看起来和普通类声明相同，只是增加了类型修饰符 partial。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;partial clas5 MyPartClass				//类名称与下面的相同
+&amp;#123;
+	memberi declaration;
+	member2 declaration;
+&amp;#125;
+类型修饰符
+partial class MyPartClass				//类名称与上西的相同
+&amp;#123;
+    member3 declaration;
+	member4 declaration;
+&amp;#125;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;类型修饰符 partial 不是关键字，所以在其他上下文中，可以在程序中把它用作标识符。但直接用在关键字 class、struct 或 interface 之前时，它表示分部类型。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分部类型还有局部结构和局部接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;11-分部方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11-分部方法&#34;&gt;#&lt;/a&gt; 11. 分部方法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;分部方法是声明在分部类中不同部分的方法。分部方法的不同部分可以声明在分部类的不同&lt;br /&gt;
+部分中，也可以声明在同一个部分中。分部方法的两个部分如下。
+&lt;ul&gt;
+&lt;li&gt;定义分部方法声明。
+&lt;ul&gt;
+&lt;li&gt;给出签名和返回类型。&lt;/li&gt;
+&lt;li&gt;声明的实现部分只是一个分号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;实现分部方法声明。
+&lt;ul&gt;
+&lt;li&gt;给出签名和返回类型。&lt;/li&gt;
+&lt;li&gt;以普通的语句块形式实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;分部方法需要了解的内容
+&lt;ul&gt;
+&lt;li&gt;定义声明和实现声明的签名和返回类型必须匹配。签名和返回类型有如下特征：
+&lt;ul&gt;
+&lt;li&gt;返回类型必须是 void。&lt;/li&gt;
+&lt;li&gt;签名不能包括访问修饰符，这使分部方法是隐式私有的。&lt;/li&gt;
+&lt;li&gt;参数列表不能包含 out 参数。&lt;/li&gt;
+&lt;li&gt;在定义声明和实现声明中都必须包含上下文关键字 partial, 并且直接放在关键字 void 之前。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以有定义部分而没有实现部分。在这种情况下，编译器把方法的声明以及方法内部任何对方法的调用都移除。不能只有分部方法的实现部分而没有定义部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;四-类的继承&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四-类的继承&#34;&gt;#&lt;/a&gt; 四、类的继承&lt;/h2&gt;
+&lt;h3 id=&#34;1-屏蔽基类的成员&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-屏蔽基类的成员&#34;&gt;#&lt;/a&gt; 1. 屏蔽基类的成员&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;虽然派生类不能删除它继承的任何成员，但可以用与基类成员名称相同的成员来屏薇 (mask) 基类成员。这是继承的主要功能之一，非常实用。
+&lt;ul&gt;
+&lt;li&gt;要屏蔽一个继承的数据成员，需要声明一个新的相同类型的成员，并使用相同的名称。&lt;/li&gt;
+&lt;li&gt;通过在派生类中声明新的带有相同签名的函数成员，可以屏蔽继承的函数成员。请记住，签名由名称和参数列表组成，不包括返回类型。&lt;/li&gt;
+&lt;li&gt;要让编译器知道你在故意屏蔽继承的成员，可使用 new 修饰符。否则，程序可以成功编译，但编译器会警告你隐藏了一个继承的成员。&lt;/li&gt;
+&lt;li&gt;也可以屏蔽静态成员。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-虚方法和覆写方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-虚方法和覆写方法&#34;&gt;#&lt;/a&gt; 2. 虚方法和覆写方法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;虚方法可以使基类的引用访问 “升至” 派生类内。可以使用基类引用调用派上类的方法，只需满足下面的条件。
+&lt;ul&gt;
+&lt;li&gt;派生类的方法和基类的方法有相同的签名和返回类型。&lt;/li&gt;
+&lt;li&gt;基类的方法使用 virtual 标注。&lt;/li&gt;
+&lt;li&gt;派生类的方法使用 override 标注。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;其他关于 virtual 和 override 修饰符的重要信息如下。
+&lt;ul&gt;
+&lt;li&gt;覆写和被覆写的方法必须有相同的可访问性。例如，这种情况是不可以的：被覆写的方&lt;br /&gt;
+法是 private 的，而覆写方法是 public 的。&lt;/li&gt;
+&lt;li&gt;不能覆写 static 方法或非虚方法。&lt;/li&gt;
+&lt;li&gt;方法、属性和索引器，以及另一种成员类型一事件，都可以被声明为 virtual 和 override.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-构造函数的执行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-构造函数的执行&#34;&gt;#&lt;/a&gt; 3. 构造函数的执行&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;要创建对象的基类部分，需要隐式调用基类的某个构造函数。继承层次链中的每个类在执行它自己的构造函数体之前执行它的基类构造函数。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220917205056606.png&#34; alt=&#34;image-20220917205056606&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;默认情况下，在构造对象时，将调用基类的无参数构造函数。但构造函数可以重载，所以基类可能有一个以上的构造函数。如果希望派生类使用一个指定的基类构造函数而不是无参数构造函数，必须在构造函数初始化语句中指定它。&lt;br /&gt;
+有两种形式的构造函数初始化语句。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一种形式使用关键字 base 并指明使用哪一个基类构造函数。&lt;/li&gt;
+&lt;li&gt;第二种形式使用关键字 this 并指明应该使用当前类的哪一个构造函数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;基类构造函数初始化语句放在冒号后面，跟在类的构造函数声明的参数列表后面。构造函数始化语句由关键字 base 和要调用的基类构造函数的参数列表组成。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-类访问修饰符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-类访问修饰符&#34;&gt;#&lt;/a&gt; 4. 类访问修饰符&lt;/h3&gt;
+&lt;p&gt;可访问（accessible) 有时也称为可见（visible), 它们可以互换使用。类的可访问性有两个级别：public 和 internal。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;标记为 pub1ic 的类可以被系统内任何程序集中的代码访问。要使一个类对其他程序集可见，使用 pub1ic 访问修饰符，如下所示：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;public class MyBaseClass
+&amp;#123;
+    ……
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标记为 internal 的类只能被它自已所在的程序集内的类看到。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这是默认的可访问级别，所以，. 除非在类的声明中显式地指定修饰符 pub1ic, 否则程&lt;br /&gt;
+序集外部的代码不能访问该类。&lt;/li&gt;
+&lt;li&gt;可以使用 internal 访问修饰符显式地声明一个类为内部的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;internal class MyBaseClass
+&amp;#123;
+    ……
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-修饰符的可访问性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-修饰符的可访问性&#34;&gt;#&lt;/a&gt; 5. 修饰符的可访问性&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;public 访问级别是限制最少的。所有的类，包括程序集内部的类和外部的类都可以自由地访问成员。&lt;/li&gt;
+&lt;li&gt;private 访问级别是限制最严格的。private 类成员只能被它自己的类的成员访问。它不能被其他的类访问，包括继承它的类。然而，private 成员能被嵌套在它的类中的类成员访问。&lt;/li&gt;
+&lt;li&gt;protected 访问级别如同 private 访问级别，但它允许派生自该类的类访问该成员。注意，即使程序集外部继承该类的类也能访问该成员。&lt;/li&gt;
+&lt;li&gt;标记为 internal 的成员对程序集内部的所有类可见，但对程序集外部的类不可见。&lt;/li&gt;
+&lt;li&gt;标记为 protected internal 的成员对所有继承该类的类以及程序集内部的所有类可见。注意，允许访问的集合是 protected 修饰符允许访问的类的集合加上 internal 修饰符允许访问的类的集合。注意，这是 protected 和 internal 的并集，不是交集。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220917210313358.png&#34; alt=&#34;image-20220917210313358&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220917210349590.png&#34; alt=&#34;image-20220917210349590&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;6-抽象成员&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-抽象成员&#34;&gt;#&lt;/a&gt; 6. 抽象成员&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;抽象成员是指设计为被覆写的函数成员。抽象成员有以下特征。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必须是一个函数成员。也就是说，字段和常量不能为抽象成员。&lt;/li&gt;
+&lt;li&gt;必须用 abstract 修饰符标记。&lt;/li&gt;
+&lt;li&gt;不能有实现代码块。抽象成员的代码用分号表示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;抽象成员只可以在抽象类中声明，下一节中会讨论。一共有 4 种类型的成员可以声明为抽象的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法；&lt;/li&gt;
+&lt;li&gt;属性；&lt;/li&gt;
+&lt;li&gt;事件；&lt;/li&gt;
+&lt;li&gt;索引器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于抽象成员的其他重要事项如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;尽管抽象成员必须在派生类中用相应的成员覆写，但不能把 virtual 修饰符附加到 abstract 修饰符。&lt;/li&gt;
+&lt;li&gt;类似于虚成员，派生类中抽象成员的实现必须指定 override 修饰符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220917210712470.png&#34; alt=&#34;image-20220917210712470&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;7-静态类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-静态类&#34;&gt;#&lt;/a&gt; 7. 静态类&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;静态类中所有成员都是静态的。静态类用于存放不受实例数据影响的数据和函数。静态类的一个常见用途可能是创建一个包含一组数学方法和值的数学库。
+&lt;ul&gt;
+&lt;li&gt;类本身必须标记为 static。&lt;/li&gt;
+&lt;li&gt;类的所有成员必须是静态的。&lt;/li&gt;
+&lt;li&gt;类可以有一个静态构造函数，但不能有实例构造函数，因为不能创建该类的实例。&lt;/li&gt;
+&lt;li&gt;静态类是隐式密封的，也就是说，不能继承静态类。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;五-运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#五-运算符&#34;&gt;#&lt;/a&gt; 五、运算符&lt;/h2&gt;
+&lt;h3 id=&#34;1-运算符重载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-运算符重载&#34;&gt;#&lt;/a&gt; 1. 运算符重载&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;运算符重载允许你定义 C# 运算符应该如何操作自定义类型的操作数。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运算符重载只能用于类和结构&lt;/li&gt;
+&lt;li&gt;为类或结构重载一个运算符 x, 可以声明一个名称为 operator× 的方法并实现它的行为
+&lt;ul&gt;
+&lt;li&gt;一元运算符的重载方法带一个单独的 class 或 struct 类型的参数。&lt;/li&gt;
+&lt;li&gt;二元运算符的重载方法带两个参数，其中至少有一个必须是 class 或 struct 类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;声明必须同时使用 static 和 public 的修饰符；&lt;/li&gt;
+&lt;li&gt;运算符必须是要操作的类或结构的成员。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运算符重载限制&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220917212812990.png&#34; alt=&#34;image-20220917212812990&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运算符重载不能：
+&lt;ul&gt;
+&lt;li&gt;创建新运算符；&lt;/li&gt;
+&lt;li&gt;改变运算符的语法；&lt;/li&gt;
+&lt;li&gt;重新定义运算符如何处理预定义类型；&lt;/li&gt;
+&lt;li&gt;改变运算符的优先级或结合性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-typeof运算符和-nameof-运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-typeof运算符和-nameof-运算符&#34;&gt;#&lt;/a&gt; 2. &lt;strong&gt;typeof&lt;/strong&gt; 运算符和 nameof 运算符&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;typeof 运算符返回作为其参数的任何类型的 System.Type 对象。通过这个对象，可以了解类型的特征。&lt;/p&gt;
+&lt;p&gt;typeof 运算符是一元运算符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;nameof 运算符返回一个表示传人参数的字符串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;六-委托&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#六-委托&#34;&gt;#&lt;/a&gt; 六、委托&lt;/h2&gt;
+&lt;h3 id=&#34;1委托概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1委托概述&#34;&gt;#&lt;/a&gt; 1. 委托概述&lt;/h3&gt;
+&lt;p&gt;委托和类一样，是一种用户用户自定义类型。但类表示的是数据和方法的集合，而委托则持有一个或多个方法，以及一系列预定义操作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明一个委托类型。委托声明看上去和方法声明类似，只是没有实现块。&lt;/li&gt;
+&lt;li&gt;使用该委托类型声明一个委托变量。&lt;/li&gt;
+&lt;li&gt;创建一个委托类型的对象，并把它赋值给委托变量。新的委托对象包含指向某个方法的引用，这个方法的签名和返回类型必须跟第一步中定义的委托类型一致。&lt;/li&gt;
+&lt;li&gt;可以选择为委托对象添加其他方法。这些方法的签名和返回类型必须与第一部中定义的委托类型相同。&lt;/li&gt;
+&lt;li&gt;可以像调用方法一样调用委托。在调用委托的时候，其包含的每一个方法都会被执行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220921194159165.png&#34; alt=&#34;image-20220921194159165&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方法的列表称为调用列表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;委托持有的方法可以来自任何类或结构，只要它们在下面两方面匹配：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;委托的返回类型；&lt;/li&gt;
+&lt;li&gt;委托的签名 (包括 ref 和 out 修饰符)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在调用列表中的方法可以是实例方法也可以是静态方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在调用委托的时候，会执行其调用列表中的所有方法。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220921195045455.png&#34; alt=&#34;image-20220921195045455&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-声明委托类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-声明委托类型&#34;&gt;#&lt;/a&gt; 2. 声明委托类型&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;委托类型必须在创建变量以及类型的对象之前声明。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;delegate void MyDel(int x);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;委托类型声明在两个方面与方法不同。委托类型声明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以 delegate 关键字开头；&lt;/li&gt;
+&lt;li&gt;没有方法主体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220921195755345.png&#34; alt=&#34;image-20220921195755345&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;委托是引用类型，因此有引用和对象。委托类型的变量声明：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;MyDel delVar;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建委托对象的方式有两种。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一种是使用 new 运算符的对象创建表达式。new 运算符的操作数组成如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;委托类型名。&lt;/li&gt;
+&lt;li&gt;一组圆括号，其中包含作为调用列表中第一个成员方法的名称。该方法可以是实例方法或静态方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;delVar=new MyDel(myInsObj.MyM1);
+dVar=new MyDel(SClass.OtherM2);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;还可以使用快捷语法，它仅由方法说明符构成。这种快捷语法能够工作是因为方法名称和其相应的委托类型之间存在隐式转换。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;delVar =MyInsObj.MyM1;
+dVar =SClass.OtherM2;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;除了为委托分配内存，创建委托对象还会把第一个方法放入委托的调用列表。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;由于委托是引用类型，我们可以通过给它赋值来改变包含在委托变量中的引用。旧的委托对象会被垃圾回收器回收。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;委托可以使用额外的运算符来 “组合”。这个运算会创建一个新的委托，并调用列表连接了作为操作数的两个委托的调用列表副本。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;MyDel delA=myInstObj.MyM1;
+MyDel delB=SClass.OtherM2;
+
+MyDel delC=delA + delB;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;委托是恒定的。委托对象被创建后不能在被改变。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-委托的添加方法和移除方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-委托的添加方法和移除方法&#34;&gt;#&lt;/a&gt; 3. 委托的添加方法和移除方法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;C# 可以为委托添加和移除方法，即使用 **+=&lt;strong&gt; 和&lt;/strong&gt; -=** 运算符。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;添加方法&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C#&#34;&gt;MyDel delVar =new inst.MyM1;
+decVar +=SCL.m3;
+delVar +=X.Act;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220921204834993.png&#34; alt=&#34;image-20220921204834993&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;在使用 += 运算符时，实际发生的是创建了一个新的委托，其调用列表是左边的委托加上右边的方法的组合。然后将这个新的委托赋值给 delVar。每次添加都会在调用列表创建一个新的元素。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;移除方法&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;decVar -=SCL.m3;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220921205038288.png&#34; alt=&#34;image-20220921205038288&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;与为委托添加方法一样，其实是创建了一个新的委托。新的委托是旧的委托的副本 — 只是没有被有了已经被移除的方法。&lt;/p&gt;
+&lt;p&gt;移除委托需要记住的一些事项，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果在调用列表中的方法有多个实例，**-=** 运算符将从列表的最后开始索引，并且移除第一个与方法匹配的实例。&lt;/li&gt;
+&lt;li&gt;试图删除委托中不存在的方法将无效。&lt;/li&gt;
+&lt;li&gt;试图调用空委托会抛出异常。可以通过将委托和 null 进行比较来判断委托的调用列表是否为空。如果调用列表为空，则委托是 null。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-委托的调用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-委托的调用&#34;&gt;#&lt;/a&gt; 4. 委托的调用&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;委托调用的重要事项。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以通过两种方式调用委托。一种是调用方法一样调用委托，另一种是使用委托的 Invoke 方法。&lt;/li&gt;
+&lt;li&gt;可以将参数放在调用的圆括号内。用于调用委托的参数作用于调用列表中的每个方法 (除非其中一个参数是输出参数)。&lt;/li&gt;
+&lt;li&gt;调用时委托不能为空 (null), 否则将引发异常。可以使用 if 语句进行检查，也可以使用空条件运算符和 Invoke 方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;MyDel delVar inst.MyM1;
+delvar+=SC1.m3;
+delvar+=X.Act;
+
+if (delVar !=null)
+&amp;#123;
+    de1var(55);			//调用委托
+&amp;#125;
+delVar?.Invoke(65);		//使用Invoke和空条件运算符
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220921211205874.png&#34; alt=&#34;image-20220921211205874&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;调用带返回值的委托&lt;br /&gt;
+如果委托有返回值并且在调用列表中有一个以上的方法，会放生下面的 qingkuang&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调用列表中最后一个方法返回的值就是委托调用返回的值。&lt;/li&gt;
+&lt;li&gt;调用列表中所有其他方法的返回值都会被忽略。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;delegate int MyDel();							//声明有返回位的方法
+class MyClass
+&amp;#123;
+    int IntValue 5;
+	public int Add2()&amp;#123;IntValue +2;return IntValue;&amp;#125;
+	public int Add3()&amp;#123;IntValue +3;return IntValue;&amp;#125;
+&amp;#125;
+
+class Program
+&amp;#123;
+     MyClass mc new Myclass();
+		MyDel mDel mc.Add2;							//创建并初始化委托
+		mDel +mc.Add3;								//增加方法
+		mDel +mc.Add2;								//增加方法
+		Console.WriteLine($&amp;quot;Value:mDel()&amp;#125;&amp;quot;);		//调用委托并使用返回值
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220927194547963.png&#34; alt=&#34;image-20220927194547963&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;调用带引用参数的委托&lt;br /&gt;
+如果委托带有引用参数，参数值会根据调用列表中的一个或多个方法的返回值而改变。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C#&#34;&gt;delegate int MyDel(ref int x);						//声明有返回位的方法
+class MyClass
+&amp;#123;
+    int IntValue 5;
+    public int Add2(ref int x)&amp;#123;x += 2;&amp;#125;
+	public int Add3(ref int x)&amp;#123;x += 3;&amp;#125;
+
+static void Main()
+    &amp;#123;
+        MyClass mc new Myclass();
+		MyDel mDel mc.Add2;
+		mDel +mc.Add3;
+		mDel +mc.Add2;
+
+    	int x = 5;
+    	mDel(ref x);
+
+		Console.WriteLine($&amp;quot;Value:&amp;#123;x&amp;#125;&amp;quot;);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出结果为:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;F:%5C%E7%AC%94%E8%AE%B0%5Cimage-20220927195618833.png&#34; alt=&#34;image-20220927195618833&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5-匿名方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-匿名方法&#34;&gt;#&lt;/a&gt; 5. 匿名方法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;匿名方法让我们无须使用独立的具名方法。匿名方法 (anonymous method) 是在实例化委托时内联 (inline) 声明的方法。例如，图 14-l2&lt;br /&gt;
+ 演示了同一个类的两个版本。左边的版本声明并使用了一个名为 Add20 的方法。右边的版本使用匿名方法。没有底色的代码部分对于两个版本是一样的。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220927200005598.png&#34; alt=&#34;image-20220927200005598&#34; /&gt;&lt;br /&gt;
+ 输出结果为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;25
+26
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;使用匿名方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明委托变量作为初始化表达方法。&lt;/li&gt;
+&lt;li&gt;组合委托时在赋值语句的右边。&lt;/li&gt;
+&lt;li&gt;为委托增加事件时在赋值语句的右边。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;匿名方法表达式的语法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;delegate 类型关键字&lt;/li&gt;
+&lt;li&gt;参数列表，如果语句块没有使用任何参数列表则可以省略&lt;/li&gt;
+&lt;li&gt;语句块，它包含了匿名方法的代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220927200408061.png&#34; alt=&#34;image-20220927200408061&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;返回类型&lt;br /&gt;
+匿名方法不会显式声明返回值。然而，实现代码本身的行为必须通过返回一个与委托的返回类型相同的值来匹配委托的返回类型。如果委托有 Void 类型的返回值，匿名方法就不能返回值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参数&lt;br /&gt;
+除了数组参数，匿名方法的参数列表必须在如下 3 方面与委托匹配：・&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;参数数量；&lt;/li&gt;
+&lt;li&gt;参数类型及位置；&lt;/li&gt;
+&lt;li&gt;修饰符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以通过使圆括号为空或省略圆括号来简化匿名方法的参数列表，但必须满足以下两个条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;委托的参数列表不包含任何 out 参数；&lt;/li&gt;
+&lt;li&gt;匿名方法不使用任何参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;params 参数&lt;/p&gt;
+&lt;p&gt;如果委托声明的参数列表包含了 params 参数，那么匿名方法的参数列表将忽略 params 关键字。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;委托类型声明指定最后一个参数为 params 类型的参数；&lt;/li&gt;
+&lt;li&gt;然而，匿名方法参数列表必须省略 params 关键字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;变量和参数的作用域&lt;br /&gt;
+参数以及声明在匿名方法内部的局部变量的作用域限制在实现代码的主题之内。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220927202320950.png&#34; alt=&#34;image-20220927202320950&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;外部变量&lt;br /&gt;
+与委托的具名方法不同，匿名方法可以访问它们外围作用域的局部变量和环境。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;外围作用域的变量叫做外部变量 (outer variable)。&lt;/li&gt;
+&lt;li&gt;用在匿名方法实现代码中的外部变量称为方法捕获。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220927211036778.png&#34; alt=&#34;image-20220927211036778&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;捕获变量的生命周期的拓展&lt;br /&gt;
+只要捕获方法是委托的一部分，即使变量已经离开了作用域，捕获的外部变量也会一直有效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;6-lambda-表达式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-lambda-表达式&#34;&gt;#&lt;/a&gt; 6. Lambda 表达式&lt;/h3&gt;
+&lt;p&gt;使用 Lambda 表达式来代替匿名方法。&lt;br /&gt;
+匿名方法转换为 Lambda 表达式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;删除 delegate 关键字；&lt;/li&gt;
+&lt;li&gt;在参数列表和匿名方法主体之间放置 Lambda 运算符 =&amp;gt;。Lamnda 运算符读作 “goes to”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220927212306117.png&#34; alt=&#34;image-20220927212306117&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;编译器可以从 lambda 表达式中推断更多信息。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编译器还可以从委托的声明中知道委托的参数的类型，因此 lambda 表达式允许省略类型参数。
+&lt;ul&gt;
+&lt;li&gt;带有类型的参数列表被称为显式类型。&lt;/li&gt;
+&lt;li&gt;省略类型的参数列表被称为隐式类型。&lt;/li&gt;
+&lt;li&gt;如果只有一个隐式类型参数，我们可以省略两端的圆括号。&lt;/li&gt;
+&lt;li&gt;最后，Lambda 表达式允许表达式的主体是语句块或表达式。如果语句块包含了一个返回语句，我们可以将语句替换为 return 关键字后的表达式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lambda 表达式的参数列表要点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lambda 表达式参数列表中的参数必须要在参数数量、类型和位置上与委托相同。&lt;/li&gt;
+&lt;li&gt;表达式的参数列表中的参数不一定需要包含类型 (隐式类型)，除非委托有 ref 或 out 参数 — 此时必须注明类型 (显式类型)。&lt;/li&gt;
+&lt;li&gt;如果只有一个参数，并且是隐式类型的，则两端的圆括号可以省略，否则必须有括号。&lt;/li&gt;
+&lt;li&gt;如果没有参数，必须使用一组空的圆括号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;七-事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#七-事件&#34;&gt;#&lt;/a&gt; 七、事件&lt;/h2&gt;
+&lt;h3 id=&#34;1-发布者和订阅者&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-发布者和订阅者&#34;&gt;#&lt;/a&gt; 1. 发布者和订阅者&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;发布者 / 订阅者模式（publisher/subscriber pattern) 可以满足这种需求。在这种模式中，发布者类定义了一系列程序的其他部分可能感兴趣的事件。其他类可以 “注册”，以便在这些事件发生时收到发布者的通知。这些订阅者类通过向发布者提供一个方法来 “注册” 以获取通知。当事件发生时，发布者 “触发事件”，然后执行订阅者提交的所有事件。&lt;/p&gt;
+&lt;p&gt;由订阅者提供的方法称为回调方法，因为发布者通过执行这些方法来 “往回调用订阅者的方法”。还可以将它们称为事件处理程序，因为它们是为处理事件而调用的代码。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220928193604069.png&#34; alt=&#34;image-20220928193604069&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关于事件的重要事项。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;发布者&lt;/strong&gt; 发布某个事件的类或结构，其他类可以在该事件发生时得到通知&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;订阅者&lt;/strong&gt; 注册并在事件发生时得到通知的类或结构&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件处理程序&lt;/strong&gt; 由订阅者注册事件的方法，在发布者 出发事件时执行。事件处理程序方法可以定义在事件所在的类或结构中，也可以定义在不同的类或结构中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;触发事件&lt;/strong&gt; 调用或触发事件的术语。当事件被触发时，所有注册到它的方法都会被一次调用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件包含了一个私有的委托。&lt;br /&gt;
+事件的私有委托注意事项：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事件提供了对它的私有控制委托的结构化访问。也就是说，你无法直接访问委托。&lt;/li&gt;
+&lt;li&gt;事件中可用的操作比委托要少，对于事件我们只能添加、删除或调用事件处理程序。&lt;/li&gt;
+&lt;li&gt;事件被触发时，它调用委托来依次调用调用列表中的方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-源代码组件概览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-源代码组件概览&#34;&gt;#&lt;/a&gt; 2. 源代码组件概览&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;事件中使用的代码有 5 部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;委托类型声明&lt;/strong&gt; 事件和事件处理程序必须有共同的签名和返回类型，它们通过委托类型进行描述。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件处理程序声明&lt;/strong&gt; 订阅者类中会在事件触发时执行的方法声明。它们不一定是显式命名的方法，还可以是匿名方法或 Lambda 表达式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件声明&lt;/strong&gt; 发布者类必须声明一个订阅者类可以注册的事件成员。当类声明的事件为 public 时，称为发布了事件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;事件注册&lt;/strong&gt; 订阅者必须注册事件才能在事件被触发时得到通知。这是将事件处理程序与事件相连的代码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;触发事件的代码&lt;/strong&gt; 发布者类中 “触发” 事件并导致调用注册的所有事件处理程序的代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220928195921778.png&#34; alt=&#34;image-20220928195921778&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-声明事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-声明事件&#34;&gt;#&lt;/a&gt; 3. 声明事件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;声明事件的语法&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220928200248183.png&#34; alt=&#34;image-20220928200248183&#34; /&gt;&lt;br /&gt;
+ 关于事件声明的内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事件声明在一个类中。&lt;/li&gt;
+&lt;li&gt;它需要委托类型的名称，任何附加到事件 (如注册) 的处理程序都必须与委托类型的签名和返回类型匹配。&lt;/li&gt;
+&lt;li&gt;它声明为 public，这样其他类和结构可以在它上面注册事件处理程序。&lt;/li&gt;
+&lt;li&gt;不能使用对象创建表达式 (new 表达式) 创建它的对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用使用逗号分隔创建多个事件：&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220928200724245.png&#34; alt=&#34;image-20220928200724245&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;也可以可以使用 static 关键字让事件变为静态：&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220928200800904.png&#34; alt=&#34;image-20220928200800904&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件是成员&lt;br /&gt;
+事件的特性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;由于事件的成员：
+&lt;ul&gt;
+&lt;li&gt;我们不能在一段可执行代码中声明事件；&lt;/li&gt;
+&lt;li&gt;它必须声明在类或者结构中，和其他成员一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;事件成员被隐式自动初始化为 null；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-订阅事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-订阅事件&#34;&gt;#&lt;/a&gt; 4. 订阅事件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;订阅者向事件添加事件处理程序。对于一个要添加到事件的事件处理程序来说，它必须具有与事件的委托相同的返回类型和签名。
+&lt;ul&gt;
+&lt;li&gt;使用 += 运算符来为事件添加事件处理程序。事件处理程序位于该运算符的右边。&lt;/li&gt;
+&lt;li&gt;事件处理程序的规范可以是以下任意的一种：
+&lt;ul&gt;
+&lt;li&gt;实例方法的名称；&lt;/li&gt;
+&lt;li&gt;静态方法的名称；&lt;/li&gt;
+&lt;li&gt;匿名方法；&lt;/li&gt;
+&lt;li&gt;Lambda 表达式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;5-触发事件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-触发事件&#34;&gt;#&lt;/a&gt; 5. 触发事件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;事件成员本身只是保存了需要被调用的事件处理程序。如果事件没有被触发，什么都不会发生。我们需要确保有代码在合适的时候做这件事情。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在触发事件之前和 null 进行比较，从而查看事件是否包含事件处理程序。如果事件是 nu11, 则表示没有事件处理程序，不能执行。&lt;/li&gt;
+&lt;li&gt;触发 l 事件的语法和调用方法一样：
+&lt;ul&gt;
+&lt;li&gt;使用事件名称，后面跟着参数列表（包含在圆括号中)：&lt;/li&gt;
+&lt;li&gt;参数列表必须与事件的委托类型相匹配。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;标准事件的用法&lt;/p&gt;
+&lt;p&gt;事件的使用，NET 框架提供了一个标准模式。该标准模式的基础就是 System 命名空间中声明的 EventHandler 委托类型。EventHandler 委托类型的声明如以下代码所示。关于该声明需要注意以下几点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一个参数用来保存触发事件的对象的引用。由于它是 object 类型的，所以可以匹配任何类型的实例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二个参数用来保存状态信息，指明什么类型适用于该应用程序。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;返回类型是 void。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;public delegate void EventHandler(object sender,EventArgs e);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;EventHandler 委托类型的第二个参数是 EventArgs 类的对象，它声明在 System 命名空间中。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;EventArgs 不能传递任何数据，它用于不需要传递数据的事件处理程序 - 通常会被忽略。&lt;/li&gt;
+&lt;li&gt;如果你希望传递数据，必须声明一个派生自 EventArgs 的类，并使用合适的字段来保存需要传递的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拓展 EventArgs 来传递数据&lt;br /&gt;
+声明一个派生自 EventArgs 的自定义类，它可以保存我们需要传入的数据。类的名称应以 EventArgs 结尾。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;public class IncrementerEvenrArgs:EventArgs
+&amp;#123;
+    public int IterationCount&amp;#123;get:set;&amp;#125;  //存储一个整数
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以使用泛型委托： &lt;code&gt;EventHandler&amp;lt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将自定义类的名称放在尖括号内。&lt;/li&gt;
+&lt;li&gt;在需要使用自定义委托类型的地方使用整个字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;public event EventHandler&amp;lt;IncreamentEventArgs&amp;gt; CountedADozen;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;移除事件处理程序&lt;/p&gt;
+&lt;p&gt;在用完事件处理程序之后，可以从事件中把它移除。可以利用 -= 运算符把事件处理程序从事件中移除，如下所示：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;p.SimpleEvent -= s.MethdB;    //移除事件处理程序MethodB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果一个处理程序向事件注册了多次，那么当执行命令移除处理程序时，将只移除列表中该处理程序的最后一个实例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;6-事件访问器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-事件访问器&#34;&gt;#&lt;/a&gt; 6. 事件访问器&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;事件只允许 += 和 -= 运算符。我们可以修改这两个运算符的行为，在使用时让事件执行任何我们希望的自定义代码。&lt;br /&gt;
+要改变这两个运算符的操作，必须为事件定义事件访问器：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有两个访问器：&lt;strong&gt;add&lt;/strong&gt; 和&lt;strong&gt; remove&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;声明事件的访问器看上去和声明属性差不多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个访问器都有叫作 value 的隐式值参数，它连受实例或静态方法的引用。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;public event EventHandler CountedADozen
+&amp;#123;
+    add
+    &amp;#123;
+        ...				//执行+=运算符的代码
+    &amp;#125;
+    remove
+    &amp;#123;
+        ...				//执行-=运算符的代码
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;声明了事件访问器之后，事件不包含任何内嵌委托对象。我们必须实现自己的机制来存储和移除事件注册的方法。&lt;br /&gt;
+事件访问器表现为 void 方法，也就是不能使用返回值的 return 语句。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;八-泛型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#八-泛型&#34;&gt;#&lt;/a&gt; 八、泛型&lt;/h2&gt;
+&lt;h3 id=&#34;1-c中的泛型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-c中的泛型&#34;&gt;#&lt;/a&gt; 1. C# 中的泛型&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;泛型 (generic) 提供了一种更优雅的方式，可以让多个类共享一组代码。泛型允许我们声明&lt;strong&gt;类型参数化&lt;/strong&gt;的代码，用不同类进行实例化。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005192917301.png&#34; alt=&#34;image-20221005192917301&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;C# 提供了 5 种泛型：类、结构、接口、委托和方法。前 4 种是类型，最后一种是方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;示例&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class MyStack&amp;lt;T&amp;gt;
+&amp;#123;
+    int StackPointer=0;
+    T []StackArray;
+    
+    public void Push(T x)&amp;#123;……&amp;#125;
+    
+    public T Pop() &amp;#123;……&amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在类的示例中，使用占位符&lt;strong&gt; T&lt;/strong&gt; 而不是 float 来替换 int。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;2-泛型类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-泛型类&#34;&gt;#&lt;/a&gt; 2. 泛型类&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;声明泛型类&lt;br /&gt;
+声明一个简单的泛型类和声明普通类差不多。区别如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在类名之后放置一组尖括号。&lt;/li&gt;
+&lt;li&gt;在尖括号中用逗号分隔的占位符字符串来表示需要提供的类型。这叫作类型参数 (type parameter)。&lt;/li&gt;
+&lt;li&gt;在泛型类声明的主体中使用类型参数来表示替代类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class SomeClass &amp;lt;T1,T2&amp;gt;
+&amp;#123;
+    public T1 SomeVar;
+    public T2 OtherVar;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;比较泛型和非泛型栈&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005194905583.png&#34; alt=&#34;image-20221005194905583&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;类型参数的约束&lt;/p&gt;
+&lt;p&gt;​	在泛型栈的示例中，栈除了保存和弹出它包含的一些项之外没有做任何事情。它不会尝试添加、比较项，也不会做其他任何需要用到项本身的运算符的事情。这是有原因的。由于泛型栈不知道它们保存的项的类型是什么，所以也就不会知道这些类型实现的成员。&lt;/p&gt;
+&lt;p&gt;​	所有的 C# 对象最终都从 object 类继承，因此，栈可以确认的是，这些保存的项都是实现了 object 类的成员，包括 ToString、Equals 以及 GetType 方法。除此以外，他不知道还有哪些成员可以使用。&lt;/p&gt;
+&lt;p&gt;​	只要我们的代码不访问它处理的一些类型的对象（或者只要它始终是 object 类型的成员），泛型类就可以处理任何类型。符合约束的类型参数叫作未绑定的类型参数 (unbounded type parameter)。然而，如果代码尝试使用其他成员，编译器会产生一个错误消息。&lt;/p&gt;
+&lt;p&gt;​	例如，如下代码声明了一个叫作 Simple 的类，它有一个叫作 LessThan 的方法，接受了同 - 一泛型类型的两个变量。LessThan 尝试用小于运算符返回结果。但是由于不是所有的类都实现了小于运算符，也就不能用任何类来代替 T, 所以编译器会产生一个错误消息。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C#&#34;&gt;class Simple&amp;lt;T&amp;gt;
+&amp;#123;
+    static public bool LessThan(T i1, T i2)
+    &amp;#123;
+        return i1&amp;lt;i2;						//错误
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;要让泛型变得更有用，我们需要提供额外的信息让编译器知道参数可以接受哪些类型。这些额外的信息叫作约束 (constraint)。只有符合约束的类型才能替代给定的类型参数来产生构造类型。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;where 子句&lt;br /&gt;
+约束使用 where 子句列出。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;每一个有约束的类型参数都有自己的 where 子句。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果形参有多个约束，它们在 where 子句中用逗号隔开。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;where 子句语法如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;where TypeParam : constraint, constraint.……
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有关 where 子句要点如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它们在类型参数列表的关闭尖括号之后列出。&lt;/li&gt;
+&lt;li&gt;它们不使用逗号或其他符号分隔。&lt;/li&gt;
+&lt;li&gt;它们可以以任何次序列出。&lt;/li&gt;
+&lt;li&gt;where 是上下文关键字，所以可以在其他上下文中使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;约束类型和次序&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005201242408.png&#34; alt=&#34;image-20221005201242408&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;where 子句可以以任何次序列出。但是 where 子句中的约束必须有特定的顺序。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005201938496.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最多只能有一个主约束，而且必须放在第一位。&lt;/li&gt;
+&lt;li&gt;可以有任意多的接口名称约束。&lt;/li&gt;
+&lt;li&gt;如果存在构造函数约束，则必须放在后面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;3-泛型方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-泛型方法&#34;&gt;#&lt;/a&gt; 3. 泛型方法&lt;/h3&gt;
+&lt;p&gt;与其他泛型不一样，方法是成员，不是类型。泛型方法额可以在泛型和非泛型以及结构和接口中声明。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005202405807.png&#34; alt=&#34;image-20221005202405807&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;声明泛型方法&lt;br /&gt;
+泛型方法具有类型参数列表和可选的约束。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;泛型方法有两个参数列表
+&lt;ul&gt;
+&lt;li&gt;封闭在圆括号内的方法参数列表。&lt;/li&gt;
+&lt;li&gt;封闭在尖括号内的类型参数列表。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;要声明泛型方法，需要：
+&lt;ul&gt;
+&lt;li&gt;在方法之后和方法参数列表之前放置类型参数列表。&lt;/li&gt;
+&lt;li&gt;在方法参数列表后放置可选的约束子句。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005203042377.png&#34; alt=&#34;image-20221005203042377&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;调用泛型方法&lt;br /&gt;
+要调用泛型方法，应该在方法调用时提供类型实参。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005203230378.png&#34; alt=&#34;image-20221005203230378&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;推断类型&lt;/p&gt;
+&lt;p&gt;如果我们为方法传入参数，编译器有时可以从方法参数的类型中推断出应用作泛型方法的类型参数的类型。这样就可以使方法调用更简单，可读性更强。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;4-拓展方法和泛型类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-拓展方法和泛型类&#34;&gt;#&lt;/a&gt; 4. 拓展方法和泛型类&lt;/h3&gt;
+&lt;p&gt;可以将类中的静态方法关联到不同的泛型类上，且允许像调用类构造实例的实例方法一样来调用方法。&lt;/p&gt;
+&lt;p&gt;和非泛型类一样，泛型类的拓展方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必须声明位 static；&lt;/li&gt;
+&lt;li&gt;必须是静态成员；&lt;/li&gt;
+&lt;li&gt;第一个参数类型中必须有关键字 this，后面是拓展的泛型类的名字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-泛型结构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-泛型结构&#34;&gt;#&lt;/a&gt; 5. 泛型结构&lt;/h3&gt;
+&lt;p&gt;与泛型类相似，泛型结构可以有类型参数和约束。泛型结构的规则和条件与泛型类是一样的。&lt;/p&gt;
+&lt;h3 id=&#34;6-泛型委托&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-泛型委托&#34;&gt;#&lt;/a&gt; 6. 泛型委托&lt;/h3&gt;
+&lt;p&gt;泛型委托和非泛型委托非常相似，不过类型参数决定了能接受什么样的方法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要声明泛型委托，在委托名称之后、委托参数列表之前的尖括号中放置类型参数列表。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005205322633.png&#34; alt=&#34;image-20221005205322633&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;注意，有两个参数列表：委托形参列表和类型参数列表。&lt;/li&gt;
+&lt;li&gt;类型参数的范围包括：
+&lt;ul&gt;
+&lt;li&gt;返回类型&lt;/li&gt;
+&lt;li&gt;形参列表&lt;/li&gt;
+&lt;li&gt;约束子句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-泛型接口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#7-泛型接口&#34;&gt;#&lt;/a&gt; 7. 泛型接口&lt;/h3&gt;
+&lt;p&gt;泛型接口允许我们编写形参和接口成员返回类型是泛型类型参数的接口。泛型接口的声明和非泛型接口的声明差不多，但是需要在接口名称之后的尖括号中放置类型参数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实现泛型类型接口时，必须保证类型实参的组合不会在类型中产生两个重复的接口。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;8-协变和逆变&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#8-协变和逆变&#34;&gt;#&lt;/a&gt; 8. 协变和逆变&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;协变&lt;br /&gt;
+每一个类型都有一种类型，可以将派生类的对象赋值给基类型的变量，叫作赋值兼容性。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c#&#34;&gt;class Animal &amp;#123;public int Legs=4;&amp;#125;	//基类
+class Dog:Animal &amp;#123;&amp;#125;					//派生类
+
+delegate T Factory&amp;lt;T&amp;gt;();			//Factory委托
+
+class Program
+&amp;#123;
+    static Dog MakeDog()			//匹配Factory委托的方法
+    &amp;#123;
+        return new Dog();
+    &amp;#125;  
+
+	static void Main()
+    &amp;#123;
+        Factory&amp;lt;Dog&amp;gt;dogMaker =MakeDog;//创建委托对象
+		Factory&amp;lt;.Animal&amp;gt;animalMaker=dogMaker;//尝试赋值委托对象里文本.编译错误！
+            
+		Console.WriteLine(animalMaker().Legs.ToString());
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个原则成立，但是对于这种情况不适用！问题在于尽管 Dog 是 Animal 的派生类，但是委托 Factory&amp;lt;Dog&amp;gt; 没有从委托 Factory&amp;lt;Animal &amp;gt; 派生。相反，两个委托对象是同级的，它们都从 delegate 类型派生，后者又派生自 object 类型，如下图所示。两者之间没有派生关系，因此赋值兼容性不适用。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005210713287.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;仅将派生类型用作输出值与构造委托有效性之间的常数关系叫作协变。为了让编译器知道这是我们的期望，必须使用 out 关键字标记委托声明中的类型参数。&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005211019289.png&#34; alt=&#34;image-20221005211019289&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005211259289.png&#34; alt=&#34;image-20221005211259289&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;图左边栈中的变量是 T Factory&amp;lt;outT&amp;gt;() 类型的委托，其中类型变量 T 是 Animal 类。&lt;/li&gt;
+&lt;li&gt;图右边堆上实际构造的委托是使用 Dog 类的类型变量进行声明的，Dog 派生自 Animal。&lt;/li&gt;
+&lt;li&gt;这是可行的，因为在调用委托的时候，调用代码接受 Dog 类型的对象，而不是期望的 Animal 类型的对象。调用代码可以自由地操作对象的 Animal 部分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逆变&lt;/p&gt;
+&lt;p&gt;​	和之前的情况相似，默认情况下不可以赋值两种不兼容的类型。但是和之前情况也相似的是，有一些情况可以让这种赋值生效。&lt;/p&gt;
+&lt;p&gt;其实，如果类型参数只用作委托中方法的输入参数的话就可以了。这是因为即使调用代码传入了一个程度更高的派生类的引用，委托中的方法也只期望一个程度低一些的派生类的引用一当然，它仍然接收并知道如何操作。&lt;br /&gt;
+这种在期望传入基类时允许传人派生对象的特性叫作逆变。可以通过在类型参数中显式使用 in 关键字来使用逆变。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005211659573.png&#34; alt=&#34;image-20221005211659573&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;图左边栈上的变量是 void Action1&amp;lt;inT&amp;gt;(Tp) 类型的委托，其类型变量是 Dog 类。&lt;/li&gt;
+&lt;li&gt;图右边实际构建的委托使用 Animal 类的类型变量来声明，它是 Dog 类的基类。&lt;/li&gt;
+&lt;li&gt;这样可以工作，因为在调用委托的时候，调用代码为方法 ActOnAnimal 传人 Dog 类型的变&lt;br /&gt;
+量，而它期望的是 Animal 类型的对象。方法当然可以像期望的那样自由操作对象的 Animal&lt;br /&gt;
+ 部分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;协变和逆变的不同&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005211755664.png&#34; alt=&#34;image-20221005211755664&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;左边栈上的变量是 F (outT)() 类型的委托，类型参数是 Base 类。&lt;/li&gt;
+&lt;li&gt;在右边实际构建的委托使用 Derived 类的类型变量进行声明，这个类派生自 Base 类。&lt;/li&gt;
+&lt;li&gt;这样可以工作，因为在调用委托的时候，方法返回指向派生类型的对象的引用，这也是指向基类的引用，即调用代码所期望的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20221005211806392.png&#34; alt=&#34;image-20221005211806392&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;左边栈上的变量是 F&amp;lt;intT&amp;gt;(Tp) 类型的委托，类型参数是 Derived 类。&lt;/li&gt;
+&lt;li&gt;在右边实际构建委托的时候，使用 Base 类的类型变量进行声明，这个类是 Derived 类的基类。&lt;/li&gt;
+&lt;li&gt;这样可以工作，因为在调用委托的时候，调用代码向方法传入了派生类型的对象，方法期望的只是基类型的对象。方法完全可以自由操作对象的基类部分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口的协变和逆变&lt;/p&gt;
+&lt;p&gt;注意几点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码使用类型参数 T 声明了泛型接口。out 关键字指定了类型参数是协变的。&lt;/li&gt;
+&lt;li&gt;泛型类 SimpleReturn 实现了泛型接口。&lt;/li&gt;
+&lt;li&gt;方法 DoSomething 演示了方法如何接受一个接口作为参数。这个方法接受由 Animal 类型构建的泛型接口 IMyIfc 作为参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编译器可以自动识别某个已构建的委托是协变还是逆变并且自动进行类型强制转换。这通常发生在没有为对象的类型赋值的时候&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;九-反射&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#九-反射&#34;&gt;#&lt;/a&gt; 九、反射&lt;/h2&gt;
+&lt;h3 id=&#34;1-元数据与反射&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-元数据与反射&#34;&gt;#&lt;/a&gt; 1. 元数据与反射&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;有关程序以及类型的数据被称为元数据。被保存在程序的程序集中。&lt;/li&gt;
+&lt;li&gt;程序在运行时，可以查看其他程序集或其本身的元数据。运行中程序查看本身的元数据或其他程序元数据的行为被称为反射。&lt;/li&gt;
+&lt;li&gt;要使用反射，必须使用 System.Reflection 命名空间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-type类&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-type类&#34;&gt;#&lt;/a&gt; 2. Type 类&lt;/h3&gt;
+&lt;p&gt;BCL 声明了一个叫作 Type 的抽象类，被设计用来包含类的特征。使用这个类能够获取程序的类型和信息。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;有关 type 的重要事项。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于程序中用到的每一个类型，CLR 都会从创建一个包含这个类型信息的 Type 类型的对象。&lt;/li&gt;
+&lt;li&gt;不管创建的类型有多少个实例，只有一个 Type 对象会关联到所有这些实例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;type 类的成员：&lt;br /&gt;
+&lt;img data-src=&#34;http://lgqimg.changzer.cn/img/image-20221007194923321.png&#34; alt=&#34;image-20221007194923321&#34; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取 type 对象&lt;/p&gt;
+&lt;p&gt;object 类型包含了一个叫作 GetType 的方法，它返回对实例的 Type 对象的引用。由于每一个类型最终&lt;br /&gt;
+都是从 object 派生的，所以我们可以在任何类型的对象上使用 GetType 方法来获取它的 Type 对&lt;br /&gt;
+象。&lt;/p&gt;
+&lt;p&gt;还可以使用 typeof 运算符来获取对象。只需要提供类型名作为操作数，就会返回 type 对象的引用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="C#" />
+        <updated>2022-10-03T07:00:03.631Z</updated>
+    </entry>
+</feed>

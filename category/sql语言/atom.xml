@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://maplelearc.github.io</id>
+    <title> • Posts by &#34;sql语言&#34; category</title>
+    <link href="https://maplelearc.github.io" />
+    <updated>2022-10-04T09:55:38.762Z</updated>
+    <category term="MySQL" />
+    <category term="数据库" />
+    <category term="Lua" />
+    <category term="算法" />
+    <category term="数据结构" />
+    <category term="深入理解计算机系统" />
+    <category term="CSAPP" />
+    <category term="计算机网络" />
+    <category term="C#" />
+    <entry>
+        <id>https://maplelearc.github.io/2022/10/04/Mysql/</id>
+        <title>MySql</title>
+        <link rel="alternate" href="https://maplelearc.github.io/2022/10/04/Mysql/"/>
+        <content type="html">&lt;h1 id=&#34;mysql&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#mysql&#34;&gt;#&lt;/a&gt; Mysql&lt;/h1&gt;
+&lt;h2 id=&#34;1-sql语句&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-sql语句&#34;&gt;#&lt;/a&gt; 1、Sql 语句&lt;/h2&gt;
+&lt;h3 id=&#34;1-ddl数据定义语言用来定义数据库对象数据库-表-字段&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-ddl数据定义语言用来定义数据库对象数据库-表-字段&#34;&gt;#&lt;/a&gt; (1) &lt;strong&gt;DDL—— 数据定义语言，用来定义数据库对象 (数据库、表、字段)&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;查询所有数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;show databases；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询当前数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select database();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;创建数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;creat database [if not exists] 数据库名 [default charset 字符集] [collate 排序规则];
+--if not exists 表示若数据库存在，则不创建
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;drop database[if exists]数据库名；
+--if exists 表示若数据库不存在，则不删除
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;使用数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;use 数据库名；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询当前数据库所有表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;show tables；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询表结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;desc 表名；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询指定表的建表语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;show create table 表名；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;表创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;create table 表名(
+字段1 字段1类型[COMMENT 字段1注释],
+字段2 字段2类型[COMMEN+T 字段2注释],
+字段3 字段3类型[COMMENT 字段3注释],
+......
+字段n 字段n类型[COMMENT 字段n注释]
+)[COMMENT 表注释];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;添加表的字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 add 字段名 类型(长度)[COMMENT 注释][约束];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;修改表的字段名和字段类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 change 旧字段名 新字段名 类型(长度) [COMMENT 注释][约束];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;修改字段的数据类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 modify 字段名 新数据类型;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;修改表名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 reanme to 新表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 drop 字段名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;drop table[if exists] 表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除指定表，并重新创建该表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;truncate table 表名;
+--删除表后，表中的数据也会删除
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2-dml数据操作语言用来对数据库表中的数据进行增删改&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-dml数据操作语言用来对数据库表中的数据进行增删改&#34;&gt;#&lt;/a&gt; (2) &lt;strong&gt;DML—— 数据操作语言，用来对数据库表中的数据进行增删改&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;查询所有数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;show databases；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询当前数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select database();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;创建数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;creat database [if not exists] 数据库名 [default charset 字符集] [collate 排序规则];
+--if not exists 表示若数据库存在，则不创建
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;drop database[if exists]数据库名；
+--if exists 表示若数据库不存在，则不删除
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;使用数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;use 数据库名；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询当前数据库所有表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;show tables；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询表结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;desc 表名；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;查询指定表的建表语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;show create table 表名；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;表创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;create table 表名(
+字段1 字段1类型[COMMENT 字段1注释],
+字段2 字段2类型[COMMENT 字段2注释],
+字段3 字段3类型[COMMENT 字段3注释],
+......
+字段n 字段n类型[COMMENT 字段n注释]
+)[COMMENT 表注释];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;添加表的字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 add 字段名 类型(长度)[COMMENT 注释][约束];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;修改表的字段名和字段类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 change 旧字段名 新字段名 类型(长度) [COMMENT 注释][约束];
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;修改字段的数据类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 modify 字段名 新数据类型;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;修改表名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 reanme to 新表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 drop 字段名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;drop table[if exists] 表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除指定表，并重新创建该表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;truncate table 表名;
+--删除表后，表中的数据也会删除
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;3-dql数据查询语言用来查询数据库中的表的记录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-dql数据查询语言用来查询数据库中的表的记录&#34;&gt;#&lt;/a&gt; (3) &lt;strong&gt;DQL—— 数据查询语言，用来查询数据库中的表的记录&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;基本查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;查询多个字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段1,字段2,字段3,... from 表名;
+select *from 表名;--查询整张表
+- 设置别名
+select 字段1[as 别名1],字段2[as 别名2],字段3[as 别名3],...from 表名;
+- 无处重复记录
+select distinct 字段列表 from 表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;条件查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;语法&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from where 条件列表;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;条件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226113100627.png&#34; alt=&#34;image-20220226113100627&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from where 条件列表;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;聚合函数&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;介绍&lt;/p&gt;
+&lt;p&gt;将一列数据作为一个整体，进行纵向计算。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常见聚合函数&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226112903488.png&#34; alt=&#34;image-20220226112903488&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 聚合函数(字段列表) from 表名;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;分组查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表名 [where 条件] group by 分组字段名 [having 分组后过滤条件]
+  - where和having区别
+      - 执行实际不同：where是分组之前进行过滤，不满条件where条件，不参与分组；having是分组之后对结果进行过滤。
+      - 判断条件不同：where不能对聚合函数进行判断，而having可以。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;排序查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表名 order by 字段1 排序方式,字段2 排序方式2;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;排序方式&lt;/li&gt;
+&lt;li&gt;ASC：升序 (默认值)&lt;/li&gt;
+&lt;li&gt;DESC：降序&lt;/li&gt;
+&lt;li&gt;如果是多字段排序，当第一个字段排序值相同时，才会根据第二个字段进行排序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;分页查询&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表明 limit 起始索引,查询记录数;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;注意&lt;/li&gt;
+&lt;li&gt;起始索引从 0 开始，起始索引 =(查询页码 - 1)* 咩野显示记录数。&lt;/li&gt;
+&lt;li&gt;分页茶树是数据库的方言，不同的数据库有不同的实现，Mysql 中是 LIMIT。&lt;/li&gt;
+&lt;li&gt;如果查询的是第一页数据，起始索引可以省略，直接简写为 [limit 查询记录数]。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;语句执行顺序&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226130917300.png&#34; alt=&#34;image-20220226130917300&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;4-dcl数据控制语言用来创建数据库用户-控制数据库的访问权限&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-dcl数据控制语言用来创建数据库用户-控制数据库的访问权限&#34;&gt;#&lt;/a&gt; (4) &lt;strong&gt;DCL—— 数据控制语言，用来创建数据库用户、控制数据库的访问权限&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;1-管理用户&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-管理用户&#34;&gt;#&lt;/a&gt; 1、管理用户&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;查询用户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;use mysql;
+select *from user;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;创建用户&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;create user &#39;用户名&#39;@&#39;主机名&#39; IDENTIFIED BY &#39;密码&#39;; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;修改用户密码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter user &#39;用户名&#39;@&#39;主机名&#39; IDENTIFIED WITH mysql_native_password BY &#39;新密码&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;4. 删除用户&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;drop user &#39;用户名&#39;@&#39;主机名&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;2-权限管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-权限管理&#34;&gt;#&lt;/a&gt; 2、权限管理&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226131018287.png&#34; alt=&#34;image-20220226131018287&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查询权限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;show grants for &#39;用户名&#39;@&#39;主机名&#39;;
+2. 授予权限
+grant 权限列表 on 数据库.表名 to &#39;用户名&#39;@&#39;主机名&#39;; 
+3. 撤销权限
+revoke 权限列表 on 数据库.表名 from &#39;用户名&#39;@&#39;主机名&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;多个权限之间，使用逗号分隔。&lt;/li&gt;
+&lt;li&gt;授权时，数据库名和表名可以使用 * 进行通配，代表所有。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;2-数据类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-数据类型&#34;&gt;#&lt;/a&gt; 2、数据类型&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226131551577.png&#34; alt=&#34;image-20220226131551577&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xncWltZy5jaGFuZ3plci5jbi9pbWFnZS0yMDIyMDIyNjEzMTY0MzM3OC5wbmc=&#34;&gt;http://lgqimg.changzer.cn/image-20220226131643378.png&lt;/span&gt;&amp;quot; alt=&amp;quot;image-20220226131643378&amp;quot;  /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226131716446.png&#34; alt=&#34;image-20220226131716446&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-函数&#34;&gt;#&lt;/a&gt; 3、函数&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 函数(参数)；
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;1-字符串函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-字符串函数&#34;&gt;#&lt;/a&gt; 1. 字符串函数&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226131918060.png&#34; alt=&#34;image-20220226131918060&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-数值函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2-数值函数&#34;&gt;#&lt;/a&gt; 2. 数值函数&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226131935009.png&#34; alt=&#34;image-20220226131935009&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-日期函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3-日期函数&#34;&gt;#&lt;/a&gt; 3. 日期函数&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226131952830.png&#34; alt=&#34;image-20220226131952830&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-流程函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-流程函数&#34;&gt;#&lt;/a&gt; 4. 流程函数&lt;/h3&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226132012231.png&#34; alt=&#34;image-20220226132012231&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;4-约束&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#4-约束&#34;&gt;#&lt;/a&gt; 4、约束&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226132324447.png&#34; alt=&#34;image-20220226132324447&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;外键约束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;添加外键&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;create table 表名(
+      字段名 数据类型,
+       ...
+       [constraint][外键名称] foreign key(外键字段名) references 主表(主表列名)
+);
+alter table 表名 add constraint 外键名称 foreign key(外键字段名) references 主表(主表列名);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除外键&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;alter table 表名 drop foreign key 外键名称;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;删除 / 更新行为&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226132502323.png&#34; alt=&#34;image-20220226132502323&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;alter&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;table&lt;/span&gt; 表名 &lt;span class=&#34;token keyword&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;constraint&lt;/span&gt; 外键名称 &lt;span class=&#34;token keyword&#34;&gt;foreign&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;外键字段&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;references&lt;/span&gt; 主表名&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;主表字段名&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;update&lt;/span&gt; 行为 &lt;span class=&#34;token keyword&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;delete&lt;/span&gt; 行为&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;5-多表查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#5-多表查询&#34;&gt;#&lt;/a&gt; 5、多表查询&lt;/h2&gt;
+&lt;h3 id=&#34;51-多表关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#51-多表关系&#34;&gt;#&lt;/a&gt; 5.1 多表关系&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226132958716.png&#34; alt=&#34;image-20220226132958716&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一对多 (多对一)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226133130710.png&#34; alt=&#34;image-20220226133130710&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;多对多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226133149302.png&#34; alt=&#34;image-20220226133149302&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;一对一&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226133214313.png&#34; alt=&#34;image-20220226133214313&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;52-多表查询概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#52-多表查询概述&#34;&gt;#&lt;/a&gt; 5.2 多表查询概述&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226133344586.png&#34; alt=&#34;image-20220226133344586&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多表查询分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226133422287.png&#34; alt=&#34;image-20220226133422287&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;53内连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#53内连接&#34;&gt;#&lt;/a&gt; 5.3 内连接&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内连接查询的是两张表交集的部分&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;隐式内连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表1,表2 where 条件...;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;显式内连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表1[inner] join 表2 on 连接条件...; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;54-外连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#54-外连接&#34;&gt;#&lt;/a&gt; 5.4 外连接、&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226133657412.png&#34; alt=&#34;image-20220226133657412&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;左外连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表1 left [outer] join 表2 on 条件...;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;右外连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表1 right [outer] join 表1 on 条件...;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;55-自连接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#55-自连接&#34;&gt;#&lt;/a&gt; 5.5 自连接、&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;自连接查询法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Sql&#34;&gt;select 字段列表 from 表A 别名A join 表A 别名B on 条件...;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;自连接查询，可以是内连接查询，也可以是外连接查询.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;56联合查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#56联合查询&#34;&gt;#&lt;/a&gt; 5.6 联合查询&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;对于 union 查询，就是把多次查询的结果合并起来，形成一个新的查询结果集。&lt;/li&gt;
+&lt;li&gt;语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;select 字段列表 from 表A
+union [all]
+select 字段列表 from 表B;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;对于联合查询的多张表的列数必须保持一致，字段类型也需要保持一致&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;union all 会将全部的数据直接合并在一起，union 会对合并之后的数据去重&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;57-子查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#57-子查询&#34;&gt;#&lt;/a&gt; 5.7 子查询&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;概念 :SQL 语句中嵌套 select 语句，称为嵌套查询，又称子查询&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; t1 &lt;span class=&#34;token keyword&#34;&gt;where&lt;/span&gt; column1&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; column1 from2&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;子查询外部的邮局可以是 insert/update/delete/select 的任何一个&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226134245323.png&#34; alt=&#34;image-20220226134245323&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;标量子查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226134338321.png&#34; alt=&#34;image-20220226134338321&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;列子查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226134402934.png&#34; alt=&#34;image-20220226134402934&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;行子查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226134418954.png&#34; alt=&#34;image-20220226134418954&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;表子查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226134437994.png&#34; alt=&#34;image-20220226134437994&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;6-事务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#6-事务&#34;&gt;#&lt;/a&gt; 6、事务&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;事务是一组操作的集合，它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销请求，即这些操作要么同时成功，要么同时失败。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;事务操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看 / 设置事务提交方式&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; @&lt;span class=&#34;token variable&#34;&gt;@autocomit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;-- 查看事务提交方式，1 为自动提交，0 为手动提交&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;set&lt;/span&gt; @&lt;span class=&#34;token variable&#34;&gt;@sutiocomit&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;-- 设置提交方式，0 为手动提交&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提交事务&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;commit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回滚事务&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;rollback&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;开启事务&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;start&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;transaction&lt;/span&gt; 或 &lt;span class=&#34;token keyword&#34;&gt;begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;事务的四大特性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226135459363.png&#34; alt=&#34;image-20220226135459363&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;并发事务问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226135518825.png&#34; alt=&#34;image-20220226135518825&#34; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;事务隔离级别&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;http://lgqimg.changzer.cn/image-20220226135534240.png&#34; alt=&#34;image-20220226135534240&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看事务隔离级别&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; @&lt;span class=&#34;token variable&#34;&gt;@transaction_isolation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置事务隔离级别&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SQL&#34;&gt;set [session|global] transaction isolation level &amp;#123;read uncommitted|read committed|repeatable read|serializable&amp;#125;;
+--session表示会话级别，表示当前客户端窗口有效
+--session global 表示所有客户端窗口有效
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="MySQL" />
+        <category term="数据库" />
+        <updated>2022-10-04T09:55:38.762Z</updated>
+    </entry>
+</feed>
