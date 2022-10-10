@@ -10,18 +10,18 @@
         <category>MySQL</category>
         <category>数据库</category>
         <category>Lua</category>
-        <category>深入理解计算机系统</category>
+        <category>计算机网络</category>
         <category>CSAPP</category>
+        <category>深入理解计算机系统</category>
         <category>算法</category>
         <category>数据结构</category>
-        <category>计算机网络</category>
         <category>C#</category>
         <item>
             <guid isPermalink="true">https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/</guid>
             <title>CSAPP:第一章</title>
             <link>https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/</link>
-            <category>深入理解计算机系统</category>
             <category>CSAPP</category>
+            <category>深入理解计算机系统</category>
             <pubDate>Wed, 05 Oct 2022 15:50:37 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;csapp第一章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#csapp第一章&#34;&gt;#&lt;/a&gt; 《CSAPP：第一章》&lt;/h1&gt;
 &lt;h2 id=&#34;11-信息就是位上下文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-信息就是位上下文&#34;&gt;#&lt;/a&gt; 1.1 信息就是位 + 上下文&lt;/h2&gt;

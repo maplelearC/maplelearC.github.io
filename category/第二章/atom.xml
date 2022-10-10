@@ -7,11 +7,11 @@
     <category term="MySQL" />
     <category term="数据库" />
     <category term="Lua" />
-    <category term="深入理解计算机系统" />
+    <category term="计算机网络" />
     <category term="CSAPP" />
+    <category term="深入理解计算机系统" />
     <category term="算法" />
     <category term="数据结构" />
-    <category term="计算机网络" />
     <category term="C#" />
     <entry>
         <id>https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%8B/</id>
@@ -235,8 +235,8 @@
 &lt;p&gt;&lt;strong&gt;把大的浮点数转换为整数是一种常见的错误。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;要小心地使用浮点运算。&lt;/strong&gt;&lt;/p&gt;
 </content>
-        <category term="深入理解计算机系统" />
         <category term="CSAPP" />
+        <category term="深入理解计算机系统" />
         <updated>2022-10-05T07:50:37.000Z</updated>
     </entry>
 </feed>

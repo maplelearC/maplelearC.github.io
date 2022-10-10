@@ -7,11 +7,11 @@
     <category term="MySQL" />
     <category term="数据库" />
     <category term="Lua" />
-    <category term="深入理解计算机系统" />
+    <category term="计算机网络" />
     <category term="CSAPP" />
+    <category term="深入理解计算机系统" />
     <category term="算法" />
     <category term="数据结构" />
-    <category term="计算机网络" />
     <category term="C#" />
     <entry>
         <id>https://maplelearc.github.io/2022/10/05/CSAPP/%E3%80%8ACSAPP%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%8B/</id>
@@ -205,8 +205,8 @@
 &lt;p&gt;&lt;strong&gt;虚拟机&lt;/strong&gt;是对整个计算机系统的抽象，包括操作系统、处理器和程序。&lt;strong&gt;1.4.1 系统的硬件组成&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;主要包括&lt;strong&gt;总线、I/O 设备、处理器、主存储器 **** 四个部分&lt;/strong&gt;&lt;/p&gt;
 </content>
-        <category term="深入理解计算机系统" />
         <category term="CSAPP" />
+        <category term="深入理解计算机系统" />
         <updated>2022-10-05T07:50:37.000Z</updated>
     </entry>
 </feed>
