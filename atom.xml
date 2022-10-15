@@ -676,7 +676,7 @@ a 的值为:    19
 &lt;h2 id=&#34;14-处理器读并解释储存在内存中的指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#14-处理器读并解释储存在内存中的指令&#34;&gt;#&lt;/a&gt; 1.4 处理器读并解释储存在内存中的指令&lt;/h2&gt;
 &lt;p&gt;shell 是一个命令行解释器，它输出一个提示符（&amp;gt;&amp;gt;），等待输入一个命令行，然后执行命令。如果输入的是可执行文件的名字，就运行该文件。&lt;/p&gt;
 &lt;h3 id=&#34;141-系统的硬件组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#141-系统的硬件组成&#34;&gt;#&lt;/a&gt; 1.4.1 系统的硬件组成&lt;/h3&gt;
-&lt;p&gt;主要包括&lt;strong&gt;总线、I/O 设备、处理器、主存储器 **** 四个部分&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;主要包括&lt;strong&gt;总线、I/O 设备、处理器、主存储器&lt;/strong&gt;四个部分&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;总线&lt;/strong&gt;&lt;/p&gt;
@@ -710,10 +710,10 @@ a 的值为:    19
 &lt;li&gt;
 &lt;p&gt;几个简单指令的操作：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;加载&lt;/em&gt; *：从主存复制一个字或字节到寄存器，覆盖原来内容 **&lt;/li&gt;
-&lt;li&gt;存储 **：从寄存器复制一个字或字节到主存，覆盖原来内容 **&lt;/li&gt;
-&lt;li&gt;操作 **：把两个寄存器的内容复制到 ALU，ALU 对这两个字做算术运算，并把结果存到一个寄存器中 **&lt;/li&gt;
-&lt;li&gt;跳转 **：从指令中抽取一个字复制到程序计数器中，覆盖原来内容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载&lt;/strong&gt;：从主存复制一个字或字节到寄存器，覆盖原来内容 **&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储&lt;/strong&gt;：从寄存器复制一个字或字节到主存，覆盖原来内容 **&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作&lt;/strong&gt;：把两个寄存器的内容复制到 ALU，ALU 对这两个字做算术运算，并把结果存到一个寄存器中 **&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跳转&lt;/strong&gt;：从指令中抽取一个字复制到程序计数器中，覆盖原来内容。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
