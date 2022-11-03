@@ -13,14 +13,110 @@
         <pubDate>Thu, 03 Nov 2022 19:39:52 +0800</pubDate>
         <lastBuildDate>Thu, 03 Nov 2022 19:39:52 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://maplelearc.github.io/2022/11/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
-            <title>操作系统：第一章</title>
-            <link>https://maplelearc.github.io/2022/11/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0/</link>
+            <guid isPermalink="true">https://maplelearc.github.io/2022/11/03/Operation%20System/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
+            <title>操作系统概述</title>
+            <link>https://maplelearc.github.io/2022/11/03/Operation%20System/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9A%E7%AC%AC%E4%B8%80%E7%AB%A0/</link>
             <category term="操作系统" scheme="https://maplelearc.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
             <category term="基础知识" scheme="https://maplelearc.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" />
             <category term="操作系统" scheme="https://maplelearc.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
             <pubDate>Thu, 03 Nov 2022 19:39:52 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
+            <description><![CDATA[ &lt;h1 id=&#34;操作系统基本概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统基本概念&#34;&gt;#&lt;/a&gt; 操作系统基本概念&lt;/h1&gt;
+&lt;h2 id=&#34;操作系统的概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统的概念&#34;&gt;#&lt;/a&gt; 操作系统的概念&lt;/h2&gt;
+&lt;p&gt;计算机系统自上而下大致可分为 4 个部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;硬件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;操作系统&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应用程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​		操作系统 (Operation System, OS) 是指控制和整理整计算机系统的硬件与软件资源，合理地组织、调度计算机的工作与资源的分配，进而为用户和其他软件提供方便接口与环境的程序合集。&lt;/p&gt;
+&lt;p&gt;操作系统石计算机系统中最基本的系统软件。&lt;/p&gt;
+&lt;h2 id=&#34;操作系统的特征&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统的特征&#34;&gt;#&lt;/a&gt; 操作系统的特征&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;并发&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;并发是指两个或多个事件在同一时间间隔内发生。&lt;/p&gt;
+&lt;p&gt;操作系统的并发性是指计算机系统中同时存在多个运行的程序，因此它具有处理和调度多个应用程序同时执行的能力。&lt;/p&gt;
+&lt;p&gt;在操作系统中，引入进程的目的是使程序能够并发。&lt;/p&gt;
+&lt;p&gt;操作系统的并发性通过分时得以实现。&lt;/p&gt;
+&lt;p&gt;并行性是指操作系统具有同时运行或操作的特性，在同一时刻能够完成两种或两种以上的工作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;共享&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;资源共享即共享，是指系统中的资源可供内存中多个并发执行的进程共同使用。&lt;/p&gt;
+&lt;p&gt;共享可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;互斥共享方式&lt;/li&gt;
+&lt;li&gt;同时访问方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;互斥共享方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设有进程 A、B 需要访问同一资源。仅当 A 进程访问并释放完该资源后，B 进程才允许对该资源进行访问。这种访问方式被称为&lt;strong&gt;互斥访问方式&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;把一段时间内只允许一个进程访问的资源称为临界资源。&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;同时访问方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;同时访问方式&lt;/strong&gt;是指在同一时间段内允许多个进程进行访问。&lt;/p&gt;
+&lt;p&gt;” 同时 “通常是在围观上的。而在微观上，这些进程可以交替地对该资源进行访问，即”&lt;strong&gt; 分时共享&lt;/strong&gt; “。&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;并发&lt;/strong&gt;和&lt;strong&gt;共享&lt;/strong&gt;操作系统两个最基本地特征。两者之间互为存在的条件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;资源共享是以程序的并发为条件的，若系统不允许程序并发执行，则自然不存在资源共享问题。&lt;/li&gt;
+&lt;li&gt;若系统不能对资源共享进行有效的管理，则必将影响到程序的并发执行，甚至根本无法并发。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;虚拟&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;虚拟&lt;/strong&gt;是值把一个物理上的实体变为若干逻辑上的对应物。&lt;/p&gt;
+&lt;p&gt;利用多道程序技术可以将物理上的 CPU 虚拟为多个逻辑上的 CPU，称为&lt;strong&gt;虚拟处理器&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;利用虚拟存储技术将一台机器的物理存储器变为虚拟存储器，以便从逻辑上扩大存储器的容量。&lt;/p&gt;
+&lt;p&gt;操作系统的虚拟技术可归纳为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时分复用技术，如处理器的分时共享&lt;/li&gt;
+&lt;li&gt;空分复用技术，如虚拟存储器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;异步&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;多道程序环境允许程序并发执行，但由于资源有限，进程的执行并不是一贯到底的，而是走走停停的，它以不可预知的速度向前推进。这便是进程的异步性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;操作系统的目标和功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统的目标和功能&#34;&gt;#&lt;/a&gt; 操作系统的目标和功能&lt;/h2&gt;
+&lt;p&gt;操作系统具有以下功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;处理机管理&lt;/li&gt;
+&lt;li&gt;存储器管理&lt;/li&gt;
+&lt;li&gt;设备管理&lt;/li&gt;
+&lt;li&gt;文件管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;处理机管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在多道程序下，处理及的分配和运行都以进程 (或线程) 为基本单位，因而对处理机的管理可归结为对进程的管理。&lt;/p&gt;
+&lt;p&gt;并发是值在计算机内同时运行多个进程，因而进程何时创建、何时销毁、如何管理、如何避免冲突、合理共享就是进程管理的最主要的任务。&lt;/p&gt;
+&lt;p&gt;进程管理的主要功能包括进程控制、进程同步、进程通信、死锁处理、处理及调度等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;存储器管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;存储管理是为了给多道程序运行提供良好的环境，方便用户使用及提高内存的利用率，主要包括内存分配与回收、地址映射、内存保护与共享及文件读写管理和保护等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;设备管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设备管理的主要任务是完成用户的 I/O 请求，方便用户使用各种设备，并提高设备的利用率，主要包括缓冲管理、设备分配、设备处理和虚拟设备等功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;文件管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;计算机中的信息都是以文件的主要形式存在的，操作系统中负责文件管理的部分称为文件系统。主要包括文件存储空间的管理、目录管理及文件读写管理和保护等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://maplelearc.github.io/2022/10/29/%E3%80%8AUnity3D%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%EF%BC%9A%E4%B8%BB%E7%A8%8B%E6%89%8B%E8%AE%B0%E3%80%8B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</guid>
@@ -62,6 +158,7 @@
             <link>https://maplelearc.github.io/2022/10/08/Lua%E5%AD%A6%E4%B9%A0/</link>
             <category term="计算机语言学习" scheme="https://maplelearc.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" />
             <category term="Lua" scheme="https://maplelearc.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/" />
+            <category term="基本语法" scheme="https://maplelearc.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Lua/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" />
             <category term="Lua" scheme="https://maplelearc.github.io/tags/Lua/" />
             <pubDate>Sat, 08 Oct 2022 17:41:18 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;lua-入门学习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lua-入门学习&#34;&gt;#&lt;/a&gt; Lua 入门学习&lt;/h1&gt;
@@ -1336,6 +1433,7 @@ end
             <link>https://maplelearc.github.io/2022/10/04/Mysql/</link>
             <category term="计算机语言学习" scheme="https://maplelearc.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" />
             <category term="SQL语言" scheme="https://maplelearc.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/" />
+            <category term="基本语法" scheme="https://maplelearc.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/SQL%E8%AF%AD%E8%A8%80/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" />
             <category term="MySQL" scheme="https://maplelearc.github.io/tags/MySQL/" />
             <category term="数据库" scheme="https://maplelearc.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
             <pubDate>Tue, 04 Oct 2022 17:55:38 +0800</pubDate>
