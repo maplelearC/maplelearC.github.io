@@ -82,6 +82,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;操作系统的目标和功能&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作系统的目标和功能&#34;&gt;#&lt;/a&gt; 操作系统的目标和功能&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;操作系统作为计算机系统资源的管理者&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;操作系统具有以下功能：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;处理机管理&lt;/li&gt;
@@ -109,6 +110,28 @@
 &lt;p&gt;计算机中的信息都是以文件的主要形式存在的，操作系统中负责文件管理的部分称为文件系统。主要包括文件存储空间的管理、目录管理及文件读写管理和保护等。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;操作系统为用户与计算机硬件系统之间的接口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为了方便用户使用操作系统，还必须像用户提供接口。操作系统提供的接口分两类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;命令接口，用户利用这些操作命令来组织和控制作业的执行；&lt;/li&gt;
+&lt;li&gt;程序接口，编程人员可以使用它们来请求操作系统服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;命令接口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用命令接口进行作业的主要控制方式主要有两种方式：&lt;strong&gt;联机控制方式&lt;/strong&gt;和&lt;strong&gt;脱机控制方式&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;按作业控制方式的不同，可将命令接口分为：&lt;strong&gt;联机命令接口&lt;/strong&gt;和&lt;strong&gt;脱机命令接口&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;联机命令接口&lt;/strong&gt;又称为交互命令接口，适用于分时或实时系统的接口。它又一组键盘操作命令组成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;脱机命令接口&lt;/strong&gt;又称批处理命令接口，适用于批处理系统，它由一组作业控制命令组成。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;程序接口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;程序接口由一组系统调用（也称广义指令）组成。用户通过在程序中使用这些系统调用来请求操作系统为其提供服务，如使用各种外部设备、申请分配和回收内存及其他各种要求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;操作系统实现了对计算机资源的扩充&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;没有任何软件支持的计算机称为裸机，它仅构成计算机系统的物质基础。&lt;/p&gt;
+&lt;p&gt;我们通常把覆盖了软件的机器称为扩充机器或虚拟机。&lt;/p&gt;
 </content>
         <category term="操作系统" scheme="https://maplelearc.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" />
         <category term="基础知识" scheme="https://maplelearc.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" />
